@@ -30,7 +30,7 @@ The first command recomputes reported metrics from released prediction tables. T
 | `work/wrf_vertical_profile_ablation_20260925_remote/bundle/` | Retrieved vertical-profile ablation results |
 | `tmp/remote_mlp17_original/` | Partial recovered remote implementation snapshot; historical provenance rather than an exact complete training snapshot |
 
-The full 1,462-case raw multimodal input dataset and the trained satellite/NWP backbone checkpoint were not found in the local material used for this release. **This is a results-and-cached-head reproducibility release, not a complete end-to-end training release.** Fusion and AOD head weights are included. Historical training scripts may require the original GPU-host layout and external input files; their presence does not establish a portable raw-data training workflow.
+The full 1,462-case multimodal input tensors and the trained satellite/NWP backbone checkpoint are retained on the original remote training server and will be uploaded in a subsequent update. They are not included in the current local snapshot. **This is a results-and-cached-head reproducibility release, not a complete end-to-end training release.** Fusion and AOD head weights are included. Historical training scripts may require the original GPU-host layout and external input files; their presence does not establish a portable raw-data training workflow.
 
 ## Evaluation scope
 

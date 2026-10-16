@@ -15,5 +15,13 @@
     "tmp/remote_mlp17_original": "Partial recovered remote implementation snapshot",
     "tmp/mlp17_7eval_training_bundle_20260909": "Historical launch bundle; differs from the partial recovered snapshot; neither establishes the exact complete formal training implementation"
   },
-  "license": "No new blanket code or data license assigned; upstream data terms remain applicable"
+  "license": "No new blanket code or data license assigned; upstream data terms remain applicable",
+  "remote_artifacts_pending_upload": {
+    "location": "Original remote training server",
+    "status": "Will be added in a subsequent public update",
+    "artifacts": [
+      "Complete 1462-case satellite/WRF input tensor dataset",
+      "Formal independent-expert best_fusion.pt checkpoint and corresponding input normalization"
+    ]
+  }
 }

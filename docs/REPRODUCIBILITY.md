@@ -8,7 +8,7 @@
 | Re-evaluate fusion heads | Verified from released feature caches and head checkpoints | Starts after pretrained satellite/NWP feature extraction |
 | Inspect or rerun AOD correction | Feature caches, weights, and historical code are included | The quick verification command checks fusion heads; AOD metrics are checked from released tables |
 | Retrain heads on cached representations | Code and cached features are provided | Historical scripts may retain original-host defaults; reproducibility depends on the exact archived implementation and configuration |
-| Infer from raw satellite/NWP inputs or retrain complete model | No | Complete raw inputs and trained backbone checkpoint were not located locally |
+| Infer from raw satellite/NWP inputs or retrain complete model | No | Complete inputs and the trained backbone checkpoint remain on the remote training server and will be added in a subsequent update |
 
 ## Verification commands
 
@@ -60,5 +60,5 @@ The test split and its gate-feature coverage had already been inspected before t
 
 ## Historical training scripts
 
-Several scripts preserve absolute Windows or original GPU-host paths. To pursue new training, first supply the missing raw inputs and backbone checkpoint or train a replacement backbone, then adapt dataset roots, split paths, output roots, and device options using each script's arguments. Such a new run is not the same as reproducing the frozen release. Existing audit files preserve historical provenance and are not current instructions to access a remote host.
+Several scripts preserve absolute Windows or original GPU-host paths. To pursue new training, first obtain the input tensors and backbone checkpoint pending upload from the remote training server, or train a replacement backbone, then adapt dataset roots, split paths, output roots, and device options using each script's arguments. Such a new run is not the same as reproducing the frozen release. Existing audit files preserve historical provenance and are not current instructions to access a remote host.
 

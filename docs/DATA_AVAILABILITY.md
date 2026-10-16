@@ -14,7 +14,7 @@ The public artifacts support independent recalculation of released metrics and v
 
 ## Material absent from this snapshot
 
-The complete raw 1,462-case multimodal dataset and the trained satellite/NWP backbone checkpoint were not located in the available local project. Consequently, independent reproduction of raw-input backbone inference, backbone training, and the complete end-to-end experiment is not supported by this release alone. No unavailable file is represented as downloadable here.
+The complete 1,462-case multimodal input tensors and the trained satellite/NWP backbone checkpoint are retained on the original remote training server. These artifacts will be added to the public repository or an associated download release in a subsequent update; the current snapshot contains only the locally available materials. Consequently, independent reproduction of raw-input backbone inference, backbone training, and the complete end-to-end experiment is not supported by this release alone. No unavailable file is represented as downloadable here.
 
 The full manuscript, correspondence, account credentials, and unrelated project material are outside the release. Manuscript version identification uses bibliographic metadata and a source-file hash.
 
