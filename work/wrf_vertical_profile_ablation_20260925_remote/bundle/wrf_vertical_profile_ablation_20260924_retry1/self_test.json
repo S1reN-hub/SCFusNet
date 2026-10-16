@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "synthetic_valid_mean": 4.0,
+  "synthetic_invalid_layer_excluded": true,
+  "finite_values_only": true,
+  "unavailable_channel_zeroed": true,
+  "unavailable_channel_preserves_column_mask": true,
+  "sample_id": "train__ABS__2021032300__r21",
+  "sample_path": "/root/autodl-tmp/guizhou_v4/data/derived/windcloud_v4_development_1241/cases/train__ABS__2021032300__r21.npz",
+  "transformed_fields": [
+    "nwp_d02_3d_raw",
+    "nwp_d02_level_valid",
+    "nwp_d01_3d_raw",
+    "nwp_d01_level_valid"
+  ],
+  "protected_fields_verified_unchanged": [
+    "satellite",
+    "satellite_valid",
+    "satellite_frame_mask",
+    "satellite_unique_frame_mask",
+    "nwp_d02_surface_raw",
+    "nwp_d01_surface_raw",
+    "nwp_d02_static_raw",
+    "nwp_d01_static_raw",
+    "wrf_ghi_anchor_d02",
+    "solar",
+    "target",
+    "target_mask",
+    "valid_minutes"
+  ],
+  "d02_shape": [
+    7,
+    12,
+    10,
+    32,
+    32
+  ],
+  "d01_shape": [
+    7,
+    12,
+    10,
+    32,
+    32
+  ],
+  "dataset_root": "/root/autodl-tmp/guizhou_v4/data/derived/windcloud_v4_all_1462_stationaware"
+}

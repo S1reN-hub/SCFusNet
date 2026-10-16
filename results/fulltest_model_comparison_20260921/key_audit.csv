@@ -1,0 +1,16 @@
+﻿frame,rows,unique_keys,duplicate_key_rows,daylight_rows,missing_keys_vs_reference,extra_keys_vs_reference,missing_keys_vs_common_intersection,finite_target_rows,finite_prediction_rows,common_valid_rows,common_daylight_valid_rows
+solfus_seed42,675,675,0,601,0,0,0,675,675,,
+solfus_seed43,675,675,0,601,0,0,0,675,675,,
+solfus_seed44,675,675,0,601,0,0,0,675,675,,
+sat_convlstm_seed42,675,675,0,617,0,0,0,675,675,,
+sat_convlstm_seed43,675,675,0,617,0,0,0,675,675,,
+sat_convlstm_seed44,675,675,0,617,0,0,0,675,675,,
+wrf_transformer_seed42,675,675,0,617,0,0,0,675,675,,
+wrf_transformer_seed43,675,675,0,617,0,0,0,675,675,,
+wrf_transformer_seed44,675,675,0,617,0,0,0,675,675,,
+early_fusion_seed42,675,675,0,617,0,0,0,675,675,,
+early_fusion_seed43,675,675,0,617,0,0,0,675,675,,
+early_fusion_seed44,675,675,0,617,0,0,0,675,675,,
+mynn,714,714,0,609,0,39,0,714,714,675.0,609.0
+ysu,714,714,0,609,0,39,0,714,714,675.0,609.0
+myj,714,714,0,609,0,39,0,714,714,675.0,609.0

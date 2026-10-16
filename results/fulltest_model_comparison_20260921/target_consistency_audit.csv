@@ -1,0 +1,16 @@
+﻿frame,max_abs_target_diff_wm2,target_mismatch_rows
+solfus_seed42,0.0,0
+solfus_seed43,0.0,0
+solfus_seed44,0.0,0
+sat_convlstm_seed42,0.0,0
+sat_convlstm_seed43,0.0,0
+sat_convlstm_seed44,0.0,0
+wrf_transformer_seed42,0.0,0
+wrf_transformer_seed43,0.0,0
+wrf_transformer_seed44,0.0,0
+early_fusion_seed42,0.0,0
+early_fusion_seed43,0.0,0
+early_fusion_seed44,0.0,0
+mynn,4.999947122996673e-09,0
+ysu,4.999947122996673e-09,0
+myj,4.999947122996673e-09,0

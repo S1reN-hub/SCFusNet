@@ -1,0 +1,17 @@
+[
+  {
+    "stage": "satellite",
+    "loss": 3.187908172607422,
+    "peak_cuda_bytes": 314091008
+  },
+  {
+    "stage": "nwp",
+    "loss": 2.353116035461426,
+    "peak_cuda_bytes": 2068174336
+  },
+  {
+    "stage": "fusion",
+    "loss": 1.7276926040649414,
+    "peak_cuda_bytes": 281313792
+  }
+]

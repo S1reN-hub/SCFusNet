@@ -1,0 +1,76 @@
+{
+  "schema_version": "wrf_pbl_fulltest_metrics_v1",
+  "generated_utc": "2026-09-21T07:17:00.193704+00:00",
+  "selection": "manifests/wrf_pbl_fulltest_20260921/pbl_fulltest_119_selected.csv",
+  "sample_count": 119,
+  "point_count": 714,
+  "common_valid_count": 675,
+  "common_daylight_valid_count": 609,
+  "evaluation_mask": "common_daylight_valid = frozen GHI label valid AND finite MYNN/YSU/MYJ predictions AND solar cosine > 0",
+  "normalization": "nRMSE and nMBE are percentages normalized by mean observed GHI over the same common daylight mask",
+  "prediction_definition": "hourly GHI = diff(ACSWDNB endpoints) / 3600; ACSWDNB in J m-2 and predictions in W m-2",
+  "overall_common_daylight": {
+    "mynn": {
+      "count": 609,
+      "mean_observed_wm2": 522.0389742779638,
+      "rmse_wm2": 127.91824823665344,
+      "nrmse_pct": 24.503582019633335,
+      "mae_wm2": 76.6064508210509,
+      "mbe_wm2": 43.30756501678161,
+      "nmbe_pct": 8.295848997994957,
+      "r2": 0.8325986008821978
+    },
+    "ysu": {
+      "count": 609,
+      "mean_observed_wm2": 522.0389742779638,
+      "rmse_wm2": 127.41470506084518,
+      "nrmse_pct": 24.40712501151345,
+      "mae_wm2": 76.4411382227422,
+      "mbe_wm2": 34.49768015909688,
+      "nmbe_pct": 6.608257593565862,
+      "r2": 0.8339139397690297
+    },
+    "myj": {
+      "count": 609,
+      "mean_observed_wm2": 522.0389742779638,
+      "rmse_wm2": 134.91214309819313,
+      "nrmse_pct": 25.843308592963037,
+      "mae_wm2": 82.10172816146141,
+      "mbe_wm2": 35.3671768507225,
+      "nmbe_pct": 6.774815405236576,
+      "r2": 0.8137929331852394
+    }
+  },
+  "overall_common_all_valid": {
+    "mynn": {
+      "count": 675,
+      "mean_observed_wm2": 471.219830128,
+      "rmse_wm2": 121.50672293073815,
+      "nrmse_pct": 25.785570802003942,
+      "mae_wm2": 69.18579664185185,
+      "mbe_wm2": 39.07617966807407,
+      "nmbe_pct": 8.292558413227132,
+      "r2": 0.8682123701190932
+    },
+    "ysu": {
+      "count": 675,
+      "mean_observed_wm2": 471.219830128,
+      "rmse_wm2": 121.02851625703865,
+      "nrmse_pct": 25.68408808775365,
+      "mae_wm2": 69.03642461386667,
+      "mbe_wm2": 31.128428948118515,
+      "nmbe_pct": 6.605925081646698,
+      "r2": 0.8692476660633109
+    },
+    "myj": {
+      "count": 675,
+      "mean_observed_wm2": 471.219830128,
+      "rmse_wm2": 128.14972450240552,
+      "nrmse_pct": 27.195316561188758,
+      "mae_wm2": 74.14348806823703,
+      "mbe_wm2": 31.91250152394074,
+      "nmbe_pct": 6.772317182677175,
+      "r2": 0.8534082986502367
+    }
+  }
+}

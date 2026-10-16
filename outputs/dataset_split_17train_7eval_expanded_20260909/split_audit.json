@@ -1,0 +1,59 @@
+{
+  "counts": {
+    "train": {
+      "cycles": 86,
+      "stations": 17,
+      "cases": 1224,
+      "evaluation_station_cases": 364,
+      "non_evaluation_station_cases": 860,
+      "geometry_eligible_hours": 6549
+    },
+    "validation": {
+      "cycles": 17,
+      "stations": 7,
+      "cases": 119,
+      "geometry_eligible_hours": 641
+    },
+    "test": {
+      "cycles": 17,
+      "stations": 7,
+      "cases": 119,
+      "geometry_eligible_hours": 639
+    }
+  },
+  "overlap_edges": [
+    [
+      "2023071500",
+      "2023071600"
+    ],
+    [
+      "2024022000",
+      "2024022300"
+    ],
+    [
+      "2024083100",
+      "2024090200"
+    ]
+  ],
+  "overlap_groups": 83,
+  "cross_split_station_hour_overlap": 0,
+  "cross_split_target_overlap": 0,
+  "validation_cycles_present_in_training_at_other_stations": 17,
+  "test_cycles_present_in_training_at_other_stations": 17,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "metadata_balance_objective": 9.0374235988981,
+  "model_outputs_used": false,
+  "labels_used": false,
+  "old_to_new_evaluation_cycle": {
+    "train->train": 34,
+    "train->test": 14,
+    "train->validation": 14,
+    "test->test": 3,
+    "validation->train": 9,
+    "test->train": 9,
+    "validation->validation": 2,
+    "test->validation": 1
+  },
+  "training_launched": false
+}

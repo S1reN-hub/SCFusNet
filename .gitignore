@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+**/cds_accounts.json
+**/credentials.json
+**/hosts.yml
+**/known_hosts
+node_modules/
+reproduction/

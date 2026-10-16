@@ -1,0 +1,20 @@
+{
+  "dataset_root": "/root/autodl-tmp/guizhou_v4/data/derived/windcloud_v4_all_1462_stationaware",
+  "split_config": "/root/autodl-tmp/guizhou_mlp17_7eval_code_20260909/configs/dataset_split_17train_7eval_expanded_20260909.json",
+  "output_dir": "/root/autodl-tmp/guizhou_baselines_v4_20260921_parallel/early_fusion/seed44",
+  "model": "early_fusion",
+  "seed": 44,
+  "device": "cuda",
+  "precision": "bf16",
+  "batch_size": 4,
+  "workers": 0,
+  "threads": 3,
+  "epochs": 50,
+  "patience": 8,
+  "learning_rate": 0.0002,
+  "weight_decay": 0.0001,
+  "d_model": 64,
+  "transformer_layers": 2,
+  "dropout": 0.1,
+  "smoke": false
+}

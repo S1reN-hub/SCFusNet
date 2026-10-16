@@ -1,0 +1,634 @@
+{
+  "reference_frame": "solfus_seed42",
+  "key_columns": [
+    "sample_id",
+    "station_id",
+    "cycle",
+    "lead"
+  ],
+  "all_frames": [
+    "solfus_seed42",
+    "solfus_seed43",
+    "solfus_seed44",
+    "sat_convlstm_seed42",
+    "sat_convlstm_seed43",
+    "sat_convlstm_seed44",
+    "wrf_transformer_seed42",
+    "wrf_transformer_seed43",
+    "wrf_transformer_seed44",
+    "early_fusion_seed42",
+    "early_fusion_seed43",
+    "early_fusion_seed44",
+    "mynn",
+    "ysu",
+    "myj"
+  ],
+  "key_audit": [
+    {
+      "frame": "solfus_seed42",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 601,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "solfus_seed43",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 601,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "solfus_seed44",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 601,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "sat_convlstm_seed42",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "sat_convlstm_seed43",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "sat_convlstm_seed44",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "wrf_transformer_seed42",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "wrf_transformer_seed43",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "wrf_transformer_seed44",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "early_fusion_seed42",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "early_fusion_seed43",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "early_fusion_seed44",
+      "rows": 675,
+      "unique_keys": 675,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 617,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 0,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 675,
+      "finite_prediction_rows": 675
+    },
+    {
+      "frame": "mynn",
+      "rows": 714,
+      "unique_keys": 714,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 609,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 39,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 714,
+      "finite_prediction_rows": 714,
+      "common_valid_rows": 675,
+      "common_daylight_valid_rows": 609
+    },
+    {
+      "frame": "ysu",
+      "rows": 714,
+      "unique_keys": 714,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 609,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 39,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 714,
+      "finite_prediction_rows": 714,
+      "common_valid_rows": 675,
+      "common_daylight_valid_rows": 609
+    },
+    {
+      "frame": "myj",
+      "rows": 714,
+      "unique_keys": 714,
+      "duplicate_key_rows": 0,
+      "daylight_rows": 609,
+      "missing_keys_vs_reference": 0,
+      "extra_keys_vs_reference": 39,
+      "missing_keys_vs_common_intersection": 0,
+      "finite_target_rows": 714,
+      "finite_prediction_rows": 714,
+      "common_valid_rows": 675,
+      "common_daylight_valid_rows": 609
+    }
+  ],
+  "target_consistency": [
+    {
+      "frame": "solfus_seed42",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "solfus_seed43",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "solfus_seed44",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "sat_convlstm_seed42",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "sat_convlstm_seed43",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "sat_convlstm_seed44",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "wrf_transformer_seed42",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "wrf_transformer_seed43",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "wrf_transformer_seed44",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "early_fusion_seed42",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "early_fusion_seed43",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "early_fusion_seed44",
+      "max_abs_target_diff_wm2": 0.0,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "mynn",
+      "max_abs_target_diff_wm2": 4.999947122996673e-09,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "ysu",
+      "max_abs_target_diff_wm2": 4.999947122996673e-09,
+      "target_mismatch_rows": 0
+    },
+    {
+      "frame": "myj",
+      "max_abs_target_diff_wm2": 4.999947122996673e-09,
+      "target_mismatch_rows": 0
+    }
+  ],
+  "exclusion_audit": [
+    {
+      "frame": "solfus_seed42",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 74,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "solfus_seed43",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 74,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "solfus_seed44",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 74,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "sat_convlstm_seed42",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "sat_convlstm_seed43",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "sat_convlstm_seed44",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "wrf_transformer_seed42",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "wrf_transformer_seed43",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "wrf_transformer_seed44",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "early_fusion_seed42",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "early_fusion_seed43",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "early_fusion_seed44",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 58,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601
+    },
+    {
+      "frame": "mynn",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 66,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601,
+      "common_valid_fail_rows": 0,
+      "common_daylight_valid_fail_rows": 66
+    },
+    {
+      "frame": "ysu",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 66,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601,
+      "common_valid_fail_rows": 0,
+      "common_daylight_valid_fail_rows": 66
+    },
+    {
+      "frame": "myj",
+      "rows_in_reference_key_intersection": 675,
+      "daylight_fail_rows": 66,
+      "target_nonfinite_rows": 0,
+      "prediction_nonfinite_rows": 0,
+      "rows_retained_in_common": 601,
+      "common_valid_fail_rows": 0,
+      "common_daylight_valid_fail_rows": 66
+    }
+  ],
+  "reference_rows": 675,
+  "reference_unique_keys": 675,
+  "key_intersection_rows": 675,
+  "common_rows": 601,
+  "common_unique_sample_ids": 110,
+  "common_unique_cycles": 17,
+  "common_unique_stations": 7,
+  "common_lead_counts": {
+    "1": 100,
+    "2": 100,
+    "3": 98,
+    "4": 100,
+    "5": 103,
+    "6": 100
+  },
+  "solfus_weight_identity": [
+    {
+      "seed": 42,
+      "max_abs_identity_diff_wm2": 9.971627150662243e-05,
+      "mean_abs_identity_diff_wm2": 1.9104387272230606e-05,
+      "rows_gt_1e-3": 0
+    },
+    {
+      "seed": 43,
+      "max_abs_identity_diff_wm2": 0.00010435952572152019,
+      "mean_abs_identity_diff_wm2": 1.7480250813911258e-05,
+      "rows_gt_1e-3": 0
+    },
+    {
+      "seed": 44,
+      "max_abs_identity_diff_wm2": 0.0001139352098107338,
+      "mean_abs_identity_diff_wm2": 1.8906829059078728e-05,
+      "rows_gt_1e-3": 0
+    }
+  ],
+  "pbl_raw_export": {
+    "path": "D:\\project\\guizhou\\results\\wrf_pbl_fulltest_20260921\\predictions_fulltest_6lead.csv",
+    "rows": 714,
+    "unique_keys": 714,
+    "cases": 119,
+    "cycles": 17,
+    "common_valid_rows": 675,
+    "common_daylight_valid_rows": 609,
+    "extra_keys_not_in_dl_solfus_reference": 39,
+    "common_key_rows_with_dl_solfus": 675,
+    "merged": true
+  },
+  "generated_local": "2026-09-21",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "metric_scope": "fully common daylight-valid rows across all frozen exports",
+  "common_data": {
+    "rows": 601,
+    "sample_ids": 110,
+    "stations": 7,
+    "cycles": 17,
+    "leads": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "seed_policy": "SolFUS and each DL baseline use seeds 42,43,44; mean ± seed SD; seeds are not independent observations",
+  "model_roles": {
+    "mynn": {
+      "display": "MYNN (WRF-PBL)",
+      "group": "traditional WRF/PBL",
+      "role": "deterministic direct WRF-PBL prediction"
+    },
+    "ysu": {
+      "display": "YSU (WRF-PBL)",
+      "group": "traditional WRF/PBL",
+      "role": "deterministic direct WRF-PBL prediction"
+    },
+    "myj": {
+      "display": "MYJ (WRF-PBL)",
+      "group": "traditional WRF/PBL",
+      "role": "deterministic direct WRF-PBL prediction"
+    },
+    "nwp_branch": {
+      "display": "WRF-NWP branch",
+      "group": "learned NWP branch",
+      "role": "frozen test prediction"
+    },
+    "sat_convlstm": {
+      "display": "Sat-ConvLSTM",
+      "group": "single-source DL",
+      "role": "frozen test prediction"
+    },
+    "wrf_transformer": {
+      "display": "WRF-Transformer",
+      "group": "single-source DL",
+      "role": "frozen test prediction"
+    },
+    "early_fusion": {
+      "display": "EarlyFusion-Transformer",
+      "group": "conventional fusion",
+      "role": "frozen test prediction"
+    },
+    "solfus": {
+      "display": "SolFUS-Net",
+      "group": "SolFUS-Net",
+      "role": "frozen test prediction"
+    }
+  },
+  "wrf_nwp_branch_definition": "nwp column from SolFUS frozen test export; this is a learned NWP branch and is not labelled as traditional WRF",
+  "traditional_wrf_pbl_definition": "mynn, ysu, and myj columns from the direct fulltest WRF-PBL export",
+  "source_sha256": {
+    "solfus_seed42": "baecc69136aa96a595aa4678b5183d14d27d195a32516cee4ab1322533fa318c",
+    "solfus_seed43": "6125cbd048acbbde110f91f3a8404fd54acd0af6c824d6037f86d769ab9dd23f",
+    "solfus_seed44": "e878d0ca8ec0969034c3650a11608e1a169ec9096f1edafe6e930dc4795af480",
+    "sat_convlstm_seed42": "4b555f5d8397c48c72f851456bf639eb1b06df2bececc08c33f94007492b6fc3",
+    "sat_convlstm_seed43": "075e03fe1c2daf0808c52d662ddbf5d8881fe890819dd5039ef21c20e80485e0",
+    "sat_convlstm_seed44": "ccf7f5522e832dc06a8fa0285a565601f35f4370f239b35807fc662acaebe134",
+    "wrf_transformer_seed42": "36f8bd0853bb58504c7ba7d269624695b1c002a07195326dd9b1d3927dc62b7f",
+    "wrf_transformer_seed43": "8857df45d61504913c8b84e51cb7da3ceafb15851adf241129fa05e0289293b0",
+    "wrf_transformer_seed44": "d2e0259115ffcdcd7be5032aa91ae13765efae50a3614872290cd69b15625a28",
+    "early_fusion_seed42": "f6ec40c86815351c4a0c47cdf33c62883a504730033accb34bf49b6bbf27ce7e",
+    "early_fusion_seed43": "060b1be73cfc84689e30ceaf6385d04bcfba978fc1db8503a4f436bbd517a795",
+    "early_fusion_seed44": "bfb13c33a8a18bda56111287957a5e4b16e539f094d33924818caa3c623cc332",
+    "wrf_pbl_fulltest": "c49e86cd4ff84bd9066816c90cefe8df2ebe252fb8d39822f3aa2f270fa73df4",
+    "smart_persistence": "00c45a4ea15405fd8533e30d113ccaa9366edd6b6d20ea935417e0cd22dd5cc3"
+  },
+  "cache": {
+    "path": "D:\\project\\guizhou\\outputs\\mlp17_7eval_training_20260909\\review\\test_7station\\test_cache.pt",
+    "exists": true,
+    "meta_cases": 119,
+    "common_rows_matched": 601,
+    "max_abs_target_diff_wm2": 1.1368683772161603e-13,
+    "target_mismatch_rows": 0,
+    "context_column_used": 1,
+    "clear_sky_definition": "Haurwitz clear-sky GHI from test_cache.pt context[...,1] * 1000",
+    "clear_sky_min_wm2": 61.951534271240234,
+    "clear_sky_max_wm2": 1027.1192626953125
+  },
+  "pbl": {
+    "path": "D:\\project\\guizhou\\results\\wrf_pbl_fulltest_20260921\\predictions_fulltest_6lead.csv",
+    "rows": 714,
+    "unique_keys": 714,
+    "cases": 119,
+    "cycles": 17,
+    "common_valid_rows": 675,
+    "common_daylight_valid_rows": 609,
+    "extra_keys_not_in_dl_solfus_reference": 39,
+    "common_key_rows_with_dl_solfus": 675,
+    "merged": true
+  },
+  "radiation_grouping": {
+    "feature": "observed total variation of k*=target/Haurwitz clear-sky GHI",
+    "thresholds": {
+      "stable_lt": 0.2,
+      "transitional_lt": 0.6,
+      "complex_ge": 0.6
+    },
+    "assigned_cases": 107,
+    "unassigned_cases": 3,
+    "selection_uses_model_error": false
+  },
+  "solfus_weight_diagnostic": {
+    "definition": "satellite_weight emitted by frozen SolFUS export; prediction identity checked against weight*satellite+(1-weight)*nwp",
+    "output": "solfus_weight_by_lead.csv"
+  },
+  "figure_contract": {
+    "core_conclusion": "Across the complete daylight test set and the corresponding smart-persistence comparison set, the seven primary methods are compared with overall MAE, FS, and observation–prediction alignment against direct WRF-PBL and learning baselines.",
+    "archetype": "asymmetric mixed-modality quantitative figure",
+    "primary_methods": [
+      "MYNN (WRF-PBL)",
+      "YSU (WRF-PBL)",
+      "MYJ (WRF-PBL)",
+      "Sat-ConvLSTM",
+      "WRF-Transformer",
+      "EarlyFusion-Transformer",
+      "SolFUS-Net"
+    ],
+    "excluded_internal_reference": "WRF-NWP branch (retained in source metrics and audit tables; excluded from Fig. 4-1)",
+    "panel_a": "overall MAE bars for seven methods; learning bars are three-seed means and PBL bars are deterministic; no single-seed points or error bars are overlaid",
+    "panel_b": "overall FS bars against smart persistence for seven methods; one mean value is labelled just above each bar",
+    "panel_c": "vertically aligned 3+2+2 observation–prediction density grid with physically square cells and an independent far-right point-density scale; PBL clouds contain 601 points and learning clouds contain 601 × 3 seed points",
+    "layout": "fixed 173 mm × 117 mm canvas; outer 1 × 2 split with approximately 38% left metric zone and 62% right density grid; panel titles and vertical extents aligned",
+    "legend_order": [
+      "MYNN",
+      "YSU",
+      "MYJ",
+      "Sat-ConvLSTM",
+      "WRF-Transformer",
+      "EarlyFusion-Transformer",
+      "SolFUS-Net"
+    ],
+    "overall_bar_width": 0.68,
+    "semantic_palette": {
+      "MYNN": "#9A4D8E",
+      "YSU": "#D9903D",
+      "MYJ": "#6BAF77",
+      "Sat-ConvLSTM": "#8CC5DD",
+      "WRF-Transformer": "#42949E",
+      "EarlyFusion-Transformer": "#E9A6A1",
+      "SolFUS-Net": "#0F4D92"
+    },
+    "axis_label_policy": "shared right-grid x/y labels; x ticks retained on the lowest occupied scatter in each column and y ticks on the left column",
+    "statistics_note": "Learning-model MAE, FS, RMSE, and R² are calculated separately for seeds 42, 43, and 44; the visible summaries report the three-seed mean and pooling is used only for density rendering",
+    "exports": [
+      "SVG",
+      "PDF",
+      "TIFF 600 dpi",
+      "PNG 600 dpi"
+    ]
+  },
+  "figure_qa": {
+    "source_validator": "PASS: 19 PASS, 1 intentional WARN, 0 FAIL (strict; no left-panel uncertainty overlay by design)",
+    "pdf_text_audit": "PASS: 98 text runs, minimum rendered glyph 5.0 pt >= 5 pt",
+    "visual_review": "PASS: final-size PNG checked panel by panel; no clipping, axis-label clipping, or title collisions; left MAE/FS panels and right square density grid are aligned"
+  }
+}

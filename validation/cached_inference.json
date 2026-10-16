@@ -1,0 +1,22 @@
+{
+  "scope": "frozen expert cache to dynamic MLP fusion; 601 common rows",
+  "cache_sha256": "538409020ef8880486c3b73e31495efd75d45a067d1afe8de83dfc5194c70f64",
+  "seeds": {
+    "42": {
+      "rows": 601,
+      "max_absolute_difference": 0.00012207031261368684,
+      "checkpoint_sha256": "455c0ec0af993a72ce6cf68f77fd94d44c3191bcd49753e920fdc66f465d08ea"
+    },
+    "43": {
+      "rows": 601,
+      "max_absolute_difference": 0.0001220703125,
+      "checkpoint_sha256": "5696fc494b44be48b32a108ae5fb45e9f16a493b3806c0061a934867e87709af"
+    },
+    "44": {
+      "rows": 601,
+      "max_absolute_difference": 0.00012207031261368684,
+      "checkpoint_sha256": "804e7718556bb803ba8e950bc20b4f7369bf125689da47f9f8f2150a7a4d1844"
+    }
+  },
+  "assertions_passed": true
+}

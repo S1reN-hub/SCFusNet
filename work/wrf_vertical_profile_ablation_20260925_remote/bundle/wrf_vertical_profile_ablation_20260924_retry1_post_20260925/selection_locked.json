@@ -1,0 +1,20 @@
+{
+  "locked": true,
+  "variant": "wrf_vertical_profile_mean_repeated_v1",
+  "test_accessed_before_lock": false,
+  "expert_checkpoint_sha256": "34ef5282ffe48cacc987ea4f8d183bfa7fb803e1ff96e58beac8b0613007f560",
+  "normalization_sha256": "c4173d94af9cd6e4fc25a40ef1a0aa15ee04ff8934cdf2f7adad21b6aebcb1ff",
+  "train_cache_sha256": "b839cf1ec8dbc735888032522d97ad732ef9fcae89d1f53ff9fa2e0aeefa2ef4",
+  "validation_cache_sha256": "a8c4a59a21285c249b164d388366a6234bb3a0bfe5a82b1b130578b282ae8955",
+  "head_best_epochs": {
+    "mlp_seed42": 4,
+    "mlp_seed43": 3,
+    "mlp_seed44": 3
+  },
+  "head_checkpoint_sha256": {
+    "42": "6f97f100f79bf2223ce8abd10070900794d56c3bf2462551aec8e1a85b823a90",
+    "43": "d4028fa319e23d8869be42f466b65c55ca0336a1df3aab6ae4d832272adbc5b9",
+    "44": "4b59866d29dc7f0cabafdfb895864722c93f3954ae79129d1d06d7599486aef6"
+  },
+  "validation_metrics_sha256": "aa3efcf7707e23192287c963b49a7ae42e3c5ce044897fb7ccd71fada0d33e05"
+}

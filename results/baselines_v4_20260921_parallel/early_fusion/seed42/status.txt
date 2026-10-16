@@ -1,0 +1,4 @@
+launched_utc=2026-09-21T11:03:54+08:00
+model=early_fusion
+seed=42
+threads=6

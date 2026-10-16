@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "base_template": "D:\\project\\guizhou\\wrf_config\\namelist.input.short06.template",
+  "base_template_sha256": "6ac214a17c050530c347a44a03246c05d7a5a07e2fc38dc3d37db35b52e56c3b",
+  "variant_checks": [
+    {
+      "scheme": "ysu",
+      "patch": "D:\\project\\guizhou\\wrf_config\\pbl_compare\\namelist.input.short06.ysu.patch",
+      "patch_sha256": "cc5d661a3b66ad2c81d250d2d0fc33028b327b9eb00b3ddf5aefb33cf62e09d5",
+      "expected_bl_pbl_physics": "1, 1",
+      "expected_sf_sfclay_physics": "1, 1",
+      "patch_content_ok": true
+    },
+    {
+      "scheme": "myj",
+      "patch": "D:\\project\\guizhou\\wrf_config\\pbl_compare\\namelist.input.short06.myj.patch",
+      "patch_sha256": "299037f3ccc0d1ac6ba2594141c73c6e791f91e3971de6241db9f896e9950706",
+      "expected_bl_pbl_physics": "2, 2",
+      "expected_sf_sfclay_physics": "2, 2",
+      "patch_content_ok": true
+    },
+    {
+      "scheme": "mynn",
+      "patch": "D:\\project\\guizhou\\wrf_config\\pbl_compare\\namelist.input.short06.mynn.patch",
+      "patch_sha256": "42f8284c338f6151c0c9010303ea4b11582365f8521e57196104ac174f42cd17",
+      "expected_bl_pbl_physics": "5, 5",
+      "expected_sf_sfclay_physics": "5, 5",
+      "patch_content_ok": true
+    }
+  ],
+  "rendered_case_count": 0,
+  "rendered_case_errors": [],
+  "errors": []
+}

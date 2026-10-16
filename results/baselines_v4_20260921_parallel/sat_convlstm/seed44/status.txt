@@ -1,0 +1,5 @@
+launched_utc=2026-09-21T11:24:03+08:00
+model=sat_convlstm
+seed=44
+threads=4
+retry_after_host_ram_kill=true

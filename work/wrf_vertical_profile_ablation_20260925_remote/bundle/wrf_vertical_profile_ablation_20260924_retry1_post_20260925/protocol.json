@@ -1,0 +1,36 @@
+{
+  "variant": "wrf_vertical_profile_mean_repeated_v1",
+  "postprocess_only": true,
+  "expert_run": "/root/autodl-tmp/guizhou_mlp17_7eval_run_20260909/wrf_vertical_profile_ablation_20260924_retry1",
+  "train_cases": 1224,
+  "validation_cases": 119,
+  "test_cases": 119,
+  "split_config_sha256": "12d8acad928f9095fe56b171bf398b72eeff3a4977b4618553491f89be8068ab",
+  "cv_sha256": "d869649cdd6206c8fee1bead24bb32bf4378fd3da8ef48b22af81a66f5d226c2",
+  "expert_checkpoint_sha256": "34ef5282ffe48cacc987ea4f8d183bfa7fb803e1ff96e58beac8b0613007f560",
+  "expert_normalization_sha256": "c4173d94af9cd6e4fc25a40ef1a0aa15ee04ff8934cdf2f7adad21b6aebcb1ff",
+  "expert_metrics_sha256": "08f8a48ee47e1a43f56b8b8a3e67a4151dc16597c9aee87ee0aedc0aa6c3977e",
+  "reference_implementation_sha256": "72c47fc07867bb74fc453bca092cb011a296e57cdb1887fa4a201de28f8293ec",
+  "test_accessed_before_selection_lock": false,
+  "domains": [
+    "d02",
+    "d01"
+  ],
+  "input_fields": [
+    "nwp_d02_3d_raw",
+    "nwp_d01_3d_raw"
+  ],
+  "normalization_order": "collapse raw physical fields before train-only fold normalization",
+  "collapse": "valid & finite & channel-available weighted mean over 10 levels, repeated over levels",
+  "mask": "per-column any-valid over the original 10 levels, repeated as Boolean across levels",
+  "retained": [
+    "surface fields",
+    "static grids",
+    "GHI anchors",
+    "satellite inputs and checkpoint",
+    "solar/time inputs",
+    "targets and masks",
+    "source/channel availability"
+  ],
+  "test_accessed_during_training_or_normalization": false
+}

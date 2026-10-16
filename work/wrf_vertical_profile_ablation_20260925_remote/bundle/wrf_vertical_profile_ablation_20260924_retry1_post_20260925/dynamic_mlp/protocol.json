@@ -1,0 +1,27 @@
+{
+  "architecture": "established_dynamic_mlp_20260908",
+  "architecture_sha256": "72c47fc07867bb74fc453bca092cb011a296e57cdb1887fa4a201de28f8293ec",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "train_cases": 1224,
+  "validation_cases": 119,
+  "evaluation_stations": [
+    "GOB",
+    "DRA",
+    "IZA",
+    "TBL",
+    "SEL",
+    "GWN",
+    "CAB"
+  ],
+  "training_sampling": "station_balanced_with_replacement",
+  "normalization": "station_balanced_train_only",
+  "temporal_baseline": "station-balanced analytic train SSE optimum",
+  "test_accessed": false,
+  "max_epochs": 40,
+  "patience": 8,
+  "batch_size": 32
+}

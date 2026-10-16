@@ -1,0 +1,182 @@
+[
+  {
+    "candidate": "d20_c80",
+    "selected": false,
+    "anomaly_min": 0.2,
+    "common_clear_min": 0.8,
+    "admitted_hours": 0,
+    "admitted_cases": 0,
+    "valid_hours": 601,
+    "by_station": {},
+    "validation_mse_gain": 0.06128192159364213,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.745471080097474,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.70741251568196,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 62.301019969015606
+  },
+  {
+    "candidate": "d20_c75",
+    "selected": false,
+    "anomaly_min": 0.2,
+    "common_clear_min": 0.75,
+    "admitted_hours": 0,
+    "admitted_cases": 0,
+    "valid_hours": 601,
+    "by_station": {},
+    "validation_mse_gain": 0.01701983362424168,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.745508349679817,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.70741251568196,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 62.301019969015606
+  },
+  {
+    "candidate": "d20_c70",
+    "selected": false,
+    "anomaly_min": 0.2,
+    "common_clear_min": 0.7,
+    "admitted_hours": 1,
+    "admitted_cases": 1,
+    "valid_hours": 601,
+    "by_station": {
+      "TBL": 1
+    },
+    "validation_mse_gain": 0.01874334633430408,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.74550689594018,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.707407425861444,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 62.29995523898125
+  },
+  {
+    "candidate": "d15_c80",
+    "selected": false,
+    "anomaly_min": 0.15,
+    "common_clear_min": 0.8,
+    "admitted_hours": 5,
+    "admitted_cases": 1,
+    "valid_hours": 601,
+    "by_station": {
+      "IZA": 5
+    },
+    "validation_mse_gain": 15.131179478770719,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.73278026963767,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.705726758872416,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 62.272827634002134
+  },
+  {
+    "candidate": "d15_c75",
+    "selected": false,
+    "anomaly_min": 0.15,
+    "common_clear_min": 0.75,
+    "admitted_hours": 5,
+    "admitted_cases": 1,
+    "valid_hours": 601,
+    "by_station": {
+      "IZA": 5
+    },
+    "validation_mse_gain": 9.583482334784398,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.737450956830557,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.706162473653464,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 62.28030088618274
+  },
+  {
+    "candidate": "d15_c70",
+    "selected": false,
+    "anomaly_min": 0.15,
+    "common_clear_min": 0.7,
+    "admitted_hours": 7,
+    "admitted_cases": 3,
+    "valid_hours": 601,
+    "by_station": {
+      "IZA": 5,
+      "TBL": 2
+    },
+    "validation_mse_gain": 7.685918967933806,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.739046197128975,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.708716669237578,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 62.30848966673619
+  },
+  {
+    "candidate": "d10_c80",
+    "selected": false,
+    "anomaly_min": 0.1,
+    "common_clear_min": 0.8,
+    "admitted_hours": 29,
+    "admitted_cases": 10,
+    "valid_hours": 601,
+    "by_station": {
+      "DRA": 4,
+      "GOB": 6,
+      "IZA": 12,
+      "SEL": 4,
+      "TBL": 3
+    },
+    "validation_mse_gain": 22.218697585303744,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.726804842370438,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.68674592275217,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 62.02449817943097
+  },
+  {
+    "candidate": "d10_c75",
+    "selected": false,
+    "anomaly_min": 0.1,
+    "common_clear_min": 0.75,
+    "admitted_hours": 35,
+    "admitted_cases": 10,
+    "valid_hours": 601,
+    "by_station": {
+      "DRA": 5,
+      "GOB": 8,
+      "IZA": 13,
+      "SEL": 5,
+      "TBL": 4
+    },
+    "validation_mse_gain": 30.814159654958832,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.719561474385905,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.670205453316104,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 61.91814441966534
+  },
+  {
+    "candidate": "d10_c70",
+    "selected": true,
+    "anomaly_min": 0.1,
+    "common_clear_min": 0.7,
+    "admitted_hours": 38,
+    "admitted_cases": 10,
+    "valid_hours": 601,
+    "by_station": {
+      "DRA": 5,
+      "GOB": 9,
+      "IZA": 13,
+      "SEL": 5,
+      "TBL": 6
+    },
+    "validation_mse_gain": 30.817268359693724,
+    "validation_before_nrmse": 20.745522705465095,
+    "validation_after_nrmse": 20.719559919154555,
+    "test_before_nrmse": 20.70741251568196,
+    "test_after_nrmse": 20.67569875452847,
+    "test_before_mae": 62.301019969015606,
+    "test_after_mae": 61.979220215241504
+  }
+]

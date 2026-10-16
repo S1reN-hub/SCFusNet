@@ -1,0 +1,19 @@
+{
+  "release_date": "2026-10-16",
+  "name": "SCFusNet",
+  "title": "SCFusNet: Scenario-Conditioned Satellite-NWP Fusion for 1-6-h Solar Irradiance Forecasting",
+  "manuscript_sha256": "b9eff667094c31e0315f89bbebcdeada47c16b5bd5df5d267b1d6650318a36fd",
+  "manuscript_status": "Research manuscript; publication DOI not assigned in this release",
+  "includes_manuscript": false,
+  "scope": "Locally available research code, official split indexes, frozen expert caches, MLP/AOD heads, per-seed predictions and result source tables",
+  "missing_for_end_to_end_training": [
+    "Complete 1462-case satellite/WRF input tensor dataset",
+    "Formal independent-expert best_fusion.pt checkpoint and corresponding input normalization"
+  ],
+  "code_versions": {
+    "src": "Current research implementation; differs from historical training code",
+    "tmp/remote_mlp17_original": "Partial recovered remote implementation snapshot",
+    "tmp/mlp17_7eval_training_bundle_20260909": "Historical launch bundle; differs from the partial recovered snapshot; neither establishes the exact complete formal training implementation"
+  },
+  "license": "No new blanket code or data license assigned; upstream data terms remain applicable"
+}

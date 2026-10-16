@@ -1,0 +1,12 @@
+{
+  "manuscript": "D:\\project\\guizhou\\论文\\前四章_审阅稿_20260909.md",
+  "sha256": "9127a893315c3fe6932e416f598be2b03b90e26e1ce29c52a0b1876d971f8138",
+  "figures": [
+    "figures/figure_1_data_alignment.svg",
+    "figures/Fig3-1_overall_framework.svg",
+    "figures/chapter4_7station_20260912/fig4_1_ground_validation_three_seeds.png",
+    "figures/chapter4_7station_20260912/fig4_2_station_nrmse_fs.png",
+    "figures/chapter4_7station_20260912/fig4_3_source_comparison.png"
+  ],
+  "checks": "metric claims, image paths, four chapters, balanced LaTeX delimiters and table tags, old-result removal passed"
+}

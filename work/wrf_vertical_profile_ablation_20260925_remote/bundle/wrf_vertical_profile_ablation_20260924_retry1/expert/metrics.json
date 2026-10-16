@@ -1,0 +1,5512 @@
+{
+  "schema_version": "scenario_driven_ghi_v4_fold_v1",
+  "fold": 0,
+  "seed": 42,
+  "device": "cuda",
+  "train_cases": 1224,
+  "validation_cases": 119,
+  "precision": "fp32",
+  "split_config": "/root/autodl-tmp/guizhou_v4/data/derived/windcloud_v4_all_1462_stationaware/split_config.json",
+  "training_sampling": "station_balanced",
+  "train_stations": [
+    "ABS",
+    "BON",
+    "CAB",
+    "CNR",
+    "DRA",
+    "FLO",
+    "GOB",
+    "GWN",
+    "ISH",
+    "IZA",
+    "PAR",
+    "PAY",
+    "RUN",
+    "SEL",
+    "TAM",
+    "TAT",
+    "TBL"
+  ],
+  "validation_stations": [
+    "CAB",
+    "DRA",
+    "GOB",
+    "GWN",
+    "IZA",
+    "SEL",
+    "TBL"
+  ],
+  "train_cycle_case_counts": {
+    "2021032300": 17,
+    "2021040200": 17,
+    "2021072300": 17,
+    "2021080200": 17,
+    "2021090200": 10,
+    "2021092300": 10,
+    "2021110200": 10,
+    "2021120200": 17,
+    "2021120900": 10,
+    "2022010200": 10,
+    "2022010900": 17,
+    "2022020200": 10,
+    "2022020900": 17,
+    "2022030200": 17,
+    "2022051600": 10,
+    "2022052300": 17,
+    "2022061600": 17,
+    "2022071600": 10,
+    "2022072300": 10,
+    "2022091600": 17,
+    "2022100900": 17,
+    "2022101600": 17,
+    "2022120200": 10,
+    "2023012000": 10,
+    "2023020200": 17,
+    "2023021000": 10,
+    "2023022300": 17,
+    "2023031600": 17,
+    "2023040500": 17,
+    "2023040900": 17,
+    "2023042300": 17,
+    "2023050500": 17,
+    "2023052300": 10,
+    "2023060200": 10,
+    "2023061600": 10,
+    "2023062500": 17,
+    "2023070200": 10,
+    "2023071500": 17,
+    "2023071600": 17,
+    "2023080900": 17,
+    "2023090200": 10,
+    "2023092300": 17,
+    "2023100200": 17,
+    "2023100500": 10,
+    "2023101600": 17,
+    "2023110500": 17,
+    "2023121000": 10,
+    "2024012000": 10,
+    "2024020900": 10,
+    "2024022000": 17,
+    "2024022300": 17,
+    "2024030100": 17,
+    "2024031600": 10,
+    "2024032000": 17,
+    "2024040900": 17,
+    "2024041600": 10,
+    "2024042500": 10,
+    "2024050200": 17,
+    "2024052000": 17,
+    "2024061000": 17,
+    "2024062300": 10,
+    "2024070500": 17,
+    "2024072000": 10,
+    "2024080200": 17,
+    "2024082500": 10,
+    "2024083100": 17,
+    "2024090200": 17,
+    "2024091000": 10,
+    "2024092000": 17,
+    "2024100200": 17,
+    "2024102000": 10,
+    "2024111500": 17,
+    "2024121600": 17,
+    "2024122000": 10,
+    "2025011000": 17,
+    "2025021500": 10,
+    "2025031500": 17,
+    "2025041500": 10,
+    "2025051500": 17,
+    "2025061000": 17,
+    "2025071500": 10,
+    "2025081500": 17,
+    "2025091500": 17,
+    "2025101000": 10,
+    "2025111000": 17,
+    "2025122000": 17
+  },
+  "validation_cycle_case_counts": {
+    "2021092300": 7,
+    "2021120900": 7,
+    "2022020200": 7,
+    "2022071600": 7,
+    "2022120200": 7,
+    "2023021000": 7,
+    "2023052300": 7,
+    "2023061600": 7,
+    "2023070200": 7,
+    "2023121000": 7,
+    "2024031600": 7,
+    "2024042500": 7,
+    "2024072000": 7,
+    "2024091000": 7,
+    "2024122000": 7,
+    "2025021500": 7,
+    "2025041500": 7
+  },
+  "parameter_count": 4437066,
+  "test_accessed": false,
+  "architecture_revision": "v4_satellite_direct_dynamic_r3",
+  "satellite_path": "dual",
+  "routing_supervision": "none",
+  "routing_quality": "legacy",
+  "final_validation": {
+    "rmse_wm2": 108.47594451904297,
+    "mae_wm2": 61.35956954956055,
+    "mbe_wm2": 16.699905395507812,
+    "daylight_rmse_wm2": 113.31453704833984,
+    "macro_station_daylight_rmse_wm2": 109.2971660069057,
+    "count": 682,
+    "daylight_count": 625,
+    "by_lead": {
+      "1": {
+        "rmse_wm2": 71.99380493164062,
+        "mae_wm2": 43.86084747314453,
+        "mbe_wm2": 18.13983726501465,
+        "daylight_rmse_wm2": 75.07330322265625,
+        "macro_station_daylight_rmse_wm2": 72.48324584960938,
+        "count": 112,
+        "daylight_count": 103
+      },
+      "2": {
+        "rmse_wm2": 112.0417251586914,
+        "mae_wm2": 62.88881301879883,
+        "mbe_wm2": 12.235121726989746,
+        "daylight_rmse_wm2": 117.40557098388672,
+        "macro_station_daylight_rmse_wm2": 109.95295006888253,
+        "count": 112,
+        "daylight_count": 102
+      },
+      "3": {
+        "rmse_wm2": 115.25029754638672,
+        "mae_wm2": 66.90483856201172,
+        "mbe_wm2": 16.330951690673828,
+        "daylight_rmse_wm2": 121.19210815429688,
+        "macro_station_daylight_rmse_wm2": 116.86162621634347,
+        "count": 115,
+        "daylight_count": 104
+      },
+      "4": {
+        "rmse_wm2": 113.65550231933594,
+        "mae_wm2": 68.47090911865234,
+        "mbe_wm2": 12.426534652709961,
+        "daylight_rmse_wm2": 118.42633056640625,
+        "macro_station_daylight_rmse_wm2": 111.65844345092773,
+        "count": 114,
+        "daylight_count": 105
+      },
+      "5": {
+        "rmse_wm2": 119.71687316894531,
+        "mae_wm2": 68.53450012207031,
+        "mbe_wm2": 23.569705963134766,
+        "daylight_rmse_wm2": 125.28804016113281,
+        "macro_station_daylight_rmse_wm2": 119.11088344029018,
+        "count": 115,
+        "daylight_count": 105
+      },
+      "6": {
+        "rmse_wm2": 110.43498229980469,
+        "mae_wm2": 57.10575866699219,
+        "mbe_wm2": 17.387182235717773,
+        "daylight_rmse_wm2": 114.52654266357422,
+        "macro_station_daylight_rmse_wm2": 94.14789363316127,
+        "count": 114,
+        "daylight_count": 106
+      }
+    },
+    "transition_rmse_wm2": 27.42841148376465,
+    "transition_count": 62,
+    "high_aod_clear_rmse_wm2": 54.889041900634766,
+    "high_aod_clear_count": 46
+  },
+  "component_validation": {
+    "satellite": {
+      "rmse_wm2": 120.33808135986328,
+      "mae_wm2": 70.76948547363281,
+      "mbe_wm2": 26.933549880981445,
+      "daylight_rmse_wm2": 125.7057876586914,
+      "macro_station_daylight_rmse_wm2": 122.18750381469727,
+      "count": 682,
+      "daylight_count": 625,
+      "by_lead": {
+        "1": {
+          "rmse_wm2": 73.89178466796875,
+          "mae_wm2": 48.19045639038086,
+          "mbe_wm2": 19.46218490600586,
+          "daylight_rmse_wm2": 77.05247497558594,
+          "macro_station_daylight_rmse_wm2": 74.07935006277901,
+          "count": 112,
+          "daylight_count": 103
+        },
+        "2": {
+          "rmse_wm2": 115.43494415283203,
+          "mae_wm2": 64.76118469238281,
+          "mbe_wm2": 10.72093391418457,
+          "daylight_rmse_wm2": 120.96124267578125,
+          "macro_station_daylight_rmse_wm2": 115.23841203962054,
+          "count": 112,
+          "daylight_count": 102
+        },
+        "3": {
+          "rmse_wm2": 119.57862854003906,
+          "mae_wm2": 72.72120666503906,
+          "mbe_wm2": 22.05017852783203,
+          "daylight_rmse_wm2": 125.74357604980469,
+          "macro_station_daylight_rmse_wm2": 123.60991995675224,
+          "count": 115,
+          "daylight_count": 104
+        },
+        "4": {
+          "rmse_wm2": 122.02586364746094,
+          "mae_wm2": 80.37792205810547,
+          "mbe_wm2": 18.787687301635742,
+          "daylight_rmse_wm2": 127.14803314208984,
+          "macro_station_daylight_rmse_wm2": 124.0450461251395,
+          "count": 114,
+          "daylight_count": 105
+        },
+        "5": {
+          "rmse_wm2": 136.67247009277344,
+          "mae_wm2": 78.3505859375,
+          "mbe_wm2": 33.896263122558594,
+          "daylight_rmse_wm2": 143.03268432617188,
+          "macro_station_daylight_rmse_wm2": 134.5630705697196,
+          "count": 115,
+          "daylight_count": 105
+        },
+        "6": {
+          "rmse_wm2": 141.49134826660156,
+          "mae_wm2": 79.63040161132812,
+          "mbe_wm2": 56.250308990478516,
+          "daylight_rmse_wm2": 146.73353576660156,
+          "macro_station_daylight_rmse_wm2": 127.41254643031529,
+          "count": 114,
+          "daylight_count": 106
+        }
+      },
+      "transition_rmse_wm2": 32.83357620239258,
+      "transition_count": 62,
+      "high_aod_clear_rmse_wm2": 67.50465393066406,
+      "high_aod_clear_count": 46
+    },
+    "nwp": {
+      "rmse_wm2": 125.97305297851562,
+      "mae_wm2": 69.43799591064453,
+      "mbe_wm2": 12.958219528198242,
+      "daylight_rmse_wm2": 131.59210205078125,
+      "macro_station_daylight_rmse_wm2": 126.87083217075893,
+      "count": 682,
+      "daylight_count": 625,
+      "by_lead": {
+        "1": {
+          "rmse_wm2": 109.73786926269531,
+          "mae_wm2": 58.54995346069336,
+          "mbe_wm2": 13.451600074768066,
+          "daylight_rmse_wm2": 114.43185424804688,
+          "macro_station_daylight_rmse_wm2": 114.06092071533203,
+          "count": 112,
+          "daylight_count": 103
+        },
+        "2": {
+          "rmse_wm2": 138.80633544921875,
+          "mae_wm2": 75.22886657714844,
+          "mbe_wm2": 14.927027702331543,
+          "daylight_rmse_wm2": 145.45150756835938,
+          "macro_station_daylight_rmse_wm2": 133.8068335396903,
+          "count": 112,
+          "daylight_count": 102
+        },
+        "3": {
+          "rmse_wm2": 137.23667907714844,
+          "mae_wm2": 77.65584564208984,
+          "mbe_wm2": 11.051607131958008,
+          "daylight_rmse_wm2": 144.31201171875,
+          "macro_station_daylight_rmse_wm2": 135.98923219953264,
+          "count": 115,
+          "daylight_count": 104
+        },
+        "4": {
+          "rmse_wm2": 127.95008850097656,
+          "mae_wm2": 75.14249420166016,
+          "mbe_wm2": 9.149554252624512,
+          "daylight_rmse_wm2": 133.32093811035156,
+          "macro_station_daylight_rmse_wm2": 124.25494166782924,
+          "count": 114,
+          "daylight_count": 105
+        },
+        "5": {
+          "rmse_wm2": 124.93541717529297,
+          "mae_wm2": 70.07488250732422,
+          "mbe_wm2": 20.308700561523438,
+          "daylight_rmse_wm2": 130.7494354248047,
+          "macro_station_daylight_rmse_wm2": 124.26828493390765,
+          "count": 115,
+          "daylight_count": 105
+        },
+        "6": {
+          "rmse_wm2": 114.28219604492188,
+          "mae_wm2": 59.808738708496094,
+          "mbe_wm2": 8.856271743774414,
+          "daylight_rmse_wm2": 118.51629638671875,
+          "macro_station_daylight_rmse_wm2": 99.66472598484584,
+          "count": 114,
+          "daylight_count": 106
+        }
+      },
+      "transition_rmse_wm2": 27.741857528686523,
+      "transition_count": 62,
+      "high_aod_clear_rmse_wm2": 96.54609680175781,
+      "high_aod_clear_count": 46
+    },
+    "fusion": {
+      "rmse_wm2": 108.47594451904297,
+      "mae_wm2": 61.35956954956055,
+      "mbe_wm2": 16.699905395507812,
+      "daylight_rmse_wm2": 113.31453704833984,
+      "macro_station_daylight_rmse_wm2": 109.2971660069057,
+      "count": 682,
+      "daylight_count": 625,
+      "by_lead": {
+        "1": {
+          "rmse_wm2": 71.99380493164062,
+          "mae_wm2": 43.86084747314453,
+          "mbe_wm2": 18.13983726501465,
+          "daylight_rmse_wm2": 75.07330322265625,
+          "macro_station_daylight_rmse_wm2": 72.48324584960938,
+          "count": 112,
+          "daylight_count": 103
+        },
+        "2": {
+          "rmse_wm2": 112.0417251586914,
+          "mae_wm2": 62.88881301879883,
+          "mbe_wm2": 12.235121726989746,
+          "daylight_rmse_wm2": 117.40557098388672,
+          "macro_station_daylight_rmse_wm2": 109.95295006888253,
+          "count": 112,
+          "daylight_count": 102
+        },
+        "3": {
+          "rmse_wm2": 115.25029754638672,
+          "mae_wm2": 66.90483856201172,
+          "mbe_wm2": 16.330951690673828,
+          "daylight_rmse_wm2": 121.19210815429688,
+          "macro_station_daylight_rmse_wm2": 116.86162621634347,
+          "count": 115,
+          "daylight_count": 104
+        },
+        "4": {
+          "rmse_wm2": 113.65550231933594,
+          "mae_wm2": 68.47090911865234,
+          "mbe_wm2": 12.426534652709961,
+          "daylight_rmse_wm2": 118.42633056640625,
+          "macro_station_daylight_rmse_wm2": 111.65844345092773,
+          "count": 114,
+          "daylight_count": 105
+        },
+        "5": {
+          "rmse_wm2": 119.71687316894531,
+          "mae_wm2": 68.53450012207031,
+          "mbe_wm2": 23.569705963134766,
+          "daylight_rmse_wm2": 125.28804016113281,
+          "macro_station_daylight_rmse_wm2": 119.11088344029018,
+          "count": 115,
+          "daylight_count": 105
+        },
+        "6": {
+          "rmse_wm2": 110.43498229980469,
+          "mae_wm2": 57.10575866699219,
+          "mbe_wm2": 17.387182235717773,
+          "daylight_rmse_wm2": 114.52654266357422,
+          "macro_station_daylight_rmse_wm2": 94.14789363316127,
+          "count": 114,
+          "daylight_count": 106
+        }
+      },
+      "transition_rmse_wm2": 27.42841148376465,
+      "transition_count": 62,
+      "high_aod_clear_rmse_wm2": 54.889041900634766,
+      "high_aod_clear_count": 46
+    },
+    "transition": {
+      "rmse_wm2": 108.47594451904297,
+      "mae_wm2": 61.35956954956055,
+      "mbe_wm2": 16.699905395507812,
+      "daylight_rmse_wm2": 113.31453704833984,
+      "macro_station_daylight_rmse_wm2": 109.2971660069057,
+      "count": 682,
+      "daylight_count": 625,
+      "by_lead": {
+        "1": {
+          "rmse_wm2": 71.99380493164062,
+          "mae_wm2": 43.86084747314453,
+          "mbe_wm2": 18.13983726501465,
+          "daylight_rmse_wm2": 75.07330322265625,
+          "macro_station_daylight_rmse_wm2": 72.48324584960938,
+          "count": 112,
+          "daylight_count": 103
+        },
+        "2": {
+          "rmse_wm2": 112.0417251586914,
+          "mae_wm2": 62.88881301879883,
+          "mbe_wm2": 12.235121726989746,
+          "daylight_rmse_wm2": 117.40557098388672,
+          "macro_station_daylight_rmse_wm2": 109.95295006888253,
+          "count": 112,
+          "daylight_count": 102
+        },
+        "3": {
+          "rmse_wm2": 115.25029754638672,
+          "mae_wm2": 66.90483856201172,
+          "mbe_wm2": 16.330951690673828,
+          "daylight_rmse_wm2": 121.19210815429688,
+          "macro_station_daylight_rmse_wm2": 116.86162621634347,
+          "count": 115,
+          "daylight_count": 104
+        },
+        "4": {
+          "rmse_wm2": 113.65550231933594,
+          "mae_wm2": 68.47090911865234,
+          "mbe_wm2": 12.426534652709961,
+          "daylight_rmse_wm2": 118.42633056640625,
+          "macro_station_daylight_rmse_wm2": 111.65844345092773,
+          "count": 114,
+          "daylight_count": 105
+        },
+        "5": {
+          "rmse_wm2": 119.71687316894531,
+          "mae_wm2": 68.53450012207031,
+          "mbe_wm2": 23.569705963134766,
+          "daylight_rmse_wm2": 125.28804016113281,
+          "macro_station_daylight_rmse_wm2": 119.11088344029018,
+          "count": 115,
+          "daylight_count": 105
+        },
+        "6": {
+          "rmse_wm2": 110.43498229980469,
+          "mae_wm2": 57.10575866699219,
+          "mbe_wm2": 17.387182235717773,
+          "daylight_rmse_wm2": 114.52654266357422,
+          "macro_station_daylight_rmse_wm2": 94.14789363316127,
+          "count": 114,
+          "daylight_count": 106
+        }
+      },
+      "transition_rmse_wm2": 27.42841148376465,
+      "transition_count": 62,
+      "high_aod_clear_rmse_wm2": 54.889041900634766,
+      "high_aod_clear_count": 46
+    },
+    "aod": {
+      "rmse_wm2": 108.47593688964844,
+      "mae_wm2": 61.35956954956055,
+      "mbe_wm2": 16.69989013671875,
+      "daylight_rmse_wm2": 113.31453704833984,
+      "macro_station_daylight_rmse_wm2": 109.29715892246791,
+      "count": 682,
+      "daylight_count": 625,
+      "by_lead": {
+        "1": {
+          "rmse_wm2": 71.99378967285156,
+          "mae_wm2": 43.86085891723633,
+          "mbe_wm2": 18.139816284179688,
+          "daylight_rmse_wm2": 75.07328796386719,
+          "macro_station_daylight_rmse_wm2": 72.4832273210798,
+          "count": 112,
+          "daylight_count": 103
+        },
+        "2": {
+          "rmse_wm2": 112.04173278808594,
+          "mae_wm2": 62.88882827758789,
+          "mbe_wm2": 12.235106468200684,
+          "daylight_rmse_wm2": 117.40559387207031,
+          "macro_station_daylight_rmse_wm2": 109.95297023228237,
+          "count": 112,
+          "daylight_count": 102
+        },
+        "3": {
+          "rmse_wm2": 115.25030517578125,
+          "mae_wm2": 66.90483093261719,
+          "mbe_wm2": 16.3309383392334,
+          "daylight_rmse_wm2": 121.19210815429688,
+          "macro_station_daylight_rmse_wm2": 116.86163166591099,
+          "count": 115,
+          "daylight_count": 104
+        },
+        "4": {
+          "rmse_wm2": 113.65550994873047,
+          "mae_wm2": 68.47091674804688,
+          "mbe_wm2": 12.42652416229248,
+          "daylight_rmse_wm2": 118.42633056640625,
+          "macro_station_daylight_rmse_wm2": 111.65844781058175,
+          "count": 114,
+          "daylight_count": 105
+        },
+        "5": {
+          "rmse_wm2": 119.71685791015625,
+          "mae_wm2": 68.53450012207031,
+          "mbe_wm2": 23.569692611694336,
+          "daylight_rmse_wm2": 125.28803253173828,
+          "macro_station_daylight_rmse_wm2": 119.11087036132812,
+          "count": 115,
+          "daylight_count": 105
+        },
+        "6": {
+          "rmse_wm2": 110.4349594116211,
+          "mae_wm2": 57.105751037597656,
+          "mbe_wm2": 17.387174606323242,
+          "daylight_rmse_wm2": 114.52651977539062,
+          "macro_station_daylight_rmse_wm2": 94.1478772844587,
+          "count": 114,
+          "daylight_count": 106
+        }
+      },
+      "transition_rmse_wm2": 27.428409576416016,
+      "transition_count": 62,
+      "high_aod_clear_rmse_wm2": 54.88902282714844,
+      "high_aod_clear_count": 46
+    },
+    "joint": {
+      "rmse_wm2": 108.47593688964844,
+      "mae_wm2": 61.35956954956055,
+      "mbe_wm2": 16.69989013671875,
+      "daylight_rmse_wm2": 113.31453704833984,
+      "macro_station_daylight_rmse_wm2": 109.29715892246791,
+      "count": 682,
+      "daylight_count": 625,
+      "by_lead": {
+        "1": {
+          "rmse_wm2": 71.99378967285156,
+          "mae_wm2": 43.86085891723633,
+          "mbe_wm2": 18.139816284179688,
+          "daylight_rmse_wm2": 75.07328796386719,
+          "macro_station_daylight_rmse_wm2": 72.4832273210798,
+          "count": 112,
+          "daylight_count": 103
+        },
+        "2": {
+          "rmse_wm2": 112.04173278808594,
+          "mae_wm2": 62.88882827758789,
+          "mbe_wm2": 12.235106468200684,
+          "daylight_rmse_wm2": 117.40559387207031,
+          "macro_station_daylight_rmse_wm2": 109.95297023228237,
+          "count": 112,
+          "daylight_count": 102
+        },
+        "3": {
+          "rmse_wm2": 115.25030517578125,
+          "mae_wm2": 66.90483093261719,
+          "mbe_wm2": 16.3309383392334,
+          "daylight_rmse_wm2": 121.19210815429688,
+          "macro_station_daylight_rmse_wm2": 116.86163166591099,
+          "count": 115,
+          "daylight_count": 104
+        },
+        "4": {
+          "rmse_wm2": 113.65550994873047,
+          "mae_wm2": 68.47091674804688,
+          "mbe_wm2": 12.42652416229248,
+          "daylight_rmse_wm2": 118.42633056640625,
+          "macro_station_daylight_rmse_wm2": 111.65844781058175,
+          "count": 114,
+          "daylight_count": 105
+        },
+        "5": {
+          "rmse_wm2": 119.71685791015625,
+          "mae_wm2": 68.53450012207031,
+          "mbe_wm2": 23.569692611694336,
+          "daylight_rmse_wm2": 125.28803253173828,
+          "macro_station_daylight_rmse_wm2": 119.11087036132812,
+          "count": 115,
+          "daylight_count": 105
+        },
+        "6": {
+          "rmse_wm2": 110.4349594116211,
+          "mae_wm2": 57.105751037597656,
+          "mbe_wm2": 17.387174606323242,
+          "daylight_rmse_wm2": 114.52651977539062,
+          "macro_station_daylight_rmse_wm2": 94.1478772844587,
+          "count": 114,
+          "daylight_count": 106
+        }
+      },
+      "transition_rmse_wm2": 27.428409576416016,
+      "transition_count": 62,
+      "high_aod_clear_rmse_wm2": 54.88902282714844,
+      "high_aod_clear_count": 46
+    }
+  },
+  "primary_evaluation_stage": "fusion",
+  "lead_prior": [
+    0.7799999713897705,
+    0.6399999856948853,
+    0.47999995946884155,
+    0.3400000035762787,
+    0.23999997973442078,
+    0.17999999225139618
+  ],
+  "history": [
+    {
+      "stage": "nwp",
+      "epoch": 0,
+      "validation": {
+        "rmse_wm2": 144.70257568359375,
+        "mae_wm2": 83.12570190429688,
+        "mbe_wm2": 36.133243560791016,
+        "daylight_rmse_wm2": 151.1570587158203,
+        "macro_station_daylight_rmse_wm2": 147.4869226728167,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 126.94751739501953,
+            "mae_wm2": 71.63855743408203,
+            "mbe_wm2": 61.42505645751953,
+            "daylight_rmse_wm2": 132.3776397705078,
+            "macro_station_daylight_rmse_wm2": 131.48125784737724,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 135.1478271484375,
+            "mae_wm2": 73.33662414550781,
+            "mbe_wm2": 34.64543914794922,
+            "daylight_rmse_wm2": 141.61782836914062,
+            "macro_station_daylight_rmse_wm2": 129.8025965009417,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 130.35459899902344,
+            "mae_wm2": 77.89488983154297,
+            "mbe_wm2": 22.95167350769043,
+            "daylight_rmse_wm2": 137.07510375976562,
+            "macro_station_daylight_rmse_wm2": 131.33788735525948,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 152.64340209960938,
+            "mae_wm2": 90.10618591308594,
+            "mbe_wm2": 23.955677032470703,
+            "daylight_rmse_wm2": 159.05079650878906,
+            "macro_station_daylight_rmse_wm2": 153.27711759294783,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 161.85939025878906,
+            "mae_wm2": 94.67669677734375,
+            "mbe_wm2": 43.010032653808594,
+            "daylight_rmse_wm2": 169.39170837402344,
+            "macro_station_daylight_rmse_wm2": 164.4523985726493,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 156.9030303955078,
+            "mae_wm2": 90.67254638671875,
+            "mbe_wm2": 31.284488677978516,
+            "daylight_rmse_wm2": 162.71620178222656,
+            "macro_station_daylight_rmse_wm2": 149.29287338256836,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 35.6974983215332,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 112.43231201171875,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 148.95912525994436,
+      "role": "incoming_stage_checkpoint"
+    },
+    {
+      "stage": "nwp",
+      "epoch": 1,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 1.0642278696976455,
+        "satellite": 0.0,
+        "nwp": 0.7975083414976504,
+        "clear": 0.5451914560463693,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.880190659192652,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.6305423897076277,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 139.3913116455078,
+        "mae_wm2": 76.78141021728516,
+        "mbe_wm2": 13.74538803100586,
+        "daylight_rmse_wm2": 145.60888671875,
+        "macro_station_daylight_rmse_wm2": 141.8034608023507,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 112.48733520507812,
+            "mae_wm2": 59.68744659423828,
+            "mbe_wm2": 35.50252151489258,
+            "daylight_rmse_wm2": 117.2989273071289,
+            "macro_station_daylight_rmse_wm2": 116.20325578962054,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 138.26942443847656,
+            "mae_wm2": 73.72825622558594,
+            "mbe_wm2": 11.89104175567627,
+            "daylight_rmse_wm2": 144.8888702392578,
+            "macro_station_daylight_rmse_wm2": 134.21992192949568,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 129.09567260742188,
+            "mae_wm2": 73.65489196777344,
+            "mbe_wm2": 0.3499104380607605,
+            "daylight_rmse_wm2": 135.75128173828125,
+            "macro_station_daylight_rmse_wm2": 128.8135384150914,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 150.39427185058594,
+            "mae_wm2": 84.95337677001953,
+            "mbe_wm2": 4.583689212799072,
+            "daylight_rmse_wm2": 156.7072296142578,
+            "macro_station_daylight_rmse_wm2": 149.6903348650251,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 153.23858642578125,
+            "mae_wm2": 86.99664306640625,
+            "mbe_wm2": 20.935657501220703,
+            "daylight_rmse_wm2": 160.36972045898438,
+            "macro_station_daylight_rmse_wm2": 154.16736711774553,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 148.006591796875,
+            "mae_wm2": 81.25218963623047,
+            "mbe_wm2": 9.613116264343262,
+            "daylight_rmse_wm2": 153.4901580810547,
+            "macro_station_daylight_rmse_wm2": 138.47736195155554,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 31.990631103515625,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 109.30689239501953,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 142.4920436518533,
+      "learning_rate": 0.0001,
+      "epoch_seconds": 71.14877079520375,
+      "stage_elapsed_seconds": 75.92199741769582
+    },
+    {
+      "stage": "nwp",
+      "epoch": 2,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 1.0180373541962087,
+        "satellite": 0.0,
+        "nwp": 0.7570739575795634,
+        "clear": 0.5188949148541961,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.767988349098006,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.6197900260780372,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 130.94290161132812,
+        "mae_wm2": 74.20307159423828,
+        "mbe_wm2": 6.150846004486084,
+        "daylight_rmse_wm2": 136.78363037109375,
+        "macro_station_daylight_rmse_wm2": 132.74073464529855,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 93.14969635009766,
+            "mae_wm2": 52.2274169921875,
+            "mbe_wm2": 27.702341079711914,
+            "daylight_rmse_wm2": 97.1341323852539,
+            "macro_station_daylight_rmse_wm2": 97.00604901994977,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 127.8429183959961,
+            "mae_wm2": 71.08525848388672,
+            "mbe_wm2": 5.061408996582031,
+            "daylight_rmse_wm2": 133.96322631835938,
+            "macro_station_daylight_rmse_wm2": 125.39479173932757,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 127.20830535888672,
+            "mae_wm2": 74.1785659790039,
+            "mbe_wm2": -5.3155341148376465,
+            "daylight_rmse_wm2": 133.7666015625,
+            "macro_station_daylight_rmse_wm2": 126.76121357509068,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 142.85418701171875,
+            "mae_wm2": 84.02484893798828,
+            "mbe_wm2": -4.498154640197754,
+            "daylight_rmse_wm2": 148.8506622314453,
+            "macro_station_daylight_rmse_wm2": 142.04566356113978,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 143.41006469726562,
+            "mae_wm2": 83.78614044189453,
+            "mbe_wm2": 13.009370803833008,
+            "daylight_rmse_wm2": 150.0838165283203,
+            "macro_station_daylight_rmse_wm2": 144.48758915492468,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 143.23287963867188,
+            "mae_wm2": 79.39213562011719,
+            "mbe_wm2": 1.3450459241867065,
+            "daylight_rmse_wm2": 148.53958129882812,
+            "macro_station_daylight_rmse_wm2": 133.1938422066825,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.933574676513672,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 118.34394836425781,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 135.45767438071113,
+      "learning_rate": 0.00015000000000000001,
+      "epoch_seconds": 71.30040200892836,
+      "stage_elapsed_seconds": 147.27060007303953
+    },
+    {
+      "stage": "nwp",
+      "epoch": 3,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.9987462406941489,
+        "satellite": 0.0,
+        "nwp": 0.7419342792051193,
+        "clear": 0.4856003052707202,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.754059936486039,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5991015234609055,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 140.84872436523438,
+        "mae_wm2": 81.6916732788086,
+        "mbe_wm2": 28.19852066040039,
+        "daylight_rmse_wm2": 147.1313018798828,
+        "macro_station_daylight_rmse_wm2": 144.27082061767578,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 115.60115814208984,
+            "mae_wm2": 64.10304260253906,
+            "mbe_wm2": 40.43214797973633,
+            "daylight_rmse_wm2": 120.54594421386719,
+            "macro_station_daylight_rmse_wm2": 120.04084014892578,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 142.77630615234375,
+            "mae_wm2": 82.11125946044922,
+            "mbe_wm2": 24.51185417175293,
+            "daylight_rmse_wm2": 149.6115264892578,
+            "macro_station_daylight_rmse_wm2": 142.5655403137207,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 136.91351318359375,
+            "mae_wm2": 83.00096130371094,
+            "mbe_wm2": 18.468128204345703,
+            "daylight_rmse_wm2": 143.97216796875,
+            "macro_station_daylight_rmse_wm2": 139.19751685006278,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 145.4215545654297,
+            "mae_wm2": 86.06201171875,
+            "mbe_wm2": 22.124900817871094,
+            "daylight_rmse_wm2": 151.52578735351562,
+            "macro_station_daylight_rmse_wm2": 146.96132005964006,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 154.71717834472656,
+            "mae_wm2": 90.42352294921875,
+            "mbe_wm2": 37.92058181762695,
+            "daylight_rmse_wm2": 161.91714477539062,
+            "macro_station_daylight_rmse_wm2": 156.9265376499721,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 146.01698303222656,
+            "mae_wm2": 84.0599365234375,
+            "mbe_wm2": 25.88352394104004,
+            "daylight_rmse_wm2": 151.42684936523438,
+            "macro_station_daylight_rmse_wm2": 138.33168411254883,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 33.521888732910156,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 105.61869812011719,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 145.02923145294187,
+      "learning_rate": 0.0002,
+      "epoch_seconds": 72.14124482497573,
+      "stage_elapsed_seconds": 219.45775267668068
+    },
+    {
+      "stage": "nwp",
+      "epoch": 4,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.9745853850557133,
+        "satellite": 0.0,
+        "nwp": 0.7171978815714087,
+        "clear": 0.4869169211806425,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.712900929201663,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.6165463112148584,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 141.54965209960938,
+        "mae_wm2": 81.02098846435547,
+        "mbe_wm2": -17.784339904785156,
+        "daylight_rmse_wm2": 147.86349487304688,
+        "macro_station_daylight_rmse_wm2": 143.38737160818917,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 105.62184143066406,
+            "mae_wm2": 61.556636810302734,
+            "mbe_wm2": -0.5757624506950378,
+            "daylight_rmse_wm2": 110.13976287841797,
+            "macro_station_daylight_rmse_wm2": 109.70745304652623,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 143.71096801757812,
+            "mae_wm2": 82.74015045166016,
+            "mbe_wm2": -17.348796844482422,
+            "daylight_rmse_wm2": 150.5909423828125,
+            "macro_station_daylight_rmse_wm2": 139.467983518328,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 139.614013671875,
+            "mae_wm2": 82.08975219726562,
+            "mbe_wm2": -26.74679946899414,
+            "daylight_rmse_wm2": 146.81190490722656,
+            "macro_station_daylight_rmse_wm2": 138.56903893607003,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 156.71665954589844,
+            "mae_wm2": 90.306640625,
+            "mbe_wm2": -27.00251007080078,
+            "daylight_rmse_wm2": 163.29501342773438,
+            "macro_station_daylight_rmse_wm2": 154.2769835335868,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 154.53395080566406,
+            "mae_wm2": 89.45808410644531,
+            "mbe_wm2": -13.385704040527344,
+            "daylight_rmse_wm2": 161.72537231445312,
+            "macro_station_daylight_rmse_wm2": 154.66078785487585,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 142.485595703125,
+            "mae_wm2": 79.57994079589844,
+            "mbe_wm2": -21.296894073486328,
+            "daylight_rmse_wm2": 147.76463317871094,
+            "macro_station_daylight_rmse_wm2": 132.08587374005998,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.0908260345459,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 148.8260040283203,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 144.44493119376048,
+      "learning_rate": 0.0002,
+      "epoch_seconds": 70.98704351112247,
+      "stage_elapsed_seconds": 290.44521372020245
+    },
+    {
+      "stage": "nwp",
+      "epoch": 5,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.9914644638599913,
+        "satellite": 0.0,
+        "nwp": 0.7354874745090462,
+        "clear": 0.4926445032500364,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.727031269883798,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.595338267925518,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 127.99845886230469,
+        "mae_wm2": 72.13310241699219,
+        "mbe_wm2": 20.08652114868164,
+        "daylight_rmse_wm2": 133.70785522460938,
+        "macro_station_daylight_rmse_wm2": 128.88175092424666,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 101.95021057128906,
+            "mae_wm2": 54.746368408203125,
+            "mbe_wm2": 31.90764045715332,
+            "daylight_rmse_wm2": 106.31107330322266,
+            "macro_station_daylight_rmse_wm2": 106.01956503731864,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 124.91840362548828,
+            "mae_wm2": 71.35306549072266,
+            "mbe_wm2": 20.180999755859375,
+            "daylight_rmse_wm2": 130.89869689941406,
+            "macro_station_daylight_rmse_wm2": 120.56532859802246,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 127.75140380859375,
+            "mae_wm2": 72.7149887084961,
+            "mbe_wm2": 13.307250022888184,
+            "daylight_rmse_wm2": 134.3376922607422,
+            "macro_station_daylight_rmse_wm2": 126.02283886500767,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 126.01434326171875,
+            "mae_wm2": 76.38679504394531,
+            "mbe_wm2": 13.716690063476562,
+            "daylight_rmse_wm2": 131.30393981933594,
+            "macro_station_daylight_rmse_wm2": 125.65577043805804,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 146.54733276367188,
+            "mae_wm2": 83.17813873291016,
+            "mbe_wm2": 27.77777671813965,
+            "daylight_rmse_wm2": 153.36709594726562,
+            "macro_station_daylight_rmse_wm2": 146.3067752293178,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 135.88287353515625,
+            "mae_wm2": 73.99854278564453,
+            "mbe_wm2": 13.829809188842773,
+            "daylight_rmse_wm2": 140.91725158691406,
+            "macro_station_daylight_rmse_wm2": 124.9664557320731,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 33.148681640625,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 100.23737335205078,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 130.1810973235539,
+      "learning_rate": 0.0001999145758387301,
+      "epoch_seconds": 72.84677203837782,
+      "stage_elapsed_seconds": 363.2924003954977
+    },
+    {
+      "stage": "nwp",
+      "epoch": 6,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.9523915029526536,
+        "satellite": 0.0,
+        "nwp": 0.6979397640248161,
+        "clear": 0.4724293115968798,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.708455412995582,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5957661580318719,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 131.52130126953125,
+        "mae_wm2": 72.48523712158203,
+        "mbe_wm2": 23.0878849029541,
+        "daylight_rmse_wm2": 137.38783264160156,
+        "macro_station_daylight_rmse_wm2": 133.27182824271065,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 104.42825317382812,
+            "mae_wm2": 54.432861328125,
+            "mbe_wm2": 30.72153091430664,
+            "daylight_rmse_wm2": 108.8951187133789,
+            "macro_station_daylight_rmse_wm2": 109.04242597307477,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 131.78152465820312,
+            "mae_wm2": 71.61820220947266,
+            "mbe_wm2": 23.86948013305664,
+            "daylight_rmse_wm2": 138.0903778076172,
+            "macro_station_daylight_rmse_wm2": 127.1279217856271,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 125.99440002441406,
+            "mae_wm2": 71.40188598632812,
+            "mbe_wm2": 16.79610252380371,
+            "daylight_rmse_wm2": 132.4901123046875,
+            "macro_station_daylight_rmse_wm2": 124.96149798801967,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 140.48922729492188,
+            "mae_wm2": 79.5299301147461,
+            "mbe_wm2": 15.696163177490234,
+            "daylight_rmse_wm2": 146.3864288330078,
+            "macro_station_daylight_rmse_wm2": 140.9782327924456,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 151.15757751464844,
+            "mae_wm2": 83.18690490722656,
+            "mbe_wm2": 32.43990707397461,
+            "daylight_rmse_wm2": 158.19187927246094,
+            "macro_station_daylight_rmse_wm2": 152.34012712751115,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 130.0304412841797,
+            "mae_wm2": 74.3253402709961,
+            "mbe_wm2": 19.12493324279785,
+            "daylight_rmse_wm2": 134.84800720214844,
+            "macro_station_daylight_rmse_wm2": 121.6676254272461,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 32.89645004272461,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 108.33000183105469,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 134.47235805647713,
+      "learning_rate": 0.000199658449300667,
+      "epoch_seconds": 71.88456142228097,
+      "stage_elapsed_seconds": 435.2234820984304
+    },
+    {
+      "stage": "nwp",
+      "epoch": 7,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.9326657666003003,
+        "satellite": 0.0,
+        "nwp": 0.6819908025071901,
+        "clear": 0.46757646605031555,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.647271340968562,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.57878002982124,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 137.18287658691406,
+        "mae_wm2": 80.23262023925781,
+        "mbe_wm2": -19.06477165222168,
+        "daylight_rmse_wm2": 143.30194091796875,
+        "macro_station_daylight_rmse_wm2": 139.98844419206893,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 110.70082092285156,
+            "mae_wm2": 63.55207061767578,
+            "mbe_wm2": -9.436860084533691,
+            "daylight_rmse_wm2": 115.43598937988281,
+            "macro_station_daylight_rmse_wm2": 114.53958238874164,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 154.7281951904297,
+            "mae_wm2": 86.74869537353516,
+            "mbe_wm2": -25.418180465698242,
+            "daylight_rmse_wm2": 162.13560485839844,
+            "macro_station_daylight_rmse_wm2": 151.21786880493164,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 140.55592346191406,
+            "mae_wm2": 81.83406066894531,
+            "mbe_wm2": -24.44400405883789,
+            "daylight_rmse_wm2": 147.8023681640625,
+            "macro_station_daylight_rmse_wm2": 141.42535999843054,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 142.56890869140625,
+            "mae_wm2": 86.70356750488281,
+            "mbe_wm2": -23.286663055419922,
+            "daylight_rmse_wm2": 148.5533905029297,
+            "macro_station_daylight_rmse_wm2": 142.9701211111886,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 139.8012237548828,
+            "mae_wm2": 84.33162689208984,
+            "mbe_wm2": -12.599552154541016,
+            "daylight_rmse_wm2": 146.30703735351562,
+            "macro_station_daylight_rmse_wm2": 140.12533950805664,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 130.58798217773438,
+            "mae_wm2": 77.99739074707031,
+            "mbe_wm2": -19.15544319152832,
+            "daylight_rmse_wm2": 135.4261932373047,
+            "macro_station_daylight_rmse_wm2": 125.27402659824916,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.86349105834961,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 129.8549041748047,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 138.21063152040753,
+      "learning_rate": 0.0001992320579737045,
+      "epoch_seconds": 72.7624964658171,
+      "stage_elapsed_seconds": 507.98638590052724
+    },
+    {
+      "stage": "nwp",
+      "epoch": 8,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.9129830058298859,
+        "satellite": 0.0,
+        "nwp": 0.662226942708728,
+        "clear": 0.4692206749923868,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.6195804309221655,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5870761953148187,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 134.89308166503906,
+        "mae_wm2": 76.06495666503906,
+        "mbe_wm2": 25.920413970947266,
+        "daylight_rmse_wm2": 140.91000366210938,
+        "macro_station_daylight_rmse_wm2": 137.67413711547852,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 113.7747802734375,
+            "mae_wm2": 60.79690170288086,
+            "mbe_wm2": 34.08555221557617,
+            "daylight_rmse_wm2": 118.64143371582031,
+            "macro_station_daylight_rmse_wm2": 117.44119044712612,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 142.0378875732422,
+            "mae_wm2": 78.0947494506836,
+            "mbe_wm2": 27.746662139892578,
+            "daylight_rmse_wm2": 148.83775329589844,
+            "macro_station_daylight_rmse_wm2": 141.820127759661,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 137.04833984375,
+            "mae_wm2": 79.3961410522461,
+            "mbe_wm2": 24.71390724182129,
+            "daylight_rmse_wm2": 144.11395263671875,
+            "macro_station_daylight_rmse_wm2": 138.89562334333147,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 141.5522003173828,
+            "mae_wm2": 86.40958404541016,
+            "mbe_wm2": 27.45442771911621,
+            "daylight_rmse_wm2": 147.49400329589844,
+            "macro_station_daylight_rmse_wm2": 141.74233736310686,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 143.0153350830078,
+            "mae_wm2": 81.80709838867188,
+            "mbe_wm2": 29.11812973022461,
+            "daylight_rmse_wm2": 149.6707305908203,
+            "macro_station_daylight_rmse_wm2": 143.44378880092077,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 129.23768615722656,
+            "mae_wm2": 69.57345581054688,
+            "mbe_wm2": 12.56161880493164,
+            "daylight_rmse_wm2": 134.02587890625,
+            "macro_station_daylight_rmse_wm2": 120.8396350315639,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 31.258316040039062,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 110.59700012207031,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 136.6634834289551,
+      "learning_rate": 0.00019863613034027224,
+      "epoch_seconds": 72.32914639543742,
+      "stage_elapsed_seconds": 580.3159261643887
+    },
+    {
+      "stage": "nwp",
+      "epoch": 9,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.9440896121505039,
+        "satellite": 0.0,
+        "nwp": 0.692664020025214,
+        "clear": 0.46568165831511316,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.677806650111878,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.578073152773131,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 133.2355194091797,
+        "mae_wm2": 74.65129852294922,
+        "mbe_wm2": 8.067665100097656,
+        "daylight_rmse_wm2": 139.1785125732422,
+        "macro_station_daylight_rmse_wm2": 134.82802963256836,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 109.99871826171875,
+            "mae_wm2": 60.0574951171875,
+            "mbe_wm2": 15.959053039550781,
+            "daylight_rmse_wm2": 114.70386505126953,
+            "macro_station_daylight_rmse_wm2": 114.9261474609375,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 145.41432189941406,
+            "mae_wm2": 79.90657806396484,
+            "mbe_wm2": 7.756972312927246,
+            "daylight_rmse_wm2": 152.37583923339844,
+            "macro_station_daylight_rmse_wm2": 143.28053528921944,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 133.9768829345703,
+            "mae_wm2": 76.66883850097656,
+            "mbe_wm2": 5.548732757568359,
+            "daylight_rmse_wm2": 140.88414001464844,
+            "macro_station_daylight_rmse_wm2": 132.3109588623047,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 136.3832550048828,
+            "mae_wm2": 82.99546813964844,
+            "mbe_wm2": 1.4444485902786255,
+            "daylight_rmse_wm2": 142.1080780029297,
+            "macro_station_daylight_rmse_wm2": 133.98062460763114,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 137.72357177734375,
+            "mae_wm2": 76.66907501220703,
+            "mbe_wm2": 15.148261070251465,
+            "daylight_rmse_wm2": 144.13270568847656,
+            "macro_station_daylight_rmse_wm2": 135.7577362060547,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 133.02320861816406,
+            "mae_wm2": 71.4111099243164,
+            "mbe_wm2": 2.641505241394043,
+            "daylight_rmse_wm2": 137.95166015625,
+            "macro_station_daylight_rmse_wm2": 123.91162926810128,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.176664352416992,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 120.36254119873047,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 132.49157495498656,
+      "learning_rate": 0.00019787168453273544,
+      "epoch_seconds": 72.33566032350063,
+      "stage_elapsed_seconds": 652.6519947852939
+    },
+    {
+      "stage": "nwp",
+      "epoch": 10,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.905162593069809,
+        "satellite": 0.0,
+        "nwp": 0.657968858112368,
+        "clear": 0.4395969628654664,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.594058544028039,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.573921346099548,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 141.08853149414062,
+        "mae_wm2": 77.4186782836914,
+        "mbe_wm2": 5.444350719451904,
+        "daylight_rmse_wm2": 147.38182067871094,
+        "macro_station_daylight_rmse_wm2": 142.64503860473633,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 110.45602416992188,
+            "mae_wm2": 59.77436065673828,
+            "mbe_wm2": 22.074655532836914,
+            "daylight_rmse_wm2": 115.18072509765625,
+            "macro_station_daylight_rmse_wm2": 114.51753234863281,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 153.94154357910156,
+            "mae_wm2": 84.54066467285156,
+            "mbe_wm2": 1.0541425943374634,
+            "daylight_rmse_wm2": 161.311279296875,
+            "macro_station_daylight_rmse_wm2": 149.94569315229143,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 146.7330322265625,
+            "mae_wm2": 80.71261596679688,
+            "mbe_wm2": -4.101125240325928,
+            "daylight_rmse_wm2": 154.29794311523438,
+            "macro_station_daylight_rmse_wm2": 145.17138753618514,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 146.38670349121094,
+            "mae_wm2": 82.33375549316406,
+            "mbe_wm2": 0.17616191506385803,
+            "daylight_rmse_wm2": 152.53146362304688,
+            "macro_station_daylight_rmse_wm2": 143.5844884599958,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 144.74172973632812,
+            "mae_wm2": 81.54750061035156,
+            "mbe_wm2": 13.393798828125,
+            "daylight_rmse_wm2": 151.4774627685547,
+            "macro_station_daylight_rmse_wm2": 144.72264535086495,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 139.76919555664062,
+            "mae_wm2": 75.3534164428711,
+            "mbe_wm2": 0.29720816016197205,
+            "daylight_rmse_wm2": 144.9475860595703,
+            "macro_station_daylight_rmse_wm2": 129.71610832214355,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.30116081237793,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 133.297119140625,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 141.35257177352904,
+      "learning_rate": 0.00019694002659393305,
+      "epoch_seconds": 73.56219919584692,
+      "stage_elapsed_seconds": 726.2164702238515
+    },
+    {
+      "stage": "nwp",
+      "epoch": 11,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.8863759451831867,
+        "satellite": 0.0,
+        "nwp": 0.6415113588457233,
+        "clear": 0.4345636494287284,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.572123312482647,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5597270364367884,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 136.02755737304688,
+        "mae_wm2": 75.08573913574219,
+        "mbe_wm2": 8.458558082580566,
+        "daylight_rmse_wm2": 142.0950927734375,
+        "macro_station_daylight_rmse_wm2": 137.43049894060408,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 108.6634750366211,
+            "mae_wm2": 58.604434967041016,
+            "mbe_wm2": 21.623308181762695,
+            "daylight_rmse_wm2": 113.31150817871094,
+            "macro_station_daylight_rmse_wm2": 113.18989018031529,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 142.51878356933594,
+            "mae_wm2": 80.48249816894531,
+            "mbe_wm2": 8.321793556213379,
+            "daylight_rmse_wm2": 149.34169006347656,
+            "macro_station_daylight_rmse_wm2": 140.91882678440638,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 141.0333251953125,
+            "mae_wm2": 77.79873657226562,
+            "mbe_wm2": 1.6098482608795166,
+            "daylight_rmse_wm2": 148.3043670654297,
+            "macro_station_daylight_rmse_wm2": 139.25203268868583,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 144.3997344970703,
+            "mae_wm2": 81.97172546386719,
+            "mbe_wm2": 4.423842906951904,
+            "daylight_rmse_wm2": 150.46107482910156,
+            "macro_station_daylight_rmse_wm2": 140.70462036132812,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 141.85394287109375,
+            "mae_wm2": 78.18477630615234,
+            "mbe_wm2": 13.264915466308594,
+            "daylight_rmse_wm2": 148.45530700683594,
+            "macro_station_daylight_rmse_wm2": 140.99720655168807,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 133.88534545898438,
+            "mae_wm2": 73.2268295288086,
+            "mbe_wm2": 1.754111886024475,
+            "daylight_rmse_wm2": 138.84573364257812,
+            "macro_station_daylight_rmse_wm2": 126.78685106549945,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.854156494140625,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 113.59681701660156,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 137.08377404894148,
+      "learning_rate": 0.0001958427482458253,
+      "epoch_seconds": 76.36503579746932,
+      "stage_elapsed_seconds": 802.5818980066106
+    },
+    {
+      "stage": "nwp",
+      "epoch": 12,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.8708030547873646,
+        "satellite": 0.0,
+        "nwp": 0.6242825299184891,
+        "clear": 0.43880659061806654,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.607567336824205,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5635317385294079,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 131.6973114013672,
+        "mae_wm2": 74.10578155517578,
+        "mbe_wm2": 4.7260847091674805,
+        "daylight_rmse_wm2": 137.57168579101562,
+        "macro_station_daylight_rmse_wm2": 133.47369384765625,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 106.28591918945312,
+            "mae_wm2": 58.89017105102539,
+            "mbe_wm2": 19.47354507446289,
+            "daylight_rmse_wm2": 110.83224487304688,
+            "macro_station_daylight_rmse_wm2": 110.12589045933315,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 148.16702270507812,
+            "mae_wm2": 82.12400817871094,
+            "mbe_wm2": 1.8123071193695068,
+            "daylight_rmse_wm2": 155.2603302001953,
+            "macro_station_daylight_rmse_wm2": 145.8310707637242,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 140.4987030029297,
+            "mae_wm2": 80.817138671875,
+            "mbe_wm2": -6.509634494781494,
+            "daylight_rmse_wm2": 147.74221801757812,
+            "macro_station_daylight_rmse_wm2": 140.13945184435164,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 136.8436279296875,
+            "mae_wm2": 78.40180969238281,
+            "mbe_wm2": -0.3644990026950836,
+            "daylight_rmse_wm2": 142.58779907226562,
+            "macro_station_daylight_rmse_wm2": 131.7163532802037,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 137.4867401123047,
+            "mae_wm2": 79.18167114257812,
+            "mbe_wm2": 9.110064506530762,
+            "daylight_rmse_wm2": 143.88485717773438,
+            "macro_station_daylight_rmse_wm2": 138.1402931213379,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 115.69935607910156,
+            "mae_wm2": 64.99024963378906,
+            "mbe_wm2": 5.102434158325195,
+            "daylight_rmse_wm2": 119.9859619140625,
+            "macro_station_daylight_rmse_wm2": 105.91763360159737,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 29.618330001831055,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 98.52741241455078,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 130.32701122760773,
+      "learning_rate": 0.00019458172417006347,
+      "epoch_seconds": 77.59438256826252,
+      "stage_elapsed_seconds": 880.1766931833699
+    },
+    {
+      "stage": "nwp",
+      "epoch": 13,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.8462981127348601,
+        "satellite": 0.0,
+        "nwp": 0.6022713743698072,
+        "clear": 0.4229128531673375,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.566294992671294,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5589224802317962,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 137.79869079589844,
+        "mae_wm2": 78.63724517822266,
+        "mbe_wm2": 7.869601726531982,
+        "daylight_rmse_wm2": 143.94522094726562,
+        "macro_station_daylight_rmse_wm2": 138.97289712088448,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 116.95659637451172,
+            "mae_wm2": 65.89224243164062,
+            "mbe_wm2": 13.594971656799316,
+            "daylight_rmse_wm2": 121.95935821533203,
+            "macro_station_daylight_rmse_wm2": 122.23195539202008,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 153.71649169921875,
+            "mae_wm2": 87.9690933227539,
+            "mbe_wm2": 5.5770487785339355,
+            "daylight_rmse_wm2": 161.07546997070312,
+            "macro_station_daylight_rmse_wm2": 152.67967305864607,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 142.84727478027344,
+            "mae_wm2": 81.46507263183594,
+            "mbe_wm2": 5.145750522613525,
+            "daylight_rmse_wm2": 150.21185302734375,
+            "macro_station_daylight_rmse_wm2": 142.8808765411377,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 148.72372436523438,
+            "mae_wm2": 86.1559829711914,
+            "mbe_wm2": 6.684234619140625,
+            "daylight_rmse_wm2": 154.96656799316406,
+            "macro_station_daylight_rmse_wm2": 142.78720038277763,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 139.37547302246094,
+            "mae_wm2": 81.21699523925781,
+            "mbe_wm2": 11.713692665100098,
+            "daylight_rmse_wm2": 145.86148071289062,
+            "macro_station_daylight_rmse_wm2": 139.068299974714,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 121.01921081542969,
+            "mae_wm2": 69.01681518554688,
+            "mbe_wm2": 4.552308082580566,
+            "daylight_rmse_wm2": 125.50291442871094,
+            "macro_station_daylight_rmse_wm2": 113.30820574079242,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 29.647052764892578,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 119.53462219238281,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 135.84967109816415,
+      "learning_rate": 0.0001931591088051279,
+      "epoch_seconds": 77.72638796642423,
+      "stage_elapsed_seconds": 957.9034864800051
+    },
+    {
+      "stage": "nwp",
+      "epoch": 14,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.8482610307195607,
+        "satellite": 0.0,
+        "nwp": 0.6056322711154672,
+        "clear": 0.4310659017365158,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.527679166762657,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5524509242839284,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 138.64315795898438,
+        "mae_wm2": 74.63594818115234,
+        "mbe_wm2": 39.624874114990234,
+        "daylight_rmse_wm2": 144.82736206054688,
+        "macro_station_daylight_rmse_wm2": 137.0455365862165,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 116.34869384765625,
+            "mae_wm2": 59.85145950317383,
+            "mbe_wm2": 39.39542770385742,
+            "daylight_rmse_wm2": 121.32545471191406,
+            "macro_station_daylight_rmse_wm2": 120.96316746303013,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 138.66712951660156,
+            "mae_wm2": 76.0123291015625,
+            "mbe_wm2": 35.7788200378418,
+            "daylight_rmse_wm2": 145.30564880371094,
+            "macro_station_daylight_rmse_wm2": 132.9060287475586,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 146.92311096191406,
+            "mae_wm2": 80.52149200439453,
+            "mbe_wm2": 38.161991119384766,
+            "daylight_rmse_wm2": 154.49781799316406,
+            "macro_station_daylight_rmse_wm2": 138.47267845698767,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 148.33009338378906,
+            "mae_wm2": 81.40621948242188,
+            "mbe_wm2": 41.90342712402344,
+            "daylight_rmse_wm2": 154.55642700195312,
+            "macro_station_daylight_rmse_wm2": 138.94369615827287,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 152.17723083496094,
+            "mae_wm2": 81.8946304321289,
+            "mbe_wm2": 48.68268585205078,
+            "daylight_rmse_wm2": 159.2589874267578,
+            "macro_station_daylight_rmse_wm2": 148.743900844029,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 125.15966033935547,
+            "mae_wm2": 67.77903747558594,
+            "mbe_wm2": 33.68876266479492,
+            "daylight_rmse_wm2": 129.79678344726562,
+            "macro_station_daylight_rmse_wm2": 112.76344408307757,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 29.561969757080078,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 86.36335754394531,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 135.4253118957792,
+      "learning_rate": 0.00019157733266550575,
+      "epoch_seconds": 79.60522414091974,
+      "stage_elapsed_seconds": 1037.5091728353873
+    },
+    {
+      "stage": "nwp",
+      "epoch": 15,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.8041056401394551,
+        "satellite": 0.0,
+        "nwp": 0.5636643808250608,
+        "clear": 0.42054797901644136,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.4858835273318824,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5483735676100051,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 131.6822967529297,
+        "mae_wm2": 74.3398208618164,
+        "mbe_wm2": -7.672413349151611,
+        "daylight_rmse_wm2": 137.55601501464844,
+        "macro_station_daylight_rmse_wm2": 132.5033302307129,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 115.86552429199219,
+            "mae_wm2": 65.69318389892578,
+            "mbe_wm2": -0.5904911756515503,
+            "daylight_rmse_wm2": 120.82161712646484,
+            "macro_station_daylight_rmse_wm2": 120.56566837855748,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 158.6202392578125,
+            "mae_wm2": 88.6590805053711,
+            "mbe_wm2": -9.954934120178223,
+            "daylight_rmse_wm2": 166.21395874023438,
+            "macro_station_daylight_rmse_wm2": 154.95934540884835,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 146.6890411376953,
+            "mae_wm2": 81.83149719238281,
+            "mbe_wm2": -10.24349308013916,
+            "daylight_rmse_wm2": 154.25167846679688,
+            "macro_station_daylight_rmse_wm2": 144.40159606933594,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 130.86968994140625,
+            "mae_wm2": 76.73898315429688,
+            "mbe_wm2": -9.772276878356934,
+            "daylight_rmse_wm2": 136.36309814453125,
+            "macro_station_daylight_rmse_wm2": 123.21643447875977,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 131.44723510742188,
+            "mae_wm2": 75.76718139648438,
+            "mbe_wm2": -4.186468124389648,
+            "daylight_rmse_wm2": 137.56430053710938,
+            "macro_station_daylight_rmse_wm2": 129.83727700369698,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 97.80408477783203,
+            "mae_wm2": 57.370262145996094,
+            "mbe_wm2": -11.210638999938965,
+            "daylight_rmse_wm2": 101.42768096923828,
+            "macro_station_daylight_rmse_wm2": 91.38408878871373,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.646745681762695,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 105.61890411376953,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 125.29789342880247,
+      "learning_rate": 0.0001898390981891979,
+      "epoch_seconds": 75.4394247289747,
+      "stage_elapsed_seconds": 1112.9490083251148
+    },
+    {
+      "stage": "nwp",
+      "epoch": 16,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7785586724970855,
+        "satellite": 0.0,
+        "nwp": 0.5410201967955609,
+        "clear": 0.42284259881239894,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.416625250398723,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5389759419790281,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 132.43748474121094,
+        "mae_wm2": 75.7184829711914,
+        "mbe_wm2": -5.21862268447876,
+        "daylight_rmse_wm2": 138.34487915039062,
+        "macro_station_daylight_rmse_wm2": 132.69044603620256,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 107.35305786132812,
+            "mae_wm2": 62.290122985839844,
+            "mbe_wm2": 2.9835782051086426,
+            "daylight_rmse_wm2": 111.94503021240234,
+            "macro_station_daylight_rmse_wm2": 111.34285518101284,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 147.24609375,
+            "mae_wm2": 85.3717041015625,
+            "mbe_wm2": -4.74141788482666,
+            "daylight_rmse_wm2": 154.29530334472656,
+            "macro_station_daylight_rmse_wm2": 146.2452553340367,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 149.03916931152344,
+            "mae_wm2": 84.47844696044922,
+            "mbe_wm2": -5.407456398010254,
+            "daylight_rmse_wm2": 156.72299194335938,
+            "macro_station_daylight_rmse_wm2": 147.6853095463344,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 142.14085388183594,
+            "mae_wm2": 81.4935531616211,
+            "mbe_wm2": -9.75610065460205,
+            "daylight_rmse_wm2": 148.1073760986328,
+            "macro_station_daylight_rmse_wm2": 134.37051337105888,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 136.7258758544922,
+            "mae_wm2": 79.92412567138672,
+            "mbe_wm2": -3.112004041671753,
+            "daylight_rmse_wm2": 143.0885772705078,
+            "macro_station_daylight_rmse_wm2": 133.19054794311523,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 104.10279083251953,
+            "mae_wm2": 60.57299041748047,
+            "mbe_wm2": -11.142882347106934,
+            "daylight_rmse_wm2": 107.95974731445312,
+            "macro_station_daylight_rmse_wm2": 95.05322974068778,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.072776794433594,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 107.69393157958984,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 129.1095639160701,
+      "learning_rate": 0.0001879473751206489,
+      "epoch_seconds": 78.32801021914929,
+      "stage_elapsed_seconds": 1191.3271148623899
+    },
+    {
+      "stage": "nwp",
+      "epoch": 17,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7653183176918746,
+        "satellite": 0.0,
+        "nwp": 0.5284123255687102,
+        "clear": 0.394884873382455,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.4407816681207395,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5393830173058447,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 131.00888061523438,
+        "mae_wm2": 75.16835021972656,
+        "mbe_wm2": 4.982004165649414,
+        "daylight_rmse_wm2": 136.85255432128906,
+        "macro_station_daylight_rmse_wm2": 132.72754832676478,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 111.49797821044922,
+            "mae_wm2": 61.3134765625,
+            "mbe_wm2": 5.589832782745361,
+            "daylight_rmse_wm2": 116.26725006103516,
+            "macro_station_daylight_rmse_wm2": 115.21473693847656,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 148.83847045898438,
+            "mae_wm2": 84.24413299560547,
+            "mbe_wm2": 2.2275142669677734,
+            "daylight_rmse_wm2": 155.9639129638672,
+            "macro_station_daylight_rmse_wm2": 147.8448598044259,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 147.016845703125,
+            "mae_wm2": 84.37030029296875,
+            "mbe_wm2": 1.020159363746643,
+            "daylight_rmse_wm2": 154.5963897705078,
+            "macro_station_daylight_rmse_wm2": 146.80440657479423,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 131.55172729492188,
+            "mae_wm2": 80.64601135253906,
+            "mbe_wm2": 3.503269672393799,
+            "daylight_rmse_wm2": 137.0737762451172,
+            "macro_station_daylight_rmse_wm2": 128.32703835623605,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 130.99346923828125,
+            "mae_wm2": 77.04122161865234,
+            "mbe_wm2": 13.58171272277832,
+            "daylight_rmse_wm2": 137.0894012451172,
+            "macro_station_daylight_rmse_wm2": 129.78149795532227,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.82283020019531,
+            "mae_wm2": 63.213993072509766,
+            "mbe_wm2": 3.8911898136138916,
+            "daylight_rmse_wm2": 114.92876434326172,
+            "macro_station_daylight_rmse_wm2": 99.849915095738,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 31.004587173461914,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 107.38721466064453,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 128.15176464489525,
+      "learning_rate": 0.00018590539543698854,
+      "epoch_seconds": 77.80006328877062,
+      "stage_elapsed_seconds": 1269.1275812014937
+    },
+    {
+      "stage": "nwp",
+      "epoch": 18,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7914940079832389,
+        "satellite": 0.0,
+        "nwp": 0.5515600442855917,
+        "clear": 0.40673106032868034,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.490192801344628,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5489162948786044,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 133.2628173828125,
+        "mae_wm2": 73.5340576171875,
+        "mbe_wm2": 14.721351623535156,
+        "daylight_rmse_wm2": 139.20701599121094,
+        "macro_station_daylight_rmse_wm2": 133.46712166922433,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 111.54220581054688,
+            "mae_wm2": 58.91270065307617,
+            "mbe_wm2": 23.99690818786621,
+            "daylight_rmse_wm2": 116.31336212158203,
+            "macro_station_daylight_rmse_wm2": 116.36300550188336,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 133.15708923339844,
+            "mae_wm2": 74.27210998535156,
+            "mbe_wm2": 17.16413688659668,
+            "daylight_rmse_wm2": 139.53179931640625,
+            "macro_station_daylight_rmse_wm2": 127.46244430541992,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 137.79296875,
+            "mae_wm2": 78.24524688720703,
+            "mbe_wm2": 9.560362815856934,
+            "daylight_rmse_wm2": 144.89697265625,
+            "macro_station_daylight_rmse_wm2": 134.3128664834159,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 141.08570861816406,
+            "mae_wm2": 81.15620422363281,
+            "mbe_wm2": 11.248079299926758,
+            "daylight_rmse_wm2": 147.00794982910156,
+            "macro_station_daylight_rmse_wm2": 136.1711082458496,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 143.52151489257812,
+            "mae_wm2": 79.04489135742188,
+            "mbe_wm2": 18.098817825317383,
+            "daylight_rmse_wm2": 150.20046997070312,
+            "macro_station_daylight_rmse_wm2": 141.71287754603796,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 129.4658966064453,
+            "mae_wm2": 69.23995971679688,
+            "mbe_wm2": 8.481033325195312,
+            "daylight_rmse_wm2": 134.26254272460938,
+            "macro_station_daylight_rmse_wm2": 116.49684415544782,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.43389320373535,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 103.85710144042969,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 132.56153337614876,
+      "learning_rate": 0.00018371664782625287,
+      "epoch_seconds": 78.08918624743819,
+      "stage_elapsed_seconds": 1347.217186355032
+    },
+    {
+      "stage": "nwp",
+      "epoch": 19,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7838209172089895,
+        "satellite": 0.0,
+        "nwp": 0.5446286988901157,
+        "clear": 0.41515292415967564,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.463801703421898,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5452052454640662,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 134.59303283691406,
+        "mae_wm2": 71.75843048095703,
+        "mbe_wm2": 19.935277938842773,
+        "daylight_rmse_wm2": 140.59657287597656,
+        "macro_station_daylight_rmse_wm2": 135.48594229561942,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 116.42560577392578,
+            "mae_wm2": 58.41475296020508,
+            "mbe_wm2": 15.402745246887207,
+            "daylight_rmse_wm2": 121.4056396484375,
+            "macro_station_daylight_rmse_wm2": 121.05357796805245,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 154.69871520996094,
+            "mae_wm2": 82.32676696777344,
+            "mbe_wm2": 15.315162658691406,
+            "daylight_rmse_wm2": 162.10470581054688,
+            "macro_station_daylight_rmse_wm2": 152.98028346470423,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 147.97557067871094,
+            "mae_wm2": 79.00352478027344,
+            "mbe_wm2": 14.649948120117188,
+            "daylight_rmse_wm2": 155.6045379638672,
+            "macro_station_daylight_rmse_wm2": 146.15024866376604,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 132.2192840576172,
+            "mae_wm2": 76.27266693115234,
+            "mbe_wm2": 21.914546966552734,
+            "daylight_rmse_wm2": 137.7693328857422,
+            "macro_station_daylight_rmse_wm2": 126.13202939714704,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 132.2795867919922,
+            "mae_wm2": 72.02632141113281,
+            "mbe_wm2": 30.51938247680664,
+            "daylight_rmse_wm2": 138.4353790283203,
+            "macro_station_daylight_rmse_wm2": 129.04797526768274,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 119.67774200439453,
+            "mae_wm2": 62.3919563293457,
+            "mbe_wm2": 21.60283088684082,
+            "daylight_rmse_wm2": 124.11175537109375,
+            "macro_station_daylight_rmse_wm2": 103.2093140738351,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 26.531646728515625,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 95.96366882324219,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 128.94020698411123,
+      "learning_rate": 0.0001813848717270195,
+      "epoch_seconds": 73.81159436143935,
+      "stage_elapsed_seconds": 1421.029189181514
+    },
+    {
+      "stage": "nwp",
+      "epoch": 20,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7553089143939657,
+        "satellite": 0.0,
+        "nwp": 0.5222815970693916,
+        "clear": 0.37541379879405296,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.381881551804885,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5280017993759876,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 132.4539337158203,
+        "mae_wm2": 73.3299560546875,
+        "mbe_wm2": 1.369148850440979,
+        "daylight_rmse_wm2": 138.36207580566406,
+        "macro_station_daylight_rmse_wm2": 132.36590194702148,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 112.08808898925781,
+            "mae_wm2": 61.727535247802734,
+            "mbe_wm2": 6.010716915130615,
+            "daylight_rmse_wm2": 116.8825912475586,
+            "macro_station_daylight_rmse_wm2": 115.86555698939732,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 147.94418334960938,
+            "mae_wm2": 82.14667510986328,
+            "mbe_wm2": 0.6974255442619324,
+            "daylight_rmse_wm2": 155.02682495117188,
+            "macro_station_daylight_rmse_wm2": 145.4936785016741,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 148.78977966308594,
+            "mae_wm2": 82.3648910522461,
+            "mbe_wm2": -2.559782028198242,
+            "daylight_rmse_wm2": 156.46072387695312,
+            "macro_station_daylight_rmse_wm2": 146.27671132768904,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 138.36862182617188,
+            "mae_wm2": 77.64700317382812,
+            "mbe_wm2": -1.8326226472854614,
+            "daylight_rmse_wm2": 144.1768035888672,
+            "macro_station_daylight_rmse_wm2": 128.17016765049524,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 131.4081268310547,
+            "mae_wm2": 74.60846710205078,
+            "mbe_wm2": 4.671236991882324,
+            "daylight_rmse_wm2": 137.5233612060547,
+            "macro_station_daylight_rmse_wm2": 128.52653067452567,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.50626373291016,
+            "mae_wm2": 61.34577560424805,
+            "mbe_wm2": 1.3030608892440796,
+            "daylight_rmse_wm2": 114.60047149658203,
+            "macro_station_daylight_rmse_wm2": 95.84016718183246,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.563743591308594,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 115.07707214355469,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 127.00214653015135,
+      "learning_rate": 0.00017891405093963938,
+      "epoch_seconds": 76.16800243780017,
+      "stage_elapsed_seconds": 1497.197584840469
+    },
+    {
+      "stage": "nwp",
+      "epoch": 21,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7358451540661014,
+        "satellite": 0.0,
+        "nwp": 0.5001634282114751,
+        "clear": 0.38597376132079586,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.403437962719038,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.54279901949214,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 138.06288146972656,
+        "mae_wm2": 73.70836639404297,
+        "mbe_wm2": 15.561208724975586,
+        "daylight_rmse_wm2": 144.22120666503906,
+        "macro_station_daylight_rmse_wm2": 138.5661452157157,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 118.04667663574219,
+            "mae_wm2": 59.91708755493164,
+            "mbe_wm2": 13.408456802368164,
+            "daylight_rmse_wm2": 123.09606170654297,
+            "macro_station_daylight_rmse_wm2": 123.00807516915458,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 155.00494384765625,
+            "mae_wm2": 80.84253692626953,
+            "mbe_wm2": 15.500565528869629,
+            "daylight_rmse_wm2": 162.42559814453125,
+            "macro_station_daylight_rmse_wm2": 153.07081467764718,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 148.02957153320312,
+            "mae_wm2": 78.87088775634766,
+            "mbe_wm2": 15.064990043640137,
+            "daylight_rmse_wm2": 155.6613311767578,
+            "macro_station_daylight_rmse_wm2": 144.8152998515538,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 142.87664794921875,
+            "mae_wm2": 80.81330871582031,
+            "mbe_wm2": 9.228275299072266,
+            "daylight_rmse_wm2": 148.8740692138672,
+            "macro_station_daylight_rmse_wm2": 135.38783155168807,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 136.93934631347656,
+            "mae_wm2": 75.09770202636719,
+            "mbe_wm2": 23.410737991333008,
+            "daylight_rmse_wm2": 143.31199645996094,
+            "macro_station_daylight_rmse_wm2": 131.97196088518416,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 123.7037353515625,
+            "mae_wm2": 66.53439331054688,
+            "mbe_wm2": 16.650894165039062,
+            "daylight_rmse_wm2": 128.28688049316406,
+            "macro_station_daylight_rmse_wm2": 111.39373997279576,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.53923988342285,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 130.92471313476562,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 133.1943892104285,
+      "learning_rate": 0.00017630840681998064,
+      "epoch_seconds": 78.94381841085851,
+      "stage_elapsed_seconds": 1576.1418139450252
+    },
+    {
+      "stage": "nwp",
+      "epoch": 22,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7292734543287677,
+        "satellite": 0.0,
+        "nwp": 0.4956174301214857,
+        "clear": 0.3807554171584985,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.388208910530689,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5297199331857021,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 131.5448455810547,
+        "mae_wm2": 70.74169158935547,
+        "mbe_wm2": 16.002079010009766,
+        "daylight_rmse_wm2": 137.4124298095703,
+        "macro_station_daylight_rmse_wm2": 132.60965292794364,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 116.78704833984375,
+            "mae_wm2": 59.55037307739258,
+            "mbe_wm2": 23.56588363647461,
+            "daylight_rmse_wm2": 121.78254699707031,
+            "macro_station_daylight_rmse_wm2": 120.92145538330078,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 141.42523193359375,
+            "mae_wm2": 75.0219955444336,
+            "mbe_wm2": 12.960800170898438,
+            "daylight_rmse_wm2": 148.19578552246094,
+            "macro_station_daylight_rmse_wm2": 139.37323188781738,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 143.16915893554688,
+            "mae_wm2": 78.7938232421875,
+            "mbe_wm2": 10.930481910705566,
+            "daylight_rmse_wm2": 150.5503387451172,
+            "macro_station_daylight_rmse_wm2": 141.67724078042167,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 136.3402862548828,
+            "mae_wm2": 77.2412338256836,
+            "mbe_wm2": 14.713089942932129,
+            "daylight_rmse_wm2": 142.06332397460938,
+            "macro_station_daylight_rmse_wm2": 130.43170166015625,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 133.84130859375,
+            "mae_wm2": 72.34439849853516,
+            "mbe_wm2": 22.141090393066406,
+            "daylight_rmse_wm2": 140.0697784423828,
+            "macro_station_daylight_rmse_wm2": 133.14075251988,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 114.6039047241211,
+            "mae_wm2": 61.29241180419922,
+            "mbe_wm2": 11.771109580993652,
+            "daylight_rmse_wm2": 118.84992980957031,
+            "macro_station_daylight_rmse_wm2": 102.16968263898578,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 29.07704734802246,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 105.93346405029297,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 128.58128695828574,
+      "learning_rate": 0.00017357239106731317,
+      "epoch_seconds": 77.46191345900297,
+      "stage_elapsed_seconds": 1653.6045806910843
+    },
+    {
+      "stage": "nwp",
+      "epoch": 23,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.6961435897677553,
+        "satellite": 0.0,
+        "nwp": 0.46339285110726075,
+        "clear": 0.3680714314706088,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.360466003417969,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5353319090273645,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 128.3277587890625,
+        "mae_wm2": 74.96905517578125,
+        "mbe_wm2": 4.562312126159668,
+        "daylight_rmse_wm2": 134.0518341064453,
+        "macro_station_daylight_rmse_wm2": 130.0874083382743,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 105.19287109375,
+            "mae_wm2": 61.41361618041992,
+            "mbe_wm2": 8.331402778625488,
+            "daylight_rmse_wm2": 109.69244384765625,
+            "macro_station_daylight_rmse_wm2": 109.65840148925781,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 146.04273986816406,
+            "mae_wm2": 84.88819122314453,
+            "mbe_wm2": 3.9500997066497803,
+            "daylight_rmse_wm2": 153.0343475341797,
+            "macro_station_daylight_rmse_wm2": 146.90422003609794,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 144.96762084960938,
+            "mae_wm2": 84.54244232177734,
+            "mbe_wm2": -1.0706437826156616,
+            "daylight_rmse_wm2": 152.44154357910156,
+            "macro_station_daylight_rmse_wm2": 145.92196546282088,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 131.7418975830078,
+            "mae_wm2": 79.76714324951172,
+            "mbe_wm2": 1.1190643310546875,
+            "daylight_rmse_wm2": 137.27191162109375,
+            "macro_station_daylight_rmse_wm2": 126.73944745744977,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 126.47286987304688,
+            "mae_wm2": 76.96244049072266,
+            "mbe_wm2": 11.937100410461426,
+            "daylight_rmse_wm2": 132.35842895507812,
+            "macro_station_daylight_rmse_wm2": 126.59820066179547,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 109.55300903320312,
+            "mae_wm2": 62.075225830078125,
+            "mbe_wm2": 3.1469507217407227,
+            "daylight_rmse_wm2": 113.61190032958984,
+            "macro_station_daylight_rmse_wm2": 95.1776509966169,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.561891555786133,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 96.02989196777344,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 125.55274380275182,
+      "learning_rate": 0.00017071067811865476,
+      "epoch_seconds": 77.70883842930198,
+      "stage_elapsed_seconds": 1731.3138697072864
+    },
+    {
+      "stage": "nwp",
+      "epoch": 24,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.6735651779895514,
+        "satellite": 0.0,
+        "nwp": 0.44408277808719016,
+        "clear": 0.3498685184890538,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.2987207010680555,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.53027354049332,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 124.54602813720703,
+        "mae_wm2": 69.1160888671875,
+        "mbe_wm2": 19.6980037689209,
+        "daylight_rmse_wm2": 130.10142517089844,
+        "macro_station_daylight_rmse_wm2": 125.45270320347377,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 105.75677490234375,
+            "mae_wm2": 56.69407272338867,
+            "mbe_wm2": 27.386423110961914,
+            "daylight_rmse_wm2": 110.28046417236328,
+            "macro_station_daylight_rmse_wm2": 110.15853772844586,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 132.51837158203125,
+            "mae_wm2": 75.24681091308594,
+            "mbe_wm2": 20.60297966003418,
+            "daylight_rmse_wm2": 138.86251831054688,
+            "macro_station_daylight_rmse_wm2": 130.06908798217773,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 140.96237182617188,
+            "mae_wm2": 78.59049987792969,
+            "mbe_wm2": 18.98345375061035,
+            "daylight_rmse_wm2": 148.2297821044922,
+            "macro_station_daylight_rmse_wm2": 139.31861523219519,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 132.591552734375,
+            "mae_wm2": 75.72904968261719,
+            "mbe_wm2": 17.18034553527832,
+            "daylight_rmse_wm2": 138.15724182128906,
+            "macro_station_daylight_rmse_wm2": 127.80270712716239,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 127.53959655761719,
+            "mae_wm2": 71.87109375,
+            "mbe_wm2": 23.65574836730957,
+            "daylight_rmse_wm2": 133.4748077392578,
+            "macro_station_daylight_rmse_wm2": 127.0577643258231,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 102.57964324951172,
+            "mae_wm2": 56.347389221191406,
+            "mbe_wm2": 10.501392364501953,
+            "daylight_rmse_wm2": 106.38018035888672,
+            "macro_station_daylight_rmse_wm2": 92.56479890005929,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 29.853469848632812,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 76.40308380126953,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 122.81599093845912,
+      "learning_rate": 0.00016772815716257412,
+      "epoch_seconds": 70.93330981582403,
+      "stage_elapsed_seconds": 1802.2475971234962
+    },
+    {
+      "stage": "nwp",
+      "epoch": 25,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.6989419961384699,
+        "satellite": 0.0,
+        "nwp": 0.4652301814198628,
+        "clear": 0.3640960489758869,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.3779408916149265,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5416879217609082,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 132.0647735595703,
+        "mae_wm2": 72.45256042480469,
+        "mbe_wm2": 27.405302047729492,
+        "daylight_rmse_wm2": 137.95555114746094,
+        "macro_station_daylight_rmse_wm2": 133.11426980154855,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 114.18413543701172,
+            "mae_wm2": 61.820556640625,
+            "mbe_wm2": 34.75841522216797,
+            "daylight_rmse_wm2": 119.06829833984375,
+            "macro_station_daylight_rmse_wm2": 117.51172746930804,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 147.0623321533203,
+            "mae_wm2": 80.77870178222656,
+            "mbe_wm2": 25.1280574798584,
+            "daylight_rmse_wm2": 154.1027374267578,
+            "macro_station_daylight_rmse_wm2": 144.45560264587402,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 150.17413330078125,
+            "mae_wm2": 85.4625015258789,
+            "mbe_wm2": 28.220815658569336,
+            "daylight_rmse_wm2": 157.9164581298828,
+            "macro_station_daylight_rmse_wm2": 148.49810436793737,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 132.1925811767578,
+            "mae_wm2": 76.78303527832031,
+            "mbe_wm2": 24.402990341186523,
+            "daylight_rmse_wm2": 137.74151611328125,
+            "macro_station_daylight_rmse_wm2": 128.3236596243722,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 129.0365753173828,
+            "mae_wm2": 70.36219787597656,
+            "mbe_wm2": 30.20903968811035,
+            "daylight_rmse_wm2": 135.0414581298828,
+            "macro_station_daylight_rmse_wm2": 127.61568559919085,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 115.16075897216797,
+            "mae_wm2": 59.372196197509766,
+            "mbe_wm2": 21.769779205322266,
+            "daylight_rmse_wm2": 119.42740631103516,
+            "macro_station_daylight_rmse_wm2": 96.11179324558803,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.09676170349121,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 84.56780242919922,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 127.53039843695504,
+      "learning_rate": 0.0001646299237860941,
+      "epoch_seconds": 71.11490342672914,
+      "stage_elapsed_seconds": 1873.409222538583
+    },
+    {
+      "stage": "nwp",
+      "epoch": 26,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.6830636004314703,
+        "satellite": 0.0,
+        "nwp": 0.452683002633207,
+        "clear": 0.35874812267538086,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.3222815320382715,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5277475145420217,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 135.28359985351562,
+        "mae_wm2": 75.72222137451172,
+        "mbe_wm2": 2.922666072845459,
+        "daylight_rmse_wm2": 141.3179473876953,
+        "macro_station_daylight_rmse_wm2": 135.8552643912179,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 116.5333251953125,
+            "mae_wm2": 63.28205108642578,
+            "mbe_wm2": 6.87209415435791,
+            "daylight_rmse_wm2": 121.51798248291016,
+            "macro_station_daylight_rmse_wm2": 120.61966160365513,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 161.24264526367188,
+            "mae_wm2": 88.06163024902344,
+            "mbe_wm2": -0.9066439867019653,
+            "daylight_rmse_wm2": 168.9619140625,
+            "macro_station_daylight_rmse_wm2": 159.09128488813127,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 151.4459686279297,
+            "mae_wm2": 84.71068572998047,
+            "mbe_wm2": -0.978386640548706,
+            "daylight_rmse_wm2": 159.2538604736328,
+            "macro_station_daylight_rmse_wm2": 149.86561475481307,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 133.83172607421875,
+            "mae_wm2": 79.32414245605469,
+            "mbe_wm2": 1.425416111946106,
+            "daylight_rmse_wm2": 139.44944763183594,
+            "macro_station_daylight_rmse_wm2": 126.49412100655692,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 131.14682006835938,
+            "mae_wm2": 76.359130859375,
+            "mbe_wm2": 10.856428146362305,
+            "daylight_rmse_wm2": 137.24989318847656,
+            "macro_station_daylight_rmse_wm2": 128.52752358572823,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.47907257080078,
+            "mae_wm2": 62.509498596191406,
+            "mbe_wm2": 0.23382167518138885,
+            "daylight_rmse_wm2": 114.572265625,
+            "macro_station_daylight_rmse_wm2": 97.0312865121024,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.23500633239746,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 93.04716491699219,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 128.59232484272547,
+      "learning_rate": 0.0001614212712689668,
+      "epoch_seconds": 72.81627514772117,
+      "stage_elapsed_seconds": 1946.225894764997
+    },
+    {
+      "stage": "nwp",
+      "epoch": 27,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7123867385819846,
+        "satellite": 0.0,
+        "nwp": 0.478582152991793,
+        "clear": 0.38519955168058184,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.379054625829061,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5317297462447017,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 136.65145874023438,
+        "mae_wm2": 74.8027114868164,
+        "mbe_wm2": 15.38476276397705,
+        "daylight_rmse_wm2": 142.74681091308594,
+        "macro_station_daylight_rmse_wm2": 136.52429417201452,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 114.69779968261719,
+            "mae_wm2": 61.31195068359375,
+            "mbe_wm2": 16.289281845092773,
+            "daylight_rmse_wm2": 119.60394287109375,
+            "macro_station_daylight_rmse_wm2": 118.80177089146206,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 144.47604370117188,
+            "mae_wm2": 81.57891845703125,
+            "mbe_wm2": 14.553547859191895,
+            "daylight_rmse_wm2": 151.3926239013672,
+            "macro_station_daylight_rmse_wm2": 140.83402115958077,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 154.63880920410156,
+            "mae_wm2": 84.72714233398438,
+            "mbe_wm2": 13.341856002807617,
+            "daylight_rmse_wm2": 162.61131286621094,
+            "macro_station_daylight_rmse_wm2": 151.6801597050258,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 146.9935760498047,
+            "mae_wm2": 82.80194091796875,
+            "mbe_wm2": 16.513381958007812,
+            "daylight_rmse_wm2": 153.16378784179688,
+            "macro_station_daylight_rmse_wm2": 138.78335625784737,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 140.28280639648438,
+            "mae_wm2": 78.1790542602539,
+            "mbe_wm2": 22.39372444152832,
+            "daylight_rmse_wm2": 146.81103515625,
+            "macro_station_daylight_rmse_wm2": 138.0375039236886,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 112.69551086425781,
+            "mae_wm2": 59.98277282714844,
+            "mbe_wm2": 9.174497604370117,
+            "daylight_rmse_wm2": 116.8708267211914,
+            "macro_station_daylight_rmse_wm2": 97.3638163975307,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.272708892822266,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 87.78038787841797,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 132.98363460132055,
+      "learning_rate": 0.00015810768154019385,
+      "epoch_seconds": 73.29610144533217,
+      "stage_elapsed_seconds": 2019.522399874404
+    },
+    {
+      "stage": "nwp",
+      "epoch": 28,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.6297408912598698,
+        "satellite": 0.0,
+        "nwp": 0.40285649100391596,
+        "clear": 0.3434786858110159,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.24729036038218,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5229175583112473,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 136.0767822265625,
+        "mae_wm2": 75.70771026611328,
+        "mbe_wm2": -9.225231170654297,
+        "daylight_rmse_wm2": 142.14651489257812,
+        "macro_station_daylight_rmse_wm2": 135.99018750871932,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 100.80101776123047,
+            "mae_wm2": 55.99674606323242,
+            "mbe_wm2": -2.426589250564575,
+            "daylight_rmse_wm2": 105.11272430419922,
+            "macro_station_daylight_rmse_wm2": 104.62087794712612,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 150.02584838867188,
+            "mae_wm2": 82.78975677490234,
+            "mbe_wm2": -10.93415641784668,
+            "daylight_rmse_wm2": 157.20814514160156,
+            "macro_station_daylight_rmse_wm2": 144.41620063781738,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 150.6189422607422,
+            "mae_wm2": 84.39362335205078,
+            "mbe_wm2": -10.412223815917969,
+            "daylight_rmse_wm2": 158.3842010498047,
+            "macro_station_daylight_rmse_wm2": 147.0926557268415,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 147.0994873046875,
+            "mae_wm2": 82.50959777832031,
+            "mbe_wm2": -14.909815788269043,
+            "daylight_rmse_wm2": 153.27415466308594,
+            "macro_station_daylight_rmse_wm2": 142.32069233485632,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 135.1378631591797,
+            "mae_wm2": 78.66753387451172,
+            "mbe_wm2": -5.026933670043945,
+            "daylight_rmse_wm2": 141.42666625976562,
+            "macro_station_daylight_rmse_wm2": 133.11117662702287,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 125.44029998779297,
+            "mae_wm2": 69.56526947021484,
+            "mbe_wm2": -11.578790664672852,
+            "daylight_rmse_wm2": 130.08779907226562,
+            "macro_station_daylight_rmse_wm2": 115.82532664707729,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 29.10469627380371,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 155.57699584960938,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 135.00828023638044,
+      "learning_rate": 0.0001546948158122427,
+      "epoch_seconds": 74.26707278005779,
+      "stage_elapsed_seconds": 2093.789952338673
+    },
+    {
+      "stage": "nwp",
+      "epoch": 29,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.7094006116678512,
+        "satellite": 0.0,
+        "nwp": 0.4766922808629674,
+        "clear": 0.3720876785524774,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.364684094790539,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5316342381772652,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 134.25770568847656,
+        "mae_wm2": 73.91374206542969,
+        "mbe_wm2": 7.663440227508545,
+        "daylight_rmse_wm2": 140.2462921142578,
+        "macro_station_daylight_rmse_wm2": 133.63560376848494,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 116.52075958251953,
+            "mae_wm2": 60.308040618896484,
+            "mbe_wm2": 11.367178916931152,
+            "daylight_rmse_wm2": 121.50487518310547,
+            "macro_station_daylight_rmse_wm2": 121.66792624337333,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 144.04794311523438,
+            "mae_wm2": 80.14459991455078,
+            "mbe_wm2": 8.539510726928711,
+            "daylight_rmse_wm2": 150.94403076171875,
+            "macro_station_daylight_rmse_wm2": 140.21057837350028,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 149.57528686523438,
+            "mae_wm2": 82.46890258789062,
+            "mbe_wm2": 2.942765235900879,
+            "daylight_rmse_wm2": 157.28672790527344,
+            "macro_station_daylight_rmse_wm2": 145.19172954559326,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 139.58279418945312,
+            "mae_wm2": 81.01264190673828,
+            "mbe_wm2": 4.943334579467773,
+            "daylight_rmse_wm2": 145.4419403076172,
+            "macro_station_daylight_rmse_wm2": 132.2050770350865,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 132.724365234375,
+            "mae_wm2": 73.77478790283203,
+            "mbe_wm2": 13.594061851501465,
+            "daylight_rmse_wm2": 138.90086364746094,
+            "macro_station_daylight_rmse_wm2": 129.79716873168945,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 119.52923583984375,
+            "mae_wm2": 65.57022857666016,
+            "mbe_wm2": 4.663520336151123,
+            "daylight_rmse_wm2": 123.95773315429688,
+            "macro_station_daylight_rmse_wm2": 106.57414899553571,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.726606369018555,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 110.40662384033203,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 130.00010288442886,
+      "learning_rate": 0.00015118850490896012,
+      "epoch_seconds": 74.83349333144724,
+      "stage_elapsed_seconds": 2168.6238683443516
+    },
+    {
+      "stage": "nwp",
+      "epoch": 30,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5996181164545561,
+        "satellite": 0.0,
+        "nwp": 0.3758978051547375,
+        "clear": 0.3385821141384761,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.188896752650441,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5112430806594347,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 125.97305297851562,
+        "mae_wm2": 69.43798828125,
+        "mbe_wm2": 12.958219528198242,
+        "daylight_rmse_wm2": 131.59210205078125,
+        "macro_station_daylight_rmse_wm2": 126.87083380562919,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 109.73786926269531,
+            "mae_wm2": 58.54995346069336,
+            "mbe_wm2": 13.4516019821167,
+            "daylight_rmse_wm2": 114.4318618774414,
+            "macro_station_daylight_rmse_wm2": 114.06092289515904,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 138.80633544921875,
+            "mae_wm2": 75.22887420654297,
+            "mbe_wm2": 14.927027702331543,
+            "daylight_rmse_wm2": 145.45150756835938,
+            "macro_station_daylight_rmse_wm2": 133.80683381216866,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 137.23667907714844,
+            "mae_wm2": 77.65585327148438,
+            "mbe_wm2": 11.051605224609375,
+            "daylight_rmse_wm2": 144.31201171875,
+            "macro_station_daylight_rmse_wm2": 135.98923219953264,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 127.95008850097656,
+            "mae_wm2": 75.14250946044922,
+            "mbe_wm2": 9.149556159973145,
+            "daylight_rmse_wm2": 133.32093811035156,
+            "macro_station_daylight_rmse_wm2": 124.25494929722377,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 124.93541717529297,
+            "mae_wm2": 70.07488250732422,
+            "mbe_wm2": 20.308700561523438,
+            "daylight_rmse_wm2": 130.7494354248047,
+            "macro_station_daylight_rmse_wm2": 124.26828002929688,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 114.28219604492188,
+            "mae_wm2": 59.808738708496094,
+            "mbe_wm2": 8.856270790100098,
+            "daylight_rmse_wm2": 118.51629638671875,
+            "macro_station_daylight_rmse_wm2": 99.66472489493233,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.741859436035156,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 96.54609680175781,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 122.79225776536123,
+      "learning_rate": 0.00014759473930370736,
+      "epoch_seconds": 73.1737804794684,
+      "stage_elapsed_seconds": 2241.798057829961
+    },
+    {
+      "stage": "nwp",
+      "epoch": 31,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.6249420966441724,
+        "satellite": 0.0,
+        "nwp": 0.4004646933064423,
+        "clear": 0.3319718094993066,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.227041634858823,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5106756781513979,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 136.93751525878906,
+        "mae_wm2": 78.68771362304688,
+        "mbe_wm2": 0.6352494359016418,
+        "daylight_rmse_wm2": 143.04563903808594,
+        "macro_station_daylight_rmse_wm2": 137.0123656136649,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 117.99178314208984,
+            "mae_wm2": 66.08008575439453,
+            "mbe_wm2": -2.340820789337158,
+            "daylight_rmse_wm2": 123.03881072998047,
+            "macro_station_daylight_rmse_wm2": 122.54597473144531,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 158.05747985839844,
+            "mae_wm2": 86.13793182373047,
+            "mbe_wm2": 3.5425288677215576,
+            "daylight_rmse_wm2": 165.624267578125,
+            "macro_station_daylight_rmse_wm2": 155.7325325012207,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 155.4507598876953,
+            "mae_wm2": 87.34375,
+            "mbe_wm2": -0.22681619226932526,
+            "daylight_rmse_wm2": 163.4651336669922,
+            "macro_station_daylight_rmse_wm2": 153.0629482269287,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 136.26556396484375,
+            "mae_wm2": 83.7818832397461,
+            "mbe_wm2": 1.5251286029815674,
+            "daylight_rmse_wm2": 141.9854736328125,
+            "macro_station_daylight_rmse_wm2": 131.65941892351424,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 134.78497314453125,
+            "mae_wm2": 82.95632934570312,
+            "mbe_wm2": 3.3683509826660156,
+            "daylight_rmse_wm2": 141.05735778808594,
+            "macro_station_daylight_rmse_wm2": 133.37859453473772,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 112.64576721191406,
+            "mae_wm2": 65.62242889404297,
+            "mbe_wm2": -2.074492931365967,
+            "daylight_rmse_wm2": 116.8192367553711,
+            "macro_station_daylight_rmse_wm2": 99.02076612200055,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.165237426757812,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 122.07611846923828,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 131.60001205035616,
+      "learning_rate": 0.00014391965888473703,
+      "epoch_seconds": 72.34022879973054,
+      "stage_elapsed_seconds": 2314.192013932392
+    },
+    {
+      "stage": "nwp",
+      "epoch": 32,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.6133622274387116,
+        "satellite": 0.0,
+        "nwp": 0.3883499149720069,
+        "clear": 0.3333657784844,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.227374764049754,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5152278395941834,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 134.7796173095703,
+        "mae_wm2": 75.13716888427734,
+        "mbe_wm2": -9.48703670501709,
+        "daylight_rmse_wm2": 140.79148864746094,
+        "macro_station_daylight_rmse_wm2": 133.7216033935547,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 112.8965835571289,
+            "mae_wm2": 61.10742950439453,
+            "mbe_wm2": -0.8455442786216736,
+            "daylight_rmse_wm2": 117.72566986083984,
+            "macro_station_daylight_rmse_wm2": 117.40211704799107,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 149.68093872070312,
+            "mae_wm2": 82.76332092285156,
+            "mbe_wm2": -9.886922836303711,
+            "daylight_rmse_wm2": 156.8467254638672,
+            "macro_station_daylight_rmse_wm2": 146.17905017307825,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 148.40072631835938,
+            "mae_wm2": 82.88782501220703,
+            "mbe_wm2": -7.836097240447998,
+            "daylight_rmse_wm2": 156.05160522460938,
+            "macro_station_daylight_rmse_wm2": 144.19267232077462,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 140.12234497070312,
+            "mae_wm2": 79.0491943359375,
+            "mbe_wm2": -14.626629829406738,
+            "daylight_rmse_wm2": 146.00413513183594,
+            "macro_station_daylight_rmse_wm2": 130.80190331595284,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 138.66610717773438,
+            "mae_wm2": 81.87124633789062,
+            "mbe_wm2": -8.778791427612305,
+            "daylight_rmse_wm2": 145.11911010742188,
+            "macro_station_daylight_rmse_wm2": 134.3409538269043,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 113.55194091796875,
+            "mae_wm2": 62.904544830322266,
+            "mbe_wm2": -14.824339866638184,
+            "daylight_rmse_wm2": 117.75897979736328,
+            "macro_station_daylight_rmse_wm2": 103.19447108677456,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.054784774780273,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 113.64663696289062,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 129.8092311143875,
+      "learning_rate": 0.00014016954246529696,
+      "epoch_seconds": 72.37286414206028,
+      "stage_elapsed_seconds": 2386.5652959477156
+    },
+    {
+      "stage": "nwp",
+      "epoch": 33,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5830463923854765,
+        "satellite": 0.0,
+        "nwp": 0.35978675133311283,
+        "clear": 0.32882743194894076,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.185354766502879,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5125762941011416,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 144.0263671875,
+        "mae_wm2": 80.14464569091797,
+        "mbe_wm2": -3.8159656524658203,
+        "daylight_rmse_wm2": 150.45068359375,
+        "macro_station_daylight_rmse_wm2": 143.6353699820382,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 126.95265197753906,
+            "mae_wm2": 68.13233947753906,
+            "mbe_wm2": -2.1140072345733643,
+            "daylight_rmse_wm2": 132.3829803466797,
+            "macro_station_daylight_rmse_wm2": 130.75579724993025,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 171.3455352783203,
+            "mae_wm2": 93.20209503173828,
+            "mbe_wm2": -8.51688289642334,
+            "daylight_rmse_wm2": 179.54847717285156,
+            "macro_station_daylight_rmse_wm2": 166.25944682529993,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 165.2186279296875,
+            "mae_wm2": 91.95066833496094,
+            "mbe_wm2": 0.10332322865724564,
+            "daylight_rmse_wm2": 173.736572265625,
+            "macro_station_daylight_rmse_wm2": 162.21718747275216,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 136.78225708007812,
+            "mae_wm2": 79.6698989868164,
+            "mbe_wm2": -0.24965065717697144,
+            "daylight_rmse_wm2": 142.52386474609375,
+            "macro_station_daylight_rmse_wm2": 132.55858176095145,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 134.55307006835938,
+            "mae_wm2": 78.11578369140625,
+            "mbe_wm2": -1.8054664134979248,
+            "daylight_rmse_wm2": 140.81466674804688,
+            "macro_station_daylight_rmse_wm2": 129.30978993007116,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 122.10585021972656,
+            "mae_wm2": 69.72965240478516,
+            "mbe_wm2": -10.417737007141113,
+            "daylight_rmse_wm2": 126.62981414794922,
+            "macro_station_daylight_rmse_wm2": 107.51801518031529,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 31.272266387939453,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 114.86088562011719,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 136.1212365048272,
+      "learning_rate": 0.00013635079705638298,
+      "epoch_seconds": 73.52672703377903,
+      "stage_elapsed_seconds": 2460.0924117183313
+    },
+    {
+      "stage": "nwp",
+      "epoch": 34,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5889009738377496,
+        "satellite": 0.0,
+        "nwp": 0.36388510766019133,
+        "clear": 0.3281704075086643,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.2240257956623255,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5188657519669314,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 134.7482147216797,
+        "mae_wm2": 73.82110595703125,
+        "mbe_wm2": 12.429349899291992,
+        "daylight_rmse_wm2": 140.75868225097656,
+        "macro_station_daylight_rmse_wm2": 134.52991921561105,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 116.22217559814453,
+            "mae_wm2": 60.8676872253418,
+            "mbe_wm2": 14.128507614135742,
+            "daylight_rmse_wm2": 121.19351196289062,
+            "macro_station_daylight_rmse_wm2": 120.90138353620257,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 146.13262939453125,
+            "mae_wm2": 79.58042907714844,
+            "mbe_wm2": 12.14763355255127,
+            "daylight_rmse_wm2": 153.1285400390625,
+            "macro_station_daylight_rmse_wm2": 141.39912469046456,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 144.20298767089844,
+            "mae_wm2": 80.1983413696289,
+            "mbe_wm2": 14.474677085876465,
+            "daylight_rmse_wm2": 151.63748168945312,
+            "macro_station_daylight_rmse_wm2": 140.29515307290214,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 140.18792724609375,
+            "mae_wm2": 78.31074523925781,
+            "mbe_wm2": 12.214754104614258,
+            "daylight_rmse_wm2": 146.0724639892578,
+            "macro_station_daylight_rmse_wm2": 133.60207421439034,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 137.36082458496094,
+            "mae_wm2": 77.2257080078125,
+            "mbe_wm2": 18.518953323364258,
+            "daylight_rmse_wm2": 143.75308227539062,
+            "macro_station_daylight_rmse_wm2": 134.93601717267717,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 121.28541564941406,
+            "mae_wm2": 66.5317153930664,
+            "mbe_wm2": 3.0450878143310547,
+            "daylight_rmse_wm2": 125.77897644042969,
+            "macro_station_daylight_rmse_wm2": 108.8229923248291,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 29.975887298583984,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 109.11018371582031,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 130.9488172020231,
+      "learning_rate": 0.00013246994692046836,
+      "epoch_seconds": 71.91608852986246,
+      "stage_elapsed_seconds": 2532.008947428316
+    },
+    {
+      "stage": "nwp",
+      "epoch": 35,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5897323114712254,
+        "satellite": 0.0,
+        "nwp": 0.36719354238738516,
+        "clear": 0.318327543347027,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.171696604466906,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5147149888129016,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 132.5298309326172,
+        "mae_wm2": 73.59835815429688,
+        "mbe_wm2": 11.790313720703125,
+        "daylight_rmse_wm2": 138.44134521484375,
+        "macro_station_daylight_rmse_wm2": 133.16113771711076,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 115.32431030273438,
+            "mae_wm2": 59.97330856323242,
+            "mbe_wm2": 8.423552513122559,
+            "daylight_rmse_wm2": 120.25724792480469,
+            "macro_station_daylight_rmse_wm2": 120.18072509765625,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 154.2201690673828,
+            "mae_wm2": 82.76274871826172,
+            "mbe_wm2": 8.289789199829102,
+            "daylight_rmse_wm2": 161.60324096679688,
+            "macro_station_daylight_rmse_wm2": 150.03497968401228,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 146.78805541992188,
+            "mae_wm2": 83.17019653320312,
+            "mbe_wm2": 14.266975402832031,
+            "daylight_rmse_wm2": 154.35581970214844,
+            "macro_station_daylight_rmse_wm2": 141.82576288495744,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 125.91497039794922,
+            "mae_wm2": 75.1576156616211,
+            "mbe_wm2": 15.330268859863281,
+            "daylight_rmse_wm2": 131.2003936767578,
+            "macro_station_daylight_rmse_wm2": 121.38506698608398,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 134.363037109375,
+            "mae_wm2": 77.33721923828125,
+            "mbe_wm2": 19.129165649414062,
+            "daylight_rmse_wm2": 140.6157989501953,
+            "macro_station_daylight_rmse_wm2": 133.0363715035575,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 113.32129669189453,
+            "mae_wm2": 62.99406433105469,
+            "mbe_wm2": 5.095557689666748,
+            "daylight_rmse_wm2": 117.5197982788086,
+            "macro_station_daylight_rmse_wm2": 101.11703273228237,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.89346694946289,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 114.40113830566406,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 126.98708228383745,
+      "learning_rate": 0.00012853362242491056,
+      "epoch_seconds": 72.61315798386931,
+      "stage_elapsed_seconds": 2604.622519626282
+    },
+    {
+      "stage": "nwp",
+      "epoch": 36,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.584924950319178,
+        "satellite": 0.0,
+        "nwp": 0.3624500465104539,
+        "clear": 0.32763532971738063,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.172588335143195,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5091548977918874,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 136.60601806640625,
+        "mae_wm2": 74.44837188720703,
+        "mbe_wm2": 11.309747695922852,
+        "daylight_rmse_wm2": 142.6993408203125,
+        "macro_station_daylight_rmse_wm2": 137.07796151297433,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 112.93424224853516,
+            "mae_wm2": 58.981773376464844,
+            "mbe_wm2": 17.785846710205078,
+            "daylight_rmse_wm2": 117.76494598388672,
+            "macro_station_daylight_rmse_wm2": 117.83250318254743,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 151.67698669433594,
+            "mae_wm2": 82.17350006103516,
+            "mbe_wm2": 4.352725505828857,
+            "daylight_rmse_wm2": 158.93832397460938,
+            "macro_station_daylight_rmse_wm2": 147.43790653773718,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 149.4320526123047,
+            "mae_wm2": 82.03743743896484,
+            "mbe_wm2": 13.259495735168457,
+            "daylight_rmse_wm2": 157.13609313964844,
+            "macro_station_daylight_rmse_wm2": 143.32850674220495,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 135.50094604492188,
+            "mae_wm2": 78.91908264160156,
+            "mbe_wm2": 12.589734077453613,
+            "daylight_rmse_wm2": 141.18875122070312,
+            "macro_station_daylight_rmse_wm2": 128.42472621372767,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 143.42337036132812,
+            "mae_wm2": 78.64952087402344,
+            "mbe_wm2": 15.598690032958984,
+            "daylight_rmse_wm2": 150.09774780273438,
+            "macro_station_daylight_rmse_wm2": 141.52915736607142,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 121.9430923461914,
+            "mae_wm2": 65.68964385986328,
+            "mbe_wm2": 4.208832740783691,
+            "daylight_rmse_wm2": 126.46102905273438,
+            "macro_station_daylight_rmse_wm2": 111.0470608302525,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.156803131103516,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 130.4204559326172,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 132.8810424055372,
+      "learning_rate": 0.00012454854871407994,
+      "epoch_seconds": 73.41042066831142,
+      "stage_elapsed_seconds": 2678.0333556896076
+    },
+    {
+      "stage": "nwp",
+      "epoch": 37,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5406274476082497,
+        "satellite": 0.0,
+        "nwp": 0.3224233945868179,
+        "clear": 0.3086003372141349,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.090571687891592,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5005688694567462,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 134.9234619140625,
+        "mae_wm2": 76.3923568725586,
+        "mbe_wm2": 18.39337730407715,
+        "daylight_rmse_wm2": 140.94174194335938,
+        "macro_station_daylight_rmse_wm2": 135.736268724714,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 118.19508361816406,
+            "mae_wm2": 62.53188705444336,
+            "mbe_wm2": 19.931720733642578,
+            "daylight_rmse_wm2": 123.25081634521484,
+            "macro_station_daylight_rmse_wm2": 122.01458413260323,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 155.18788146972656,
+            "mae_wm2": 84.93360900878906,
+            "mbe_wm2": 15.85051155090332,
+            "daylight_rmse_wm2": 162.61727905273438,
+            "macro_station_daylight_rmse_wm2": 151.9966218130929,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 144.9881591796875,
+            "mae_wm2": 83.15535736083984,
+            "mbe_wm2": 18.2330265045166,
+            "daylight_rmse_wm2": 152.46311950683594,
+            "macro_station_daylight_rmse_wm2": 141.12181881495886,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 130.62318420410156,
+            "mae_wm2": 78.1415786743164,
+            "mbe_wm2": 15.912934303283691,
+            "daylight_rmse_wm2": 136.10626220703125,
+            "macro_station_daylight_rmse_wm2": 125.5267688206264,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 143.610595703125,
+            "mae_wm2": 84.69029998779297,
+            "mbe_wm2": 26.06512451171875,
+            "daylight_rmse_wm2": 150.293701171875,
+            "macro_station_daylight_rmse_wm2": 143.5668776375907,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 111.56886291503906,
+            "mae_wm2": 64.6760025024414,
+            "mbe_wm2": 14.283432006835938,
+            "daylight_rmse_wm2": 115.70243835449219,
+            "macro_station_daylight_rmse_wm2": 99.71142087663922,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.82077407836914,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 112.31324005126953,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 129.95808569363186,
+      "learning_rate": 0.00012052153421956342,
+      "epoch_seconds": 72.67967643775046,
+      "stage_elapsed_seconds": 2750.713429821655
+    },
+    {
+      "stage": "nwp",
+      "epoch": 38,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5495322553647889,
+        "satellite": 0.0,
+        "nwp": 0.3300701096620459,
+        "clear": 0.3002015242286124,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.128530503098482,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5059615478796118,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 137.89308166503906,
+        "mae_wm2": 79.02099609375,
+        "mbe_wm2": -2.7073655128479004,
+        "daylight_rmse_wm2": 144.0438232421875,
+        "macro_station_daylight_rmse_wm2": 138.62157276698522,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 120.11774444580078,
+            "mae_wm2": 67.25456237792969,
+            "mbe_wm2": -2.7222483158111572,
+            "daylight_rmse_wm2": 125.25572204589844,
+            "macro_station_daylight_rmse_wm2": 125.31369999476841,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 148.4990692138672,
+            "mae_wm2": 84.68284606933594,
+            "mbe_wm2": -9.323248863220215,
+            "daylight_rmse_wm2": 155.60826110839844,
+            "macro_station_daylight_rmse_wm2": 144.25345938546317,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 147.2282257080078,
+            "mae_wm2": 84.4874267578125,
+            "mbe_wm2": -0.26036137342453003,
+            "daylight_rmse_wm2": 154.8186492919922,
+            "macro_station_daylight_rmse_wm2": 144.77207974025183,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 133.59713745117188,
+            "mae_wm2": 79.99314880371094,
+            "mbe_wm2": -4.129066467285156,
+            "daylight_rmse_wm2": 139.2050323486328,
+            "macro_station_daylight_rmse_wm2": 128.7130284990583,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 150.44580078125,
+            "mae_wm2": 88.1501235961914,
+            "mbe_wm2": -0.36252573132514954,
+            "daylight_rmse_wm2": 157.44699096679688,
+            "macro_station_daylight_rmse_wm2": 149.17570550101144,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 123.96051788330078,
+            "mae_wm2": 69.32279205322266,
+            "mbe_wm2": 0.39489129185676575,
+            "daylight_rmse_wm2": 128.55319213867188,
+            "macro_station_daylight_rmse_wm2": 111.54542813982282,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 30.346914291381836,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 152.79891967773438,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 135.07256415912082,
+      "learning_rate": 0.00011645945902807338,
+      "epoch_seconds": 76.42496178299189,
+      "stage_elapsed_seconds": 2827.1387781435624
+    },
+    {
+      "stage": "nwp",
+      "epoch": 39,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5249140255786235,
+        "satellite": 0.0,
+        "nwp": 0.3083339005775652,
+        "clear": 0.29985454050349253,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.066367436078639,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.4959637748162731,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 132.658447265625,
+        "mae_wm2": 73.08870697021484,
+        "mbe_wm2": 4.241566181182861,
+        "daylight_rmse_wm2": 138.57569885253906,
+        "macro_station_daylight_rmse_wm2": 132.9473522731236,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 111.419921875,
+            "mae_wm2": 59.25708770751953,
+            "mbe_wm2": 11.90874195098877,
+            "daylight_rmse_wm2": 116.18585968017578,
+            "macro_station_daylight_rmse_wm2": 115.99362400599888,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 146.89834594726562,
+            "mae_wm2": 79.97090148925781,
+            "mbe_wm2": -2.4720687866210938,
+            "daylight_rmse_wm2": 153.93092346191406,
+            "macro_station_daylight_rmse_wm2": 142.37641062055314,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 140.7161865234375,
+            "mae_wm2": 79.2709732055664,
+            "mbe_wm2": 3.7925069332122803,
+            "daylight_rmse_wm2": 147.97091674804688,
+            "macro_station_daylight_rmse_wm2": 136.9991411481585,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 130.33477783203125,
+            "mae_wm2": 75.7212905883789,
+            "mbe_wm2": 1.408164620399475,
+            "daylight_rmse_wm2": 135.80572509765625,
+            "macro_station_daylight_rmse_wm2": 123.06869343348912,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 142.91677856445312,
+            "mae_wm2": 79.72838592529297,
+            "mbe_wm2": 5.9683451652526855,
+            "daylight_rmse_wm2": 149.5675811767578,
+            "macro_station_daylight_rmse_wm2": 142.48703493390764,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 119.65538024902344,
+            "mae_wm2": 64.34916687011719,
+            "mbe_wm2": 4.849225044250488,
+            "daylight_rmse_wm2": 124.08856201171875,
+            "macro_station_daylight_rmse_wm2": 103.81863730294364,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.716636657714844,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 122.49689483642578,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 128.4995693751744,
+      "learning_rate": 0.00011236926312693479,
+      "epoch_seconds": 71.99644894525409,
+      "stage_elapsed_seconds": 2899.135624544695
+    },
+    {
+      "stage": "nwp",
+      "epoch": 40,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.4955276426633978,
+        "satellite": 0.0,
+        "nwp": 0.27832103305986283,
+        "clear": 0.29863989767101073,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 5.05908614124348,
+        "base_uncertainty": 0.0,
+        "cloud": 0.0,
+        "route_reg": 0.0,
+        "safety": 0.0,
+        "anchor_trust": 0.5050203459933887,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 133.80906677246094,
+        "mae_wm2": 71.98023223876953,
+        "mbe_wm2": 16.244487762451172,
+        "daylight_rmse_wm2": 139.77764892578125,
+        "macro_station_daylight_rmse_wm2": 134.3906489780971,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 119.53996276855469,
+            "mae_wm2": 63.0070686340332,
+            "mbe_wm2": 18.276073455810547,
+            "daylight_rmse_wm2": 124.65322875976562,
+            "macro_station_daylight_rmse_wm2": 123.12437765938895,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 148.98114013671875,
+            "mae_wm2": 76.5860824584961,
+            "mbe_wm2": 10.816383361816406,
+            "daylight_rmse_wm2": 156.11341857910156,
+            "macro_station_daylight_rmse_wm2": 143.63305282592773,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 145.84719848632812,
+            "mae_wm2": 78.45469665527344,
+            "mbe_wm2": 18.642065048217773,
+            "daylight_rmse_wm2": 153.366455078125,
+            "macro_station_daylight_rmse_wm2": 143.81908907209123,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 129.8144989013672,
+            "mae_wm2": 73.96118927001953,
+            "mbe_wm2": 13.871609687805176,
+            "daylight_rmse_wm2": 135.26361083984375,
+            "macro_station_daylight_rmse_wm2": 124.84215218680245,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 139.88401794433594,
+            "mae_wm2": 78.50389862060547,
+            "mbe_wm2": 20.184473037719727,
+            "daylight_rmse_wm2": 146.39369201660156,
+            "macro_station_daylight_rmse_wm2": 138.78186798095703,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 114.98258972167969,
+            "mae_wm2": 61.17782974243164,
+            "mbe_wm2": 15.561148643493652,
+            "daylight_rmse_wm2": 119.24263763427734,
+            "macro_station_daylight_rmse_wm2": 98.16357176644462,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 28.59186363220215,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 104.63449096679688,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 128.79836386953082,
+      "learning_rate": 0.00010825793454723325,
+      "epoch_seconds": 72.46960248798132,
+      "stage_elapsed_seconds": 2971.605632145889
+    },
+    {
+      "stage": "fusion",
+      "epoch": 0,
+      "validation": {
+        "rmse_wm2": 108.47594451904297,
+        "mae_wm2": 61.35956954956055,
+        "mbe_wm2": 16.699905395507812,
+        "daylight_rmse_wm2": 113.31453704833984,
+        "macro_station_daylight_rmse_wm2": 109.2971660069057,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 71.99380493164062,
+            "mae_wm2": 43.86084747314453,
+            "mbe_wm2": 18.13983726501465,
+            "daylight_rmse_wm2": 75.07330322265625,
+            "macro_station_daylight_rmse_wm2": 72.48324584960938,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.0417251586914,
+            "mae_wm2": 62.88881301879883,
+            "mbe_wm2": 12.235121726989746,
+            "daylight_rmse_wm2": 117.40557098388672,
+            "macro_station_daylight_rmse_wm2": 109.95295006888253,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 115.25029754638672,
+            "mae_wm2": 66.90483856201172,
+            "mbe_wm2": 16.330951690673828,
+            "daylight_rmse_wm2": 121.19210815429688,
+            "macro_station_daylight_rmse_wm2": 116.86162621634347,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 113.65550231933594,
+            "mae_wm2": 68.47090911865234,
+            "mbe_wm2": 12.426534652709961,
+            "daylight_rmse_wm2": 118.42633056640625,
+            "macro_station_daylight_rmse_wm2": 111.65844345092773,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 119.71687316894531,
+            "mae_wm2": 68.53450012207031,
+            "mbe_wm2": 23.569705963134766,
+            "daylight_rmse_wm2": 125.28804016113281,
+            "macro_station_daylight_rmse_wm2": 119.11088344029018,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.43498229980469,
+            "mae_wm2": 57.10575866699219,
+            "mbe_wm2": 17.387182235717773,
+            "daylight_rmse_wm2": 114.52654266357422,
+            "macro_station_daylight_rmse_wm2": 94.14789363316127,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.42841148376465,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 54.889041900634766,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 109.2971660069057,
+      "role": "incoming_stage_checkpoint"
+    },
+    {
+      "stage": "fusion",
+      "epoch": 1,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5792984882357464,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.246587285808489,
+        "cloud": 0.0,
+        "route_reg": 0.004412436271177642,
+        "safety": 0.10435620867160264,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 108.56947326660156,
+        "mae_wm2": 61.38895797729492,
+        "mbe_wm2": 16.619054794311523,
+        "daylight_rmse_wm2": 113.41223907470703,
+        "macro_station_daylight_rmse_wm2": 109.37461635044643,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.01045989990234,
+            "mae_wm2": 43.83134078979492,
+            "mbe_wm2": 18.12514305114746,
+            "daylight_rmse_wm2": 75.09066772460938,
+            "macro_station_daylight_rmse_wm2": 72.50905173165458,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.09518432617188,
+            "mae_wm2": 62.92757797241211,
+            "mbe_wm2": 12.255584716796875,
+            "daylight_rmse_wm2": 117.46159362792969,
+            "macro_station_daylight_rmse_wm2": 109.97790690830776,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 115.40357971191406,
+            "mae_wm2": 66.95598602294922,
+            "mbe_wm2": 16.255674362182617,
+            "daylight_rmse_wm2": 121.35328674316406,
+            "macro_station_daylight_rmse_wm2": 116.96750804356166,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 113.83805847167969,
+            "mae_wm2": 68.54103088378906,
+            "mbe_wm2": 12.357297897338867,
+            "daylight_rmse_wm2": 118.61653900146484,
+            "macro_station_daylight_rmse_wm2": 111.7821273803711,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 119.7900390625,
+            "mae_wm2": 68.5518569946289,
+            "mbe_wm2": 23.482824325561523,
+            "daylight_rmse_wm2": 125.36461639404297,
+            "macro_station_daylight_rmse_wm2": 119.18552943638393,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.49130249023438,
+            "mae_wm2": 57.13323974609375,
+            "mbe_wm2": 17.130651473999023,
+            "daylight_rmse_wm2": 114.58495330810547,
+            "macro_station_daylight_rmse_wm2": 94.2476577758789,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.421974182128906,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 55.106605529785156,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 109.37461635044643,
+      "learning_rate": 0.0002,
+      "epoch_seconds": 45.49646179843694,
+      "stage_elapsed_seconds": 48.56634468585253
+    },
+    {
+      "stage": "fusion",
+      "epoch": 2,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.56138871848778,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.23760043951421,
+        "cloud": 0.0,
+        "route_reg": 0.004364251373320502,
+        "safety": 0.0948311798355361,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 108.76971435546875,
+        "mae_wm2": 61.45806884765625,
+        "mbe_wm2": 16.46121597290039,
+        "daylight_rmse_wm2": 113.62141418457031,
+        "macro_station_daylight_rmse_wm2": 109.54241234915597,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.04808044433594,
+            "mae_wm2": 43.76942825317383,
+            "mbe_wm2": 18.09422492980957,
+            "daylight_rmse_wm2": 75.1299057006836,
+            "macro_station_daylight_rmse_wm2": 72.56631851196289,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.21672058105469,
+            "mae_wm2": 63.01416778564453,
+            "mbe_wm2": 12.298760414123535,
+            "daylight_rmse_wm2": 117.58894348144531,
+            "macro_station_daylight_rmse_wm2": 110.03856904166085,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 115.73567962646484,
+            "mae_wm2": 67.09347534179688,
+            "mbe_wm2": 16.100812911987305,
+            "daylight_rmse_wm2": 121.7025146484375,
+            "macro_station_daylight_rmse_wm2": 117.20125361851284,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 114.22211456298828,
+            "mae_wm2": 68.69072723388672,
+            "mbe_wm2": 12.218154907226562,
+            "daylight_rmse_wm2": 119.01671600341797,
+            "macro_station_daylight_rmse_wm2": 112.049802507673,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 119.94358825683594,
+            "mae_wm2": 68.58573913574219,
+            "mbe_wm2": 23.313234329223633,
+            "daylight_rmse_wm2": 125.52531433105469,
+            "macro_station_daylight_rmse_wm2": 119.34150695800781,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.60933685302734,
+            "mae_wm2": 57.19988250732422,
+            "mbe_wm2": 16.640779495239258,
+            "daylight_rmse_wm2": 114.70734405517578,
+            "macro_station_daylight_rmse_wm2": 94.45102391924176,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.40918731689453,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 55.559329986572266,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 109.54241234915597,
+      "learning_rate": 0.0002,
+      "epoch_seconds": 45.318700827658176,
+      "stage_elapsed_seconds": 93.8853956470266
+    },
+    {
+      "stage": "fusion",
+      "epoch": 3,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5628263309500576,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.245207086887235,
+        "cloud": 0.0,
+        "route_reg": 0.0046887763192286725,
+        "safety": 0.09713607128464692,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 108.99420166015625,
+        "mae_wm2": 61.53260803222656,
+        "mbe_wm2": 16.295751571655273,
+        "daylight_rmse_wm2": 113.85590362548828,
+        "macro_station_daylight_rmse_wm2": 109.73450633457729,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.09176635742188,
+            "mae_wm2": 43.704078674316406,
+            "mbe_wm2": 18.061580657958984,
+            "daylight_rmse_wm2": 75.17546081542969,
+            "macro_station_daylight_rmse_wm2": 72.63135256086078,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.35706329345703,
+            "mae_wm2": 63.105186462402344,
+            "mbe_wm2": 12.344083786010742,
+            "daylight_rmse_wm2": 117.73601531982422,
+            "macro_station_daylight_rmse_wm2": 110.11395263671875,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 116.1047134399414,
+            "mae_wm2": 67.24026489257812,
+            "mbe_wm2": 15.939654350280762,
+            "daylight_rmse_wm2": 122.09056091308594,
+            "macro_station_daylight_rmse_wm2": 117.46693638392857,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 114.64064025878906,
+            "mae_wm2": 68.84671020507812,
+            "mbe_wm2": 12.075027465820312,
+            "daylight_rmse_wm2": 119.45281982421875,
+            "macro_station_daylight_rmse_wm2": 112.35159410749164,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 120.11790466308594,
+            "mae_wm2": 68.62276458740234,
+            "mbe_wm2": 23.137187957763672,
+            "daylight_rmse_wm2": 125.70773315429688,
+            "macro_station_daylight_rmse_wm2": 119.51767294747489,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.74934387207031,
+            "mae_wm2": 57.279197692871094,
+            "mbe_wm2": 16.121740341186523,
+            "daylight_rmse_wm2": 114.85255432128906,
+            "macro_station_daylight_rmse_wm2": 94.68450845990863,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.398183822631836,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 56.062679290771484,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 109.73450633457729,
+      "learning_rate": 0.00019978589232386035,
+      "epoch_seconds": 45.07350455690175,
+      "stage_elapsed_seconds": 138.95927494671196
+    },
+    {
+      "stage": "fusion",
+      "epoch": 4,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5480286153702955,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.229013007450727,
+        "cloud": 0.0,
+        "route_reg": 0.004653311363083548,
+        "safety": 0.0927898272229214,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 109.20903015136719,
+        "mae_wm2": 61.60277557373047,
+        "mbe_wm2": 16.1518611907959,
+        "daylight_rmse_wm2": 114.080322265625,
+        "macro_station_daylight_rmse_wm2": 109.92075456891742,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.13548278808594,
+            "mae_wm2": 43.6440544128418,
+            "mbe_wm2": 18.031614303588867,
+            "daylight_rmse_wm2": 75.22103881835938,
+            "macro_station_daylight_rmse_wm2": 72.69524329049247,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.49755859375,
+            "mae_wm2": 63.18890380859375,
+            "mbe_wm2": 12.385826110839844,
+            "daylight_rmse_wm2": 117.88322448730469,
+            "macro_station_daylight_rmse_wm2": 110.19378335135323,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 116.46235656738281,
+            "mae_wm2": 67.3885269165039,
+            "mbe_wm2": 15.792555809020996,
+            "daylight_rmse_wm2": 122.46664428710938,
+            "macro_station_daylight_rmse_wm2": 117.72943605695453,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 115.03392791748047,
+            "mae_wm2": 68.98582458496094,
+            "mbe_wm2": 11.947443008422852,
+            "daylight_rmse_wm2": 119.86260986328125,
+            "macro_station_daylight_rmse_wm2": 112.64353016444615,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 120.28246307373047,
+            "mae_wm2": 68.657470703125,
+            "mbe_wm2": 22.98355484008789,
+            "daylight_rmse_wm2": 125.87995147705078,
+            "macro_station_daylight_rmse_wm2": 119.68332290649414,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 110.88047790527344,
+            "mae_wm2": 57.35200119018555,
+            "mbe_wm2": 15.680290222167969,
+            "daylight_rmse_wm2": 114.98854064941406,
+            "macro_station_daylight_rmse_wm2": 94.89729581560407,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.389488220214844,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 56.52931594848633,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 109.92075456891742,
+      "learning_rate": 0.00019914448613738106,
+      "epoch_seconds": 45.570522024296224,
+      "stage_elapsed_seconds": 184.5300895711407
+    },
+    {
+      "stage": "fusion",
+      "epoch": 5,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5874144540113562,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.3034102083031645,
+        "cloud": 0.0,
+        "route_reg": 0.004701133840260845,
+        "safety": 0.10092721849056402,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 109.41683197021484,
+        "mae_wm2": 61.671730041503906,
+        "mbe_wm2": 16.022113800048828,
+        "daylight_rmse_wm2": 114.2973861694336,
+        "macro_station_daylight_rmse_wm2": 110.10319573538644,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.1808090209961,
+            "mae_wm2": 43.587257385253906,
+            "mbe_wm2": 18.002805709838867,
+            "daylight_rmse_wm2": 75.26830291748047,
+            "macro_station_daylight_rmse_wm2": 72.7604751586914,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.63957214355469,
+            "mae_wm2": 63.26763153076172,
+            "mbe_wm2": 12.425044059753418,
+            "daylight_rmse_wm2": 118.03204345703125,
+            "macro_station_daylight_rmse_wm2": 110.2779838017055,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 116.80829620361328,
+            "mae_wm2": 67.54418182373047,
+            "mbe_wm2": 15.657350540161133,
+            "daylight_rmse_wm2": 122.8304214477539,
+            "macro_station_daylight_rmse_wm2": 117.98736000061035,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 115.40859985351562,
+            "mae_wm2": 69.11262512207031,
+            "mbe_wm2": 11.83108139038086,
+            "daylight_rmse_wm2": 120.25300598144531,
+            "macro_station_daylight_rmse_wm2": 112.92827224731445,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 120.43925476074219,
+            "mae_wm2": 68.68848419189453,
+            "mbe_wm2": 22.84623146057129,
+            "daylight_rmse_wm2": 126.04403686523438,
+            "macro_station_daylight_rmse_wm2": 119.8406595502581,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 111.00724792480469,
+            "mae_wm2": 57.427886962890625,
+            "mbe_wm2": 15.285140991210938,
+            "daylight_rmse_wm2": 115.12000274658203,
+            "macro_station_daylight_rmse_wm2": 95.09860610961914,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.38142204284668,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 56.97459411621094,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 110.10319573538644,
+      "learning_rate": 0.00019807852804032305,
+      "epoch_seconds": 45.14777200482786,
+      "stage_elapsed_seconds": 229.67823462374508
+    },
+    {
+      "stage": "fusion",
+      "epoch": 6,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5818727879596302,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.2426055989234275,
+        "cloud": 0.0,
+        "route_reg": 0.004937341842675594,
+        "safety": 0.10386280688313859,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 109.60811614990234,
+        "mae_wm2": 61.739906311035156,
+        "mbe_wm2": 15.91732120513916,
+        "daylight_rmse_wm2": 114.49720001220703,
+        "macro_station_daylight_rmse_wm2": 110.27151380266461,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.22830963134766,
+            "mae_wm2": 43.55192947387695,
+            "mbe_wm2": 17.974529266357422,
+            "daylight_rmse_wm2": 75.31784057617188,
+            "macro_station_daylight_rmse_wm2": 72.82794516427177,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.78717803955078,
+            "mae_wm2": 63.3443489074707,
+            "mbe_wm2": 12.463289260864258,
+            "daylight_rmse_wm2": 118.18670654296875,
+            "macro_station_daylight_rmse_wm2": 110.36855261666435,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 117.14435577392578,
+            "mae_wm2": 67.70362854003906,
+            "mbe_wm2": 15.531807899475098,
+            "daylight_rmse_wm2": 123.18380737304688,
+            "macro_station_daylight_rmse_wm2": 118.24123055594308,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 115.74332427978516,
+            "mae_wm2": 69.233154296875,
+            "mbe_wm2": 11.730989456176758,
+            "daylight_rmse_wm2": 120.6017837524414,
+            "macro_station_daylight_rmse_wm2": 113.18759672982353,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 120.57022094726562,
+            "mae_wm2": 68.7164077758789,
+            "mbe_wm2": 22.737178802490234,
+            "daylight_rmse_wm2": 126.18110656738281,
+            "macro_station_daylight_rmse_wm2": 119.97175979614258,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 111.10938262939453,
+            "mae_wm2": 57.48551559448242,
+            "mbe_wm2": 14.985183715820312,
+            "daylight_rmse_wm2": 115.22592163085938,
+            "macro_station_daylight_rmse_wm2": 95.25815146309989,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.370925903320312,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 57.37472152709961,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 110.27151380266461,
+      "learning_rate": 0.00019659258262890683,
+      "epoch_seconds": 45.903959184885025,
+      "stage_elapsed_seconds": 275.58255512081087
+    },
+    {
+      "stage": "fusion",
+      "epoch": 7,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5754001760989232,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.235051102108425,
+        "cloud": 0.0,
+        "route_reg": 0.004948038787024059,
+        "safety": 0.09826113879596936,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 109.80805969238281,
+        "mae_wm2": 61.80987548828125,
+        "mbe_wm2": 15.811688423156738,
+        "daylight_rmse_wm2": 114.7060775756836,
+        "macro_station_daylight_rmse_wm2": 110.44929994855609,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.27853393554688,
+            "mae_wm2": 43.51681137084961,
+            "mbe_wm2": 17.946441650390625,
+            "daylight_rmse_wm2": 75.3702163696289,
+            "macro_station_daylight_rmse_wm2": 72.89847782679966,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 112.94274139404297,
+            "mae_wm2": 63.42055130004883,
+            "mbe_wm2": 12.501253128051758,
+            "daylight_rmse_wm2": 118.3497314453125,
+            "macro_station_daylight_rmse_wm2": 110.46678134373256,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 117.49397277832031,
+            "mae_wm2": 67.8641586303711,
+            "mbe_wm2": 15.406384468078613,
+            "daylight_rmse_wm2": 123.55144500732422,
+            "macro_station_daylight_rmse_wm2": 118.5084171295166,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 116.08902740478516,
+            "mae_wm2": 69.36089324951172,
+            "mbe_wm2": 11.630919456481934,
+            "daylight_rmse_wm2": 120.96199798583984,
+            "macro_station_daylight_rmse_wm2": 113.45987646920341,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 120.70915985107422,
+            "mae_wm2": 68.74644470214844,
+            "mbe_wm2": 22.626426696777344,
+            "daylight_rmse_wm2": 126.32652282714844,
+            "macro_station_daylight_rmse_wm2": 120.11057880946568,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 111.21782684326172,
+            "mae_wm2": 57.543785095214844,
+            "mbe_wm2": 14.681852340698242,
+            "daylight_rmse_wm2": 115.33839416503906,
+            "macro_station_daylight_rmse_wm2": 95.42527988978794,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.362239837646484,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 57.78915786743164,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 110.44929994855609,
+      "learning_rate": 0.0001946930129495106,
+      "epoch_seconds": 45.54523419961333,
+      "stage_elapsed_seconds": 321.12808633130044
+    },
+    {
+      "stage": "fusion",
+      "epoch": 8,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.556211435570826,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.247162376353943,
+        "cloud": 0.0,
+        "route_reg": 0.004901461440573744,
+        "safety": 0.0865085025174017,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 110.0005111694336,
+        "mae_wm2": 61.87449645996094,
+        "mbe_wm2": 15.715201377868652,
+        "daylight_rmse_wm2": 114.90711212158203,
+        "macro_station_daylight_rmse_wm2": 110.62175805228097,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.32955169677734,
+            "mae_wm2": 43.483097076416016,
+            "mbe_wm2": 17.91945457458496,
+            "daylight_rmse_wm2": 75.42340850830078,
+            "macro_station_daylight_rmse_wm2": 72.96937997000558,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 113.0999984741211,
+            "mae_wm2": 63.49350357055664,
+            "mbe_wm2": 12.537622451782227,
+            "daylight_rmse_wm2": 118.51451110839844,
+            "macro_station_daylight_rmse_wm2": 110.56855310712542,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 117.83283233642578,
+            "mae_wm2": 68.01399993896484,
+            "mbe_wm2": 15.28929615020752,
+            "daylight_rmse_wm2": 123.90777587890625,
+            "macro_station_daylight_rmse_wm2": 118.77009391784668,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 116.41382598876953,
+            "mae_wm2": 69.47731018066406,
+            "mbe_wm2": 11.539749145507812,
+            "daylight_rmse_wm2": 121.30043029785156,
+            "macro_station_daylight_rmse_wm2": 113.71950285775321,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 120.84059143066406,
+            "mae_wm2": 68.77373504638672,
+            "mbe_wm2": 22.52576446533203,
+            "daylight_rmse_wm2": 126.46405792236328,
+            "macro_station_daylight_rmse_wm2": 120.24164472307477,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 111.3208236694336,
+            "mae_wm2": 57.59672164916992,
+            "mbe_wm2": 14.406238555908203,
+            "daylight_rmse_wm2": 115.4452133178711,
+            "macro_station_daylight_rmse_wm2": 95.58211054120746,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.354143142700195,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 58.18852233886719,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 110.62175805228097,
+      "learning_rate": 0.0001923879532511287,
+      "epoch_seconds": 45.69729314837605,
+      "stage_elapsed_seconds": 366.8257671492174
+    },
+    {
+      "stage": "fusion",
+      "epoch": 9,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5968898438598985,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.318619252030366,
+        "cloud": 0.0,
+        "route_reg": 0.004934535273563823,
+        "safety": 0.09691253652833433,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 110.18496704101562,
+        "mae_wm2": 61.936012268066406,
+        "mbe_wm2": 15.623758316040039,
+        "daylight_rmse_wm2": 115.09979248046875,
+        "macro_station_daylight_rmse_wm2": 110.78850718906948,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.37667083740234,
+            "mae_wm2": 43.453495025634766,
+            "mbe_wm2": 17.895784378051758,
+            "daylight_rmse_wm2": 75.47254180908203,
+            "macro_station_daylight_rmse_wm2": 73.03429140363421,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 113.24456024169922,
+            "mae_wm2": 63.55746078491211,
+            "mbe_wm2": 12.569480895996094,
+            "daylight_rmse_wm2": 118.66600036621094,
+            "macro_station_daylight_rmse_wm2": 110.66399274553571,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 118.15274810791016,
+            "mae_wm2": 68.15262603759766,
+            "mbe_wm2": 15.182400703430176,
+            "daylight_rmse_wm2": 124.24418640136719,
+            "macro_station_daylight_rmse_wm2": 119.01936858040946,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 116.7292709350586,
+            "mae_wm2": 69.59473419189453,
+            "mbe_wm2": 11.453572273254395,
+            "daylight_rmse_wm2": 121.62911987304688,
+            "macro_station_daylight_rmse_wm2": 113.97493989127022,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 120.96966552734375,
+            "mae_wm2": 68.79960632324219,
+            "mbe_wm2": 22.43035316467285,
+            "daylight_rmse_wm2": 126.59913635253906,
+            "macro_station_daylight_rmse_wm2": 120.37017222813198,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 111.42382049560547,
+            "mae_wm2": 57.64759063720703,
+            "mbe_wm2": 14.141404151916504,
+            "daylight_rmse_wm2": 115.55201721191406,
+            "macro_station_daylight_rmse_wm2": 95.73720932006836,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.349353790283203,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 58.563377380371094,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 110.78850718906948,
+      "learning_rate": 0.00018968727415326884,
+      "epoch_seconds": 46.22332711983472,
+      "stage_elapsed_seconds": 413.0494821816683
+    },
+    {
+      "stage": "fusion",
+      "epoch": 10,
+      "train": {
+        "direct_supervision": 0.0,
+        "history_alignment": 0.0,
+        "total": 0.5919879165058043,
+        "satellite": 0.0,
+        "nwp": 0.0,
+        "clear": 0.0,
+        "satellite_uncertainty": 0.0,
+        "nwp_uncertainty": 0.0,
+        "base_uncertainty": 5.285766017203238,
+        "cloud": 0.0,
+        "route_reg": 0.005000659152013219,
+        "safety": 0.1018157927144404,
+        "anchor_trust": 0.0,
+        "ridge_distill": 0.0,
+        "correction_reg": 0.0
+      },
+      "validation": {
+        "rmse_wm2": 110.37859344482422,
+        "mae_wm2": 62.001888275146484,
+        "mbe_wm2": 15.536527633666992,
+        "daylight_rmse_wm2": 115.30204772949219,
+        "macro_station_daylight_rmse_wm2": 110.96402522495815,
+        "count": 682,
+        "daylight_count": 625,
+        "by_lead": {
+          "1": {
+            "rmse_wm2": 72.43245697021484,
+            "mae_wm2": 43.42003631591797,
+            "mbe_wm2": 17.86903190612793,
+            "daylight_rmse_wm2": 75.53071594238281,
+            "macro_station_daylight_rmse_wm2": 73.11054447719029,
+            "count": 112,
+            "daylight_count": 103
+          },
+          "2": {
+            "rmse_wm2": 113.41292572021484,
+            "mae_wm2": 63.62870407104492,
+            "mbe_wm2": 12.605046272277832,
+            "daylight_rmse_wm2": 118.84241485595703,
+            "macro_station_daylight_rmse_wm2": 110.77715955461774,
+            "count": 112,
+            "daylight_count": 102
+          },
+          "3": {
+            "rmse_wm2": 118.50044250488281,
+            "mae_wm2": 68.30371856689453,
+            "mbe_wm2": 15.069841384887695,
+            "daylight_rmse_wm2": 124.60980224609375,
+            "macro_station_daylight_rmse_wm2": 119.29255185808454,
+            "count": 115,
+            "daylight_count": 104
+          },
+          "4": {
+            "rmse_wm2": 117.04769897460938,
+            "mae_wm2": 69.72830200195312,
+            "mbe_wm2": 11.368734359741211,
+            "daylight_rmse_wm2": 121.96090698242188,
+            "macro_station_daylight_rmse_wm2": 114.23584393092564,
+            "count": 114,
+            "daylight_count": 105
+          },
+          "5": {
+            "rmse_wm2": 121.09667205810547,
+            "mae_wm2": 68.82427215576172,
+            "mbe_wm2": 22.33942985534668,
+            "daylight_rmse_wm2": 126.73206329345703,
+            "macro_station_daylight_rmse_wm2": 120.4964714050293,
+            "count": 115,
+            "daylight_count": 105
+          },
+          "6": {
+            "rmse_wm2": 111.52072143554688,
+            "mae_wm2": 57.69376754760742,
+            "mbe_wm2": 13.90099048614502,
+            "daylight_rmse_wm2": 115.65250396728516,
+            "macro_station_daylight_rmse_wm2": 95.88172231401715,
+            "count": 114,
+            "daylight_count": 106
+          }
+        },
+        "transition_rmse_wm2": 27.341617584228516,
+        "transition_count": 62,
+        "high_aod_clear_rmse_wm2": 58.95683288574219,
+        "high_aod_clear_count": 46
+      },
+      "selection_score": 110.96402522495815,
+      "learning_rate": 0.00018660254037844388,
+      "epoch_seconds": 45.66032236907631,
+      "stage_elapsed_seconds": 458.7101713642478
+    }
+  ],
+  "ablation": "fixed_router",
+  "requested_stages": [
+    "nwp",
+    "fusion"
+  ],
+  "stages_run": [
+    "nwp",
+    "fusion"
+  ],
+  "data_contract": "wind_cloud_v4_dual_domain_7_state",
+  "clear_label_policy": "hourly_soft_proxy",
+  "aod_reference": "/root/autodl-tmp/guizhou_v4/data/derived/windcloud_v4_all_1462_stationaware/statistics/fold_0_aod_reference.json",
+  "normalization_cache": "/root/autodl-tmp/guizhou_mlp17_7eval_run_20260909/wrf_vertical_profile_ablation_20260924_retry1/expert/normalization.json",
+  "era5_encoder_checkpoint": null
+}

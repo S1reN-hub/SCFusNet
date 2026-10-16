@@ -1,0 +1,7 @@
+--- wrf_config/namelist.input.short06.template
++++ myj
+&physics
+- sf_sfclay_physics                   = 5, 5,
+- bl_pbl_physics                      = 5, 5,
++ sf_sfclay_physics                   = 2, 2,
++ bl_pbl_physics                      = 2, 2,

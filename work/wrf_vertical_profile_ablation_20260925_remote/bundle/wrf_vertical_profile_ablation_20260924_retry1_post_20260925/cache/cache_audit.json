@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "train_cases": 1224,
+  "validation_cases": 119,
+  "train_cycles": 86,
+  "validation_cycles": 17,
+  "test_accessed": false,
+  "checkpoint": "/root/autodl-tmp/guizhou_mlp17_7eval_run_20260909/wrf_vertical_profile_ablation_20260924_retry1/expert/best_fusion.pt"
+}

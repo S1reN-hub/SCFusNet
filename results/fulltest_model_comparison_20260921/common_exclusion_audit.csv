@@ -1,0 +1,16 @@
+﻿frame,rows_in_reference_key_intersection,daylight_fail_rows,target_nonfinite_rows,prediction_nonfinite_rows,rows_retained_in_common,common_valid_fail_rows,common_daylight_valid_fail_rows
+solfus_seed42,675,74,0,0,601,,
+solfus_seed43,675,74,0,0,601,,
+solfus_seed44,675,74,0,0,601,,
+sat_convlstm_seed42,675,58,0,0,601,,
+sat_convlstm_seed43,675,58,0,0,601,,
+sat_convlstm_seed44,675,58,0,0,601,,
+wrf_transformer_seed42,675,58,0,0,601,,
+wrf_transformer_seed43,675,58,0,0,601,,
+wrf_transformer_seed44,675,58,0,0,601,,
+early_fusion_seed42,675,58,0,0,601,,
+early_fusion_seed43,675,58,0,0,601,,
+early_fusion_seed44,675,58,0,0,601,,
+mynn,675,66,0,0,601,0.0,66.0
+ysu,675,66,0,0,601,0.0,66.0
+myj,675,66,0,0,601,0.0,66.0

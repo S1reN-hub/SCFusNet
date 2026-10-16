@@ -1,0 +1,266 @@
+{
+  "schema_version": "2.0",
+  "updated_at": "2026-09-03",
+  "satellites": {
+    "GOES-16": {
+      "type": "geostationary",
+      "longitude": -75.0,
+      "operational_role": "GOES-East through 2025-04-07T15:00:00Z",
+      "data_source": "AWS_S3",
+      "bucket": "noaa-goes16",
+      "access": "public_anonymous",
+      "scan_interval_min": 10,
+      "full_disk_resolution_km": 2,
+      "full_disk_pixels": 5424,
+      "pixel_radian": 5.6e-5,
+      "products": {
+        "CloudMask": {
+          "aws_prefix": "ABI-L2-ACMF",
+          "description": "Clear Sky Mask (not cloud phase)",
+          "resolution_km": 2,
+          "variables": {
+            "BCM": { "long_name": "Binary Cloud Mask", "values": { "0": "clear", "1": "cloudy" } },
+            "ACM": { "long_name": "Four-level Cloud Mask", "values": { "0": "clear", "1": "probably_clear", "2": "probably_cloudy", "3": "cloudy" } }
+          },
+          "quality_fields": ["DQF"]
+        },
+        "COD": {
+          "aws_prefix": "ABI-L2-CODF",
+          "description": "Cloud Optical Depth (Full Disk)",
+          "resolution_km": 2,
+          "variables": {
+            "COD": {
+              "long_name": "Cloud Optical Depth",
+              "units": "dimensionless",
+              "valid_range": [0, 100],
+              "fill_value": -1.0
+            }
+          },
+          "quality_fields": ["DQF", "COD_Retrieval_Flag"],
+          "sza_limit_deg": 70.0
+        },
+        "Phase": {
+          "aws_prefix": "ABI-L2-ACTPF",
+          "description": "Cloud Top Phase (Full Disk)",
+          "resolution_km": 10,
+          "variables": {
+            "Phase": {
+              "long_name": "Cloud Phase Classification",
+              "values": {
+                "0": "Clear",
+                "1": "Water",
+                "2": "Supercooled",
+                "3": "Mixed",
+                "4": "Ice",
+                "5": "Unknown"
+              }
+            }
+          }
+        },
+        "CTP": {
+          "aws_prefix": "ABI-L2-ACHP2KMF",
+          "description": "Enterprise 2 km Cloud Top Pressure (optional; AWS archive starts in 2023)",
+          "resolution_km": 2,
+          "variables": {
+            "PRES": {
+              "long_name": "Cloud Top Pressure",
+              "units": "hPa",
+              "valid_range": [0, 1100]
+            }
+          },
+          "quality_fields": ["DQF"]
+        },
+        "CPS": {
+          "aws_prefix": "ABI-L2-CPSF",
+          "description": "Cloud Particle Size / effective radius (Full Disk, optional in the first ablation)",
+          "resolution_km": 2,
+          "variables": {
+            "CPS": {
+              "long_name": "Cloud Particle Effective Radius",
+              "units": "micrometers",
+              "valid_range": [0, 160]
+            },
+            "PSD": {
+              "long_name": "Legacy GOES-R Cloud Particle Size alias",
+              "units": "micrometers",
+              "valid_range": [0, 160]
+            }
+          },
+          "quality_fields": ["DQF"]
+        }
+      }
+    },
+    "GOES-19": {
+      "type": "geostationary",
+      "longitude": -75.0,
+      "data_source": "AWS_S3",
+      "bucket": "noaa-goes19",
+      "access": "public_anonymous",
+      "scan_interval_min": 10,
+      "full_disk_resolution_km": 2,
+      "full_disk_pixels": 5424,
+      "pixel_radian": 5.6e-5,
+      "operational_role": "GOES-East from 2025-04-07T15:00:00Z",
+      "products_inherit": "GOES-16"
+    },
+    "GOES-18": {
+      "type": "geostationary",
+      "longitude": -137.0,
+      "data_source": "AWS_S3",
+      "bucket": "noaa-goes18",
+      "access": "public_anonymous",
+      "scan_interval_min": 10,
+      "full_disk_resolution_km": 2,
+      "full_disk_pixels": 5424,
+      "pixel_radian": 5.6e-5,
+      "operational_role": "GOES-West from 2023-01-04",
+      "products_inherit": "GOES-16"
+    },
+    "Himawari-8": {
+      "type": "geostationary",
+      "longitude": 140.7,
+      "data_source": "JAXA_P-Tree_FTP",
+      "access": "registration_required",
+      "registration_url": "https://www.eorc.jaxa.jp/ptree/",
+      "scan_interval_min": 10,
+      "full_disk_resolution_km": 5,
+      "notes": "Himawari Cloud Property (HCP) L2 netCDF products. Registration takes 1-3 business days.",
+      "products": {
+        "COT": {
+          "description": "Cloud Optical Thickness (Level 2)",
+          "resolution_km": 5,
+          "variables": {
+            "COT": {
+              "long_name": "Cloud Optical Thickness",
+              "units": "dimensionless",
+              "valid_range": [0, 100]
+            }
+          }
+        },
+        "CER": {
+          "description": "Cloud Effective Radius (Level 2)",
+          "resolution_km": 5,
+          "variables": {
+            "CER": {
+              "long_name": "Cloud Effective Radius",
+              "units": "micrometers"
+            }
+          }
+        },
+        "CTT": {
+          "description": "Cloud Top Temperature (Level 2)",
+          "resolution_km": 5,
+          "variables": {
+            "CTT": {
+              "long_name": "Cloud Top Temperature",
+              "units": "K"
+            }
+          }
+        },
+        "CLTYPE": {
+          "description": "Cloud Type Classification (Level 2)",
+          "resolution_km": 5,
+          "variables": {
+            "CLTYPE": {
+              "long_name": "Cloud Type",
+              "values": {
+                "0": "Clear",
+                "1": "Water low",
+                "2": "Water mid",
+                "3": "Mixed",
+                "4": "Ice high",
+                "5": "Ice cirrus",
+                "9": "Unknown"
+              }
+            }
+          }
+        }
+      }
+    },
+    "NOAA GridSat-B1 v02r01": {
+      "type": "global_merged_geostationary_grid",
+      "data_source": "NOAA_NCEI_GridSat-B1",
+      "access": "public",
+      "scan_interval_min": 180,
+      "native_resolution_deg": 0.07,
+      "products": {
+        "IRWIN_CDR": {
+          "description": "Quality-controlled infrared window brightness temperature",
+          "variables": {
+            "irwin_cdr": {
+              "target_name": "gridsat_irwin_bt_k",
+              "units": "K"
+            }
+          }
+        }
+      }
+    }
+  },
+  "cloud_feature_channels": {
+    "version": "1.0",
+    "description": "Five native GOES cloud-property channels; availability is retained independently for every pixel and channel",
+    "dqf_policy": "Finite in-range COD/CPS retrievals are retained when DQF is degraded; strict-good DQF fraction is stored separately for scan weighting and audit. Other products require strict-good DQF.",
+    "channels": [
+      { "index": 0, "name": "COD", "description": "Cloud Optical Depth", "fill_value": null, "validity_mask_required": true },
+      { "index": 1, "name": "cloud_fraction", "description": "Per-pixel cloud indicator (0=valid clear, 1=valid cloudy)", "fill_value": null, "validity_mask_required": true },
+      { "index": 2, "name": "cloud_top_pressure_hpa", "description": "Cloud top pressure (hPa)", "fill_value": null, "validity_mask_required": true },
+      { "index": 3, "name": "CER_liq_um", "description": "Cloud effective radius, liquid/supercooled phase (um)", "fill_value": null, "validity_mask_required": true },
+      { "index": 4, "name": "CER_ice_um", "description": "Cloud effective radius, ice phase (um)", "fill_value": null, "validity_mask_required": true }
+    ]
+  },
+  "model_input_contract": {
+    "history_slots": 6,
+    "canonical_shape": [6, 7, 32, 32],
+    "channels": [
+      { "index": 0, "name": "COD", "sources": ["GOES-16", "GOES-19"] },
+      { "index": 1, "name": "cloud_fraction", "sources": ["GOES-16", "GOES-19"] },
+      { "index": 2, "name": "cloud_top_pressure_hpa", "sources": ["GOES-16", "GOES-19"] },
+      { "index": 3, "name": "CER_liq_um", "sources": ["GOES-16", "GOES-19"] },
+      { "index": 4, "name": "CER_ice_um", "sources": ["GOES-16", "GOES-19"] },
+      { "index": 5, "name": "ahi_band11_brightness", "sources": ["Himawari-8", "Himawari-9"] },
+      { "index": 6, "name": "gridsat_irwin_bt_k", "sources": ["NOAA GridSat-B1 v02r01"] }
+    ],
+    "native_shapes": {
+      "GOES-16_19": [63, 63, 5],
+      "Himawari-8_9": [32, 32, 6],
+      "NOAA_GridSat-B1_v02r01": [32, 32, 7]
+    },
+    "inactive_channel_policy": "masked_invalid",
+    "goes_resampling": "63x63_to_32x32_before_model_input"
+  },
+  "spatial_window": {
+    "description": "Spatial window centered on station coordinates, covering approximately ERA5 5×5 grid cell area (~125 km × 125 km)",
+    "half_size_km": 62.5,
+    "pixels_per_satellite": {
+      "GOES-16_19_native": 63,
+      "Himawari-8_9_prepared": 32,
+      "NOAA_GridSat-B1_prepared": 32
+    },
+    "extracted_features": {
+      "per_channel": ["mean", "std", "skewness", "center_value", "gradient_magnitude", "valid_fraction", "scan_mean", "temporal_std"],
+      "cod_solar_directions": ["up_sun_mean", "down_sun_mean", "cross_left_mean", "cross_right_mean"],
+      "total_dimensions": 44
+    }
+  },
+  "station_satellite_mapping": {
+    "PAR": { "satellite": "GOES-East", "region": "South_America" },
+    "SEL": { "satellite": "GOES-East", "region": "Central_America" },
+    "DRA": { "satellite": "GOES-East", "region": "North_America_West" },
+    "GWN": { "satellite": "GOES-East", "region": "North_America_South" },
+    "BON": { "satellite": "GOES-East", "region": "North_America_Midwest" },
+    "TBL": { "satellite": "GOES-East", "region": "North_America_West" },
+    "FLO": { "satellite": "GOES-East", "region": "South_America" },
+    "ISH": { "satellite": "Himawari-8", "region": "East_Asia" },
+    "TAT": { "satellite": "Himawari-8", "region": "East_Asia" },
+    "ABS": { "satellite": "Himawari-8", "region": "East_Asia" },
+    "CAB": { "satellite": "NOAA GridSat-B1 v02r01", "region": "Europe" },
+    "CNR": { "satellite": "NOAA GridSat-B1 v02r01", "region": "Europe" },
+    "PAY": { "satellite": "NOAA GridSat-B1 v02r01", "region": "Europe" },
+    "IZA": { "satellite": "NOAA GridSat-B1 v02r01", "region": "Atlantic" },
+    "GOB": { "satellite": "NOAA GridSat-B1 v02r01", "region": "Southern_Africa" },
+    "TAM": { "satellite": "NOAA GridSat-B1 v02r01", "region": "North_Africa" },
+    "RUN": { "satellite": "NOAA GridSat-B1 v02r01", "region": "Indian_Ocean" }
+  },
+  "pilot_dates": ["2021-03-23", "2023-07-15", "2025-07-15"],
+  "pilot_station": "DRA"
+}

@@ -1,0 +1,12 @@
+{
+  "original_run_max_absolute_difference": 0.0,
+  "ground_target_mismatches_over_1_Wm2": 3,
+  "original_aggregation_max_target_difference": 0.0,
+  "admitted_ground_target_mismatches": 0,
+  "qc_mean_difference_explanation": "Three ungated low-sun hours differ because hour_qc averages only minutes with SZA<=85; the original label averages all accepted minute GHI. Reproducing original aggregation matches every target. No admitted hour has this discrepancy.",
+  "audited_unique_cases": 10,
+  "audited_valid_hours": 57,
+  "ground_qc_usage": "Post-hoc weather interpretation only; never used as an inference gate or a training/selection feature.",
+  "ground_qc_definition": "At least 54 valid minute GHI and 45 valid component minutes; p90 normalized minute increment <=0.02; DNI>=50 fraction>=0.90; component closure relative error<=0.08.",
+  "interpretation": "Observed smooth direct-sun conditions are a near-clear proxy; no causal attribution to aerosol alone. AOD values are forecast inputs, not verified coincident observed aerosol."
+}

@@ -1,0 +1,85 @@
+{
+  "candidates": [
+    {
+      "name": "d20_c80",
+      "anomaly_min": 0.2,
+      "common_clear_min": 0.8
+    },
+    {
+      "name": "d20_c75",
+      "anomaly_min": 0.2,
+      "common_clear_min": 0.75
+    },
+    {
+      "name": "d20_c70",
+      "anomaly_min": 0.2,
+      "common_clear_min": 0.7
+    },
+    {
+      "name": "d15_c80",
+      "anomaly_min": 0.15,
+      "common_clear_min": 0.8
+    },
+    {
+      "name": "d15_c75",
+      "anomaly_min": 0.15,
+      "common_clear_min": 0.75
+    },
+    {
+      "name": "d15_c70",
+      "anomaly_min": 0.15,
+      "common_clear_min": 0.7
+    },
+    {
+      "name": "d10_c80",
+      "anomaly_min": 0.1,
+      "common_clear_min": 0.8
+    },
+    {
+      "name": "d10_c75",
+      "anomaly_min": 0.1,
+      "common_clear_min": 0.75
+    },
+    {
+      "name": "d10_c70",
+      "anomaly_min": 0.1,
+      "common_clear_min": 0.7
+    }
+  ],
+  "original_policy": {
+    "anomaly_min": 0.2,
+    "common_clear_min": 0.8,
+    "day_fraction_min": 0.99,
+    "mean_cos_sza_min": 0.25,
+    "epochs": 24,
+    "patience": 8,
+    "learning_rate": 0.001,
+    "selection": "validation admitted-hour MAE; epoch zero is no correction",
+    "batch_cases": 4,
+    "loss": "admitted-hour MAE",
+    "comparator": "frozen current dynamic MLP",
+    "seed_reporting": "mean of separately calculated seed metrics",
+    "background": "current training rows only; station-month median with fallbacks"
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "scope": "Exploratory sensitivity on an already inspected test split; not a fresh confirmatory test.",
+  "feature_coverage_audit": "Test gate-feature coverage was inspected before defining this bounded grid; test errors were not used for candidate selection.",
+  "training": "Frozen DynamicMLP; independently refit original AOD Correction for each gate and seed; unchanged optimizer, loss, epochs and patience.",
+  "checkpoint_selection": "Original per-candidate validation admitted-hour MAE, including epoch-zero no correction.",
+  "candidate_selection": "Minimize mean of per-seed MSE on the SAME full validation cohort. Require no seed to worsen full-validation MSE versus no correction (tolerance 1e-8). No-correction fallback. Exact ties prefer higher anomaly threshold, then higher clear threshold.",
+  "gate": "Only anomaly_min and common_clear_min vary. Day fraction, cosSZA, continuous support and correction bounds unchanged.",
+  "reporting": "Every predeclared candidate reported, metrics calculated separately per seed then averaged. Unique cases/hours not multiplied by seed count.",
+  "sha256": {
+    "D:\\project\\guizhou\\outputs\\mlp17_7eval_training_20260909\\review\\dynamic_mlp\\mlp_seed42\\best.pt": "455c0ec0af993a72ce6cf68f77fd94d44c3191bcd49753e920fdc66f465d08ea",
+    "D:\\project\\guizhou\\outputs\\mlp17_7eval_training_20260909\\review\\dynamic_mlp\\mlp_seed43\\best.pt": "5696fc494b44be48b32a108ae5fb45e9f16a493b3806c0061a934867e87709af",
+    "D:\\project\\guizhou\\outputs\\mlp17_7eval_training_20260909\\review\\dynamic_mlp\\mlp_seed44\\best.pt": "804e7718556bb803ba8e950bc20b4f7369bf125689da47f9f8f2150a7a4d1844",
+    "D:\\project\\guizhou\\outputs\\aod_cloud_cache_20260913\\train.pt": "d32f52bb38aa1c6970c7425cb0901c9e89d4169ec5726baee49290892f6b1d26",
+    "D:\\project\\guizhou\\outputs\\aod_cloud_cache_20260913\\validation.pt": "67c676a0cd7034da86b8426af5debcac78551815b04573e688d75153a12f93d6",
+    "D:\\project\\guizhou\\outputs\\aod_cloud_cache_20260913\\test.pt": "bb03e9cb821757d191e92ab8de30af4f1c8bdab5ca93c2570bd5e3e61a67bde8"
+  },
+  "started_unix": 1789288653.3535516
+}

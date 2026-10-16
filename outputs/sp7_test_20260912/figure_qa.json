@@ -1,0 +1,48 @@
+{
+  "artifacts": [
+    {
+      "file": "fig4_1_ground_validation_three_seeds.png",
+      "pixels": [
+        2864,
+        2319
+      ],
+      "dpi": [
+        399.9992,
+        399.9992
+      ],
+      "vector_masters": true
+    },
+    {
+      "file": "fig4_2_station_nrmse_fs.png",
+      "pixels": [
+        2881,
+        3307
+      ],
+      "dpi": [
+        399.9992,
+        399.9992
+      ],
+      "vector_masters": true
+    },
+    {
+      "file": "fig4_3_source_comparison.png",
+      "pixels": [
+        2881,
+        1228
+      ],
+      "dpi": [
+        399.9992,
+        399.9992
+      ],
+      "vector_masters": true
+    }
+  ],
+  "scatter_data_min_max": [
+    15.766666412353516,
+    1142.0833740234375
+  ],
+  "visual_review": "All three PNGs inspected; labels and legends legible, no clipping. Fig4-1 uses identical 0–1300 axes to separate the metrics from points.",
+  "styles": "Existing user-requested density palette and station dual axes retained.",
+  "source_integrity": "No synthetic points; SP drawn once per target; dynamic scatter has three predictions per target. Metrics are seed means, not ensemble scores.",
+  "original_schematic_check": "No stale cohort quantities in the retained chapter 2/3 figures."
+}

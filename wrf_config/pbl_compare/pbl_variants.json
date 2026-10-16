@@ -1,0 +1,27 @@
+{
+  "schema_version": "wrf_pbl_compare_v1",
+  "base_template": "wrf_config/namelist.input.short06.template",
+  "variants": {
+    "ysu": {
+      "label": "YSU",
+      "bl_pbl_physics": "1, 1",
+      "sf_sfclay_physics": "1, 1",
+      "pbl_description": "Yonsei University non-local PBL",
+      "surface_layer_description": "revised MM5 surface layer"
+    },
+    "myj": {
+      "label": "MYJ",
+      "bl_pbl_physics": "2, 2",
+      "sf_sfclay_physics": "2, 2",
+      "pbl_description": "Mellor–Yamada–Janjic local-TKE PBL",
+      "surface_layer_description": "Janjic Eta similarity surface layer"
+    },
+    "mynn": {
+      "label": "MYNN",
+      "bl_pbl_physics": "5, 5",
+      "sf_sfclay_physics": "5, 5",
+      "pbl_description": "MYNN prognostic-QKE PBL",
+      "surface_layer_description": "MYNN surface layer"
+    }
+  }
+}

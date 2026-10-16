@@ -1,0 +1,72 @@
+{
+  "schema_version": "model_1_6h_scenario_driven_v4",
+  "engineering_name": "v4-windcloud-reliability",
+  "status": "implemented_pending_grouped_oof",
+  "task": "future_1_to_6_hour_station_ghi",
+  "manuscript_alignment": {
+    "primary_experts": ["time_aware_satellite", "wind_cloud_wrf_nwp"],
+    "primary_experts_remain_independently_supervised": true,
+    "cross_modal_interaction_location": "router_only",
+    "conditional_corrections": ["solar_transition", "clear_sky_aerosol"],
+    "inference_inputs_are_causal": true,
+    "future_satellite_is_training_auxiliary_only": true
+  },
+  "architecture": {
+    "d_model": 128,
+    "dropout": 0.15,
+    "parameter_count": 4304584,
+    "satellite_expert": {
+      "source_specific_adapters": ["GOES_cloud_physics", "Himawari_AHI_band11", "GridSat_B1_IR"],
+      "history_encoder": "actual_scan_time_aware_masked_convgru",
+      "duplicate_scan_policy": "process_each_unique_scan_once",
+      "motion": "explicit_latent_flow_and_differentiable_warp",
+      "outputs": ["complete_ghi_trajectory", "clear_probability", "error_scale", "motion_vector", "motion_confidence", "future_cloud_auxiliary"]
+    },
+    "wrf_nwp_expert": {
+      "domains": {"d02": "3km_32x32", "d01": "9km_32x32"},
+      "states": ["issue", "issue_plus_1h_to_6h"],
+      "physical_branches": ["thermodynamic", "hydrometeor", "dynamics"],
+      "cloud_transport": "physical_unit_uv_semilagrangian",
+      "cross_scale_fusion": "d02_query_d01_attention",
+      "anchor": "d02_ACSWDNB_endpoint_difference_3600s",
+      "anchor_field": "wrf_ghi_anchor_d02",
+      "cape_cin": "wrf_python_cape_2d_RIP_MCAPE_MCIN_J_kg-1",
+      "landuse": "categorical_LU_INDEX_embedding_without_zscore",
+      "anchor_update": "trust_adaptive_bounded_residual",
+      "outputs": ["complete_ghi_trajectory", "clear_probability", "error_scale", "anchor_trust", "transport_residual", "cloud_layer_wind"]
+    },
+    "router": {
+      "prior": "learnable_monotonic_satellite_weight_by_lead",
+      "evidence": ["source_quality", "actual_recency", "unique_frame_fraction", "satellite_motion_confidence", "wrf_anchor_trust", "wrf_transport_residual", "motion_wind_consistency", "expert_disagreement"],
+      "uncertainty": "expert_heteroscedastic_error_scales",
+      "negative_transfer_control": "confidence_shrinkage_to_lead_prior",
+      "temporal_regularization": "scene_conditional_smoothness"
+    },
+    "corrections": {
+      "solar_transition": "unchanged_bounded_conditional_correction",
+      "aerosol": "unchanged_high_clear_support_bounded_transmittance_correction"
+    }
+  },
+  "training": {
+    "stages": ["satellite", "nwp", "fusion", "transition", "aod", "joint"],
+    "default_epochs": {"satellite": 80, "nwp": 80, "fusion": 50, "transition": 25, "aod": 25, "joint": 50},
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "joint_learning_rate": 0.00005,
+    "objectives": ["case_balanced_ghi", "cloud_ramp", "expert_uncertainty", "future_cloud_auxiliary", "routing_oracle", "negative_transfer", "anchor_trust", "grouped_signed_bias", "bounded_corrections"],
+    "selection": "grouped_GFS_cycle_OOF_all_available_stations_variable_cycle_size_with_role_metrics_and_global_safety",
+    "sample_count_is_not_hardcoded": true,
+    "future_satellite_auxiliary_is_optional": true,
+    "formal_development_pool": {"cycles": 118, "cases": 1958},
+    "sealed_confirmation": {"cycles": 16, "cases": 272, "training_access": false},
+    "startup_gate": "matching_passed_label_inspected_dataset_audit",
+    "legacy_pretraining": {
+      "status": "optional_separate_stage",
+      "mixed_with_formal_v4_batches": false,
+      "transfer_allowlist": ["thermodynamic_encoder", "hydrometeor_encoder", "compatible_surface_encoder"],
+      "formal_fold_normalization_overridden": false
+    },
+    "final_seeds": [42, 3407, 2026]
+  },
+  "ablations": ["full", "no_motion", "no_uncertainty", "fixed_router", "no_transition", "no_aod", "no_conditional"]
+}

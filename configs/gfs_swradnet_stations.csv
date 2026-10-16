@@ -1,0 +1,18 @@
+station_id,name,country,climate_group,latitude,longitude,elevation_m,network,observation_window,role,observation_status,regional_holdout,source_url
+PAR,Paramaribo,Suriname,tropical_humid,5.8060,-55.2146,4,BSRN_PANGAEA,2021-03-23/2026-04-30,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.979681
+ISH,Ishigakijima,Japan,tropical_humid,24.3367,124.1644,5.7,BSRN_PANGAEA,2021-03-23/2026-03-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.972475
+RUN,Reunion Island University,Reunion,tropical_monsoon_wet_dry,-20.9014,55.4836,116,BSRN_PANGAEA,2021-03-23/2026-05-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.962049
+SEL,Selegua,Mexico,tropical_monsoon_wet_dry,15.784016,-91.990174,602,BSRN_PANGAEA,2022-04/2026-03,core_late_start,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.971683
+GOB,Gobabeb,Namibia,arid_desert_plateau,-23.5614,15.04198,407,BSRN_PANGAEA,2021-03-23/2026-05-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.968639
+TAM,Tamanrasset,Algeria,arid_desert_plateau,22.7903,5.5292,1385,BSRN_PANGAEA,2021-03-23/2026-04-30,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.965124
+DRA,Desert Rock,United States,arid_desert_plateau,36.62373,-116.01947,1007,NOAA_SURFRAD,2021-03-23/2026-07,core,download_ready,false,https://gml.noaa.gov/aftp/data/radiation/surfrad/dra/
+TAT,Tateno,Japan,humid_subtropical_monsoon,36.0581,140.1258,25,BSRN_PANGAEA,2021-03-23/2026-04-30,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.968727
+GWN,Goodwin Creek,United States,humid_subtropical_monsoon,34.2547,-89.8729,98,NOAA_SURFRAD,2021-03-23/2026-07,core,download_ready,false,https://gml.noaa.gov/aftp/data/radiation/surfrad/gwn/
+FLO,Florianopolis,Brazil,humid_subtropical_monsoon,-27.60469,-48.5227,11,BSRN_PANGAEA,2021-03-23/2025-11-30,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.974493
+CAB,Cabauw,Netherlands,temperate_oceanic,51.968,4.928,0,BSRN_PANGAEA,2021-03-23/2026-03-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.940531
+CNR,Cener,Spain,temperate_oceanic,42.816,-1.601,471,BSRN_PANGAEA,2021-03-23/2026-05-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.931893
+ABS,Abashiri,Japan,temperate_continental,44.0178,144.2797,38,BSRN_PANGAEA,2021-03-23/2026-03-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.974699
+BON,Bondville,United States,temperate_continental,40.05192,-88.37309,230,NOAA_SURFRAD,2021-03-23/2026-07,core,download_ready,false,https://gml.noaa.gov/aftp/data/radiation/surfrad/bon/
+PAY,Payerne,Switzerland,temperate_continental,46.8123,6.9422,491,BSRN_PANGAEA,2021-03-23/2025-12-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.946384
+IZA,Izana,Spain,highland_complex_terrain,28.30935,-16.49926,2372.9,BSRN_PANGAEA,2021-03-23/2026-05-31,core,download_ready,false,https://doi.pangaea.de/10.1594/PANGAEA.968676
+TBL,Table Mountain,United States,highland_complex_terrain,40.12498,-105.23680,1689,NOAA_SURFRAD,2021-03-23/2026-07,core,download_ready,false,https://gml.noaa.gov/aftp/data/radiation/surfrad/tbl/

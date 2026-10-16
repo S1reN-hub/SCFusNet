@@ -1,0 +1,85 @@
+{
+  "schema_version": "formal_0_6_v1",
+  "task": "station_specific_direct6_1_to_6_hour_ghi_forecast",
+  "timezone": "UTC",
+  "station_config": "configs/global_radiation_truth_stations.json",
+  "cycle_split_config": "configs/gfs_temporal_grouped_cv_47.json",
+  "paths": {
+    "output_root": "data/formal_0_6_v1",
+    "ground_raw_root": "data/radiation_observations/raw",
+    "satellite_source_root": "data/satellite_cloud/gfs_aligned",
+    "satellite_schema": "configs/satellite_cloud_schema.json",
+    "gfs_raw_root": "data/wrf_gfs_subset/raw",
+    "cams_station_hour_csv": "data/aod/cams/processed/cams_aod550_station_hour_formal47.csv",
+    "wrf_hourly_root": "data/formal_0_6_v1/canonical_hourly/wrf"
+  },
+  "sampling_window": {
+    "mode": "one_station_specific_stratified_random_direct6_per_gfs_source_cycle",
+    "issue_offset_hours": [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66],
+    "lead_hours": [1, 2, 3, 4, 5, 6],
+    "satellite_history_offsets_hours": [-5, -4, -3, -2, -1, 0],
+    "wrf_run_start": "issue_time",
+    "wrf_run_hours": 6,
+    "wrf_spinup_hours": 0
+  },
+  "ground_ghi": {
+    "aggregation_interval": "[valid_time-1h, valid_time)",
+    "minimum_valid_minutes": 54,
+    "negative_value_policy": "clip_to_zero_after_existing_qc",
+    "interpolate_missing_labels": false
+  },
+  "satellite": {
+    "canonical_shape": [6, 7, 32, 32],
+    "canonical_channels": [
+      "COD",
+      "cloud_fraction",
+      "cloud_top_pressure_hpa",
+      "CER_liq_um",
+      "CER_ice_um",
+      "ahi_band11_brightness",
+      "gridsat_irwin_bt_k"
+    ],
+    "native_inputs": {
+      "GOES-16_19": {"shape_per_slot": [63, 63, 5], "active_channels": [0, 1, 2, 3, 4]},
+      "Himawari-8_9": {"shape_per_slot": [32, 32, 6], "active_channels": [5]},
+      "NOAA_GridSat-B1_v02r01": {"shape_per_slot": [32, 32, 7], "active_channels": [6]}
+    },
+    "goes_resampling": "63x63_to_32x32_before_model_input",
+    "inactive_channel_policy": "masked_invalid",
+    "minimum_valid_history_frames": 4,
+    "causal_scan_rule": "use_latest_available_scan_with_actual_scan_time <= history_slot_time <= issue_time"
+  },
+  "wrf": {
+    "domain": "d02",
+    "horizontal_resolution_m": 3000,
+    "integration_mode": "direct6_from_station_issue_time",
+    "forecast_hours": [0, 1, 2, 3, 4, 5, 6],
+    "future_feature_hours": [1, 2, 3, 4, 5, 6],
+    "gfs_boundary_interval_hours": 3,
+    "gfs_driver_hours_rule": "issue_offset, issue_offset+3, issue_offset+6",
+    "spatial_window": [5, 5],
+    "pressure_levels_hpa": [1000, 925, 850, 700, 600, 500, 400, 300, 250, 200],
+    "three_dimensional_variables": [
+      "temperature",
+      "water_vapor_mixing_ratio",
+      "cloud_water",
+      "cloud_ice",
+      "cloud_fraction",
+      "geopotential_height"
+    ],
+    "surface_variables": ["T2", "PSFC", "ALBEDO", "SWDOWN_instantaneous"],
+    "radiation_accumulator": "ACSWDNB",
+    "radiation_hourly_mean": "(ACSWDNB[t]-ACSWDNB[t-1])/3600",
+    "f000_required_for_radiation_qc": true
+  },
+  "cams": {
+    "cycle_policy": "previous_day_12UTC_relative_to_gfs_source_cycle_fixed_for_each_direct6_case",
+    "forecast_hours": [16, 84],
+    "variable": "aod550"
+  },
+  "storage": {
+    "sample_index_local_format": "csv.gz",
+    "sample_index_cloud_target_format": "parquet",
+    "note": "Local Python currently has no pyarrow. CSV.GZ is the lossless D1 interchange; convert to Parquet after canonical masks are finalized."
+  }
+}

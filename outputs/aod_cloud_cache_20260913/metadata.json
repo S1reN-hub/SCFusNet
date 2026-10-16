@@ -1,0 +1,6 @@
+{
+  "cloud_source": "WRF d02 CLDFRA at forecast endpoints, central 3x3 patch",
+  "aggregation": "maximum-random overlap of sampled pressure levels then spatial mean",
+  "caveat": "sampled pressure-level proxy; no native full-model-level or subhourly cloud coverage",
+  "no_future_observations_in_cloud_predictor": true
+}

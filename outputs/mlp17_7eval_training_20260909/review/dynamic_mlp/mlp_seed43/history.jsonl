@@ -1,0 +1,8 @@
+{"epoch": 1, "train_loss": 0.9287852041232281, "daylight_nrmse_pct": 20.8081183498384, "daylight_rmse": 111.32660357855862, "elapsed_seconds": 0.124046066775918}
+{"epoch": 2, "train_loss": 0.926889337790318, "daylight_nrmse_pct": 20.851207998862495, "daylight_rmse": 111.55713976614628, "elapsed_seconds": 0.24661006964743137}
+{"epoch": 3, "train_loss": 0.9813142143763028, "daylight_nrmse_pct": 20.960297651162346, "daylight_rmse": 112.14078602727986, "elapsed_seconds": 0.3696415573358536}
+{"epoch": 4, "train_loss": 0.9264328754865206, "daylight_nrmse_pct": 20.921244850316008, "daylight_rmse": 111.93184759251331, "elapsed_seconds": 0.4911634102463722}
+{"epoch": 5, "train_loss": 0.8693396640129578, "daylight_nrmse_pct": 21.124007221749995, "daylight_rmse": 113.0166571733592, "elapsed_seconds": 0.6136549413204193}
+{"epoch": 6, "train_loss": 0.8675584372801658, "daylight_nrmse_pct": 21.22746468372703, "daylight_rmse": 113.57017035812302, "elapsed_seconds": 0.7386668175458908}
+{"epoch": 7, "train_loss": 0.9009384933190469, "daylight_nrmse_pct": 21.077548217612943, "daylight_rmse": 112.76809442254898, "elapsed_seconds": 0.857584722340107}
+{"epoch": 8, "train_loss": 0.8507531109528664, "daylight_nrmse_pct": 21.00122137298235, "daylight_rmse": 112.35973417431643, "elapsed_seconds": 0.9740249644964933}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "elapsed_seconds": 3622.450701107271,
+  "best_epochs": {
+    "nwp": 40,
+    "fusion": 10
+  },
+  "test_accessed": false
+}

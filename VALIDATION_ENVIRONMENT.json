@@ -1,0 +1,15 @@
+{
+  "python": "3.14.3",
+  "packages": {
+    "torch": "2.12.0+cu126",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.0",
+    "netCDF4": "1.7.4",
+    "xarray": "2026.4.0"
+  },
+  "scope": "Local release validation environment; not a reconstruction of the historical GPU training environment",
+  "python_sources_parsed": 75,
+  "syntax_errors": []
+}
