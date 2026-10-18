@@ -9,7 +9,7 @@
 | Inspect or rerun AOD correction | Feature caches, weights, and historical code are included | The quick verification command checks fusion heads; AOD metrics are checked from released tables |
 | Retrain heads on cached representations | Code and cached features are provided | Historical scripts may retain original-host defaults; reproducibility depends on the exact archived implementation and configuration |
 | Inspect/reconstruct case-level multimodal inputs | Packaged input supplement; see the fixed GitHub release assets | Current recovered snapshot has matching historical source indices and published split, but no historical per-NPZ digest |
-| Infer using the formal original satellite/NWP experts | No | Formal expert checkpoint and its matching expert normalization remain missing |
+| Infer with recovered formal expert branches | Verified on all 119 test cases; see [model recovery](MODEL_RECOVERY.md) | Recovered from a frozen pilot into a new serialization; original full checkpoint bytes and exact original-run inference remain unverified |
 | Retrain a complete replacement model | Not established as a portable workflow | Recovered inputs can support new work once downloaded and configured; historical source versions differ, and a new run does not recover the original model |
 
 ## Verification commands
@@ -42,7 +42,7 @@ Download the four independent input ZIPs directly from the public GitHub release
 
 Extract all four independent input ZIPs into a single input root containing `cases/`; the current GitHub code archive extracts to `SCFusNet/`. From the code root, run `python scripts/verify_recovered_inputs.py --data-root /path/to/inputs`. Only NumPy is required for this payload check, and metadata are read from `data/recovered_inputs_20261018/` by default. See [full extraction commands](DATA_RECOVERY.md#download-layout-and-verification-commands). A v1 code directory updated with the Zenodo overlay can use the same verifier against the GitHub inputs.
 
-The original [v1 archive](https://doi.org/10.5281/zenodo.23418519) is preserved. The [concept DOI](https://doi.org/10.5281/zenodo.23418518) identifies the version family. **Version DOI: `10.5281/zenodo.23445294` (registration becomes effective on publication).** Until its public landing page is accessible, treat the identifier as reserved; this documentation does not itself confirm Zenodo publication.
+The original [v1 archive](https://doi.org/10.5281/zenodo.23418519) is preserved. The published input-recovery version is [10.5281/zenodo.23445294](https://doi.org/10.5281/zenodo.23445294); the [concept DOI](https://doi.org/10.5281/zenodo.23418518) identifies the family. The later GitHub model supplement is not in that Zenodo version.
 
 ## Published recovery verification reports
 
@@ -54,7 +54,7 @@ The following reports are included in the repository as public verification evid
 | [Independent sanitization audit](../reproduction/recovered_inputs_sanitization.json) | All source hashes; all 54 NPY members per case; bit-exact numerical payloads; identical compressed bytes for the 52 unchanged members per case; permitted edits restricted to the two WRF-output path fields; full published-member decompression/CRC checks; personal-path checks across all string members |
 | [Archive restoration](../reproduction/recovered_archive_restoration.json) | Historical local test: offline reconstruction from all 82 chunks to the four original ZIP hashes, totaling 5,305,991,774 archive bytes; these chunks were not deposited as a public Zenodo download |
 
-The corresponding source and sanitized NPZ totals are 5,307,594,704 and 5,305,765,926 bytes. These checks support recovery, publication transformation, and transport integrity. None establishes historical raw-training payload byte identity, supplies the missing formal experts, or represents a new training experiment.
+The corresponding source and sanitized NPZ totals are 5,307,594,704 and 5,305,765,926 bytes. These checks support recovery, publication transformation, and transport integrity. These input audits do not establish historical raw-training payload byte identity or represent a new training experiment. The later [model recovery supplement](MODEL_RECOVERY.md) separately recovers the frozen expert branches and the exact paired normalization.
 
 ## Split and temporal interpretation
 
@@ -86,4 +86,4 @@ The test split and its gate-feature coverage had already been inspected before t
 
 ## Historical training scripts
 
-Several scripts preserve absolute Windows or original GPU-host paths. To pursue new training, obtain and verify the recovered-input supplement when available, then adapt dataset roots, split paths, output roots, and device options using each script's arguments. The formal backbone checkpoint and expert normalization remain missing; training a replacement backbone is a new experiment and must be reported as such. Existing audit files preserve historical provenance and are not current instructions to access a remote host.
+Several scripts preserve absolute Windows or original GPU-host paths. To pursue new training, obtain and verify the recovered-input supplement when available, then adapt dataset roots, split paths, output roots, and device options using each script's arguments. The original serialized full backbone checkpoint remains missing. A later [model supplement](MODEL_RECOVERY.md) recovers the expert branches from a frozen pilot and the exact paired normalization; training any replacement backbone remains a new experiment. Existing audit files preserve historical provenance and are not current instructions to access a remote host.

@@ -1,0 +1,10 @@
+{
+  "extracted_entries": 383,
+  "all_entries_bitwise_equal_to_source": true,
+  "normalization_equal_to_embedded": true,
+  "aod_reference_equal_to_embedded": true,
+  "standalone_cli_smoke_cases": 2,
+  "standalone_cli_smoke_rows": 12,
+  "standalone_cli_max_difference_vs_original_csv_wm2": 0.01715087890625,
+  "all_loads_weights_only": true
+}

@@ -1,0 +1,10 @@
+{
+  "file": "SCFusNet-recovered-experts-20261018.zip",
+  "bytes": 37467351,
+  "sha256": "1fa2f1978a6d7182022faab2a469e4f39de55d510e3fed2489c1adc4e53aa618",
+  "payload_files": 23,
+  "archive_crc_and_all_manifest_hashes_verified": true,
+  "release_url": "https://github.com/S1reN-hub/SCFusNet/releases/tag/experts-20261018",
+  "download_url": "https://github.com/S1reN-hub/SCFusNet/releases/download/experts-20261018/SCFusNet-recovered-experts-20261018.zip",
+  "zenodo_23445294_includes_this_supplement": false
+}

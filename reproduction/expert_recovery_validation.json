@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-18",
+  "device": "cpu",
+  "pytorch": "2.12.0+cu126",
+  "training_performed": false,
+  "cases": 119,
+  "leads": 6,
+  "stations": [
+    "CAB",
+    "DRA",
+    "GOB",
+    "GWN",
+    "IZA",
+    "SEL",
+    "TBL"
+  ],
+  "expert_predictions_compared": 1428,
+  "cache_sha256": "538409020ef8880486c3b73e31495efd75d45a067d1afe8de83dfc5194c70f64",
+  "strict_branch_loading": true,
+  "roundtrip_tensors_bitwise_equal": true,
+  "expert_state_dict_entries": 383,
+  "expert_parameter_count": 4156909,
+  "feature_differences": {
+    "s": {
+      "max_abs": 0.0007086992263793945,
+      "mean_abs": 5.827330824104138e-05,
+      "rmse": 7.872036076150835e-05,
+      "finite": true
+    },
+    "n": {
+      "max_abs": 0.002751469612121582,
+      "mean_abs": 0.00016225551371462643,
+      "rmse": 0.00021481863223016262,
+      "finite": true
+    },
+    "context": {
+      "max_abs": 0.00013893842697143555,
+      "mean_abs": 6.761956683476456e-07,
+      "rmse": 3.3990986594290007e-06,
+      "finite": true
+    },
+    "prediction": {
+      "max_abs": 0.202545166015625,
+      "mean_abs": 0.00453589204698801,
+      "rmse": 0.009587717242538929,
+      "finite": true
+    },
+    "y": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0,
+      "finite": true
+    }
+  },
+  "exact_boolean_matches": {
+    "available": true,
+    "valid": true,
+    "day": true
+  },
+  "routers": {
+    "42": {
+      "raw_inputs_vs_cache_rerun": {
+        "max_abs": 0.1483154296875,
+        "mean_abs": 0.0035650450736284256,
+        "rmse": 0.007914741523563862,
+        "finite": true
+      },
+      "raw_inputs_vs_archived_prediction_csv": {
+        "max_abs": 0.1483154296875,
+        "mean_abs": 0.0034513557329773903,
+        "rmse": 0.007885000668466091,
+        "finite": true
+      },
+      "compared_csv_rows": 675,
+      "strict_state_loading": true,
+      "checkpoint_sha256": "455c0ec0af993a72ce6cf68f77fd94d44c3191bcd49753e920fdc66f465d08ea"
+    },
+    "43": {
+      "raw_inputs_vs_cache_rerun": {
+        "max_abs": 0.144287109375,
+        "mean_abs": 0.0034725044388324022,
+        "rmse": 0.007747115101665258,
+        "finite": true
+      },
+      "raw_inputs_vs_archived_prediction_csv": {
+        "max_abs": 0.144287109375,
+        "mean_abs": 0.0033613236155360937,
+        "rmse": 0.007709723897278309,
+        "finite": true
+      },
+      "compared_csv_rows": 675,
+      "strict_state_loading": true,
+      "checkpoint_sha256": "5696fc494b44be48b32a108ae5fb45e9f16a493b3806c0061a934867e87709af"
+    },
+    "44": {
+      "raw_inputs_vs_cache_rerun": {
+        "max_abs": 0.164825439453125,
+        "mean_abs": 0.0036675024311989546,
+        "rmse": 0.00840950571000576,
+        "finite": true
+      },
+      "raw_inputs_vs_archived_prediction_csv": {
+        "max_abs": 0.164794921875,
+        "mean_abs": 0.0035518871154636145,
+        "rmse": 0.008411220274865627,
+        "finite": true
+      },
+      "compared_csv_rows": 675,
+      "strict_state_loading": true,
+      "checkpoint_sha256": "804e7718556bb803ba8e950bc20b4f7369bf125689da47f9f8f2150a7a4d1844"
+    }
+  },
+  "interpretation": "Numerical compatibility check against historical GPU caches, not byte identity with the missing original checkpoint. CPU/GPU kernels and precision can differ.",
+  "elapsed_seconds": 63.08
+}

@@ -1,0 +1,46 @@
+{
+  "recovery": {
+    "schema": "scfusnet_recovered_expert_branches_v1",
+    "recovery_date": "2026-10-18",
+    "recovered_from_sha256": "6adf17bb57eedc54d022c7f50fe922b6371c4132448985563b4af2a96a232795",
+    "historical_original_checkpoint_sha256": "0c2eadcd625a57686e02d604714e81de864efb19ca92c951a4d8e40e863532f9",
+    "original_checkpoint_bytes_recovered": false,
+    "normalization_sha256": "3432ea2177762468cdae240a42edf9f1de8777345eabd327950d8570f7a02474",
+    "note": "Expert branches extracted from a frozen pilot, excluding its subsequently trained router. This is a new serialization, not the original best_fusion.pt."
+  },
+  "source_checkpoint": "outputs\\joint_mlp_pilot_20260914\\pilot_seed42\\frozen\\best.pt",
+  "source_pilot_epoch": 0,
+  "formal_normalization_source": "results\\baselines_v4_20260921_parallel\\wrf_transformer\\seed42\\normalization.json",
+  "normalization_embedded_semantic_equality": true,
+  "frozen_gradient_report": {
+    "satellite": {
+      "tensors": 0,
+      "norm": 0.0
+    },
+    "nwp": {
+      "tensors": 0,
+      "norm": 0.0
+    },
+    "router": {
+      "tensors": 17,
+      "norm": 0.5444028973579407
+    }
+  },
+  "implementation_sources": {
+    "tmp\\mlp17_7eval_training_bundle_20260909\\src\\ghi_hierarchical_v4\\model.py": "13522307cd3e452a0a595542d6fe6562a5ec61d9a74fb5264c21c090521f18ca",
+    "tmp\\mlp17_7eval_training_bundle_20260909\\src\\ghi_hierarchical_v4\\data.py": "cd33f72a5d9f5c6a2068da391d5af2bbe1fa8fdddb244528708beec95e8ca652",
+    "scripts\\run_query_fusion_pilot_20260908.py": "72c47fc07867bb74fc453bca092cb011a296e57cdb1887fa4a201de28f8293ec"
+  },
+  "evidence_files": [
+    "outputs/joint_mlp_pilot_20260914/pilot_seed42/protocol.json",
+    "scripts/pilot_joint_mlp_20260914.py",
+    "scripts/train_joint_mlp_fusion.py",
+    "work/fusion_repair_20260917/audit/remote_raw_cache_smoke/raw_train10_smoke_report.json"
+  ],
+  "limits": [
+    "The historical original serialized backbone file was not found by exact SHA-256.",
+    "Only the two frozen expert branches are recovered; the original built-in router and conditional correction modules are not recovered.",
+    "Use the separately preserved formal dynamic MLP routers with the legacy 136/133/11 feature schema. The frozen pilot router is intentionally excluded.",
+    "This bundle preserves the original 2026-09-09 experiment semantics; it does not implement later model/data changes or constitute new training."
+  ]
+}

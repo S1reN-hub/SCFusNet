@@ -1,6 +1,6 @@
 # Recovered input data: provenance and release status
 
-Updated **2026-10-18**. This document describes the packaged case-level input supplement for [GitHub release `inputs-20261018`](https://github.com/S1reN-hub/SCFusNet/releases/tag/inputs-20261018), which is public with all nine assets server-digest verified. The [original v1 archive](https://doi.org/10.5281/zenodo.23418519) remains preserved. **Version DOI: `10.5281/zenodo.23445294` (registration becomes effective on publication).** Treat it as reserved until its public landing page is accessible; listing it here is not publication confirmation. The [Zenodo concept DOI](https://doi.org/10.5281/zenodo.23418518) identifies the release family.
+Updated **2026-10-18**. The input supplement is available from [GitHub release `inputs-20261018`](https://github.com/S1reN-hub/SCFusNet/releases/tag/inputs-20261018). The preservation archive is published at [Zenodo DOI 10.5281/zenodo.23445294](https://doi.org/10.5281/zenodo.23445294). A later [model recovery supplement](MODEL_RECOVERY.md) is hosted separately on GitHub.
 
 ## Located inputs
 
@@ -119,7 +119,7 @@ python -m pip install numpy
 python scripts/verify_recovered_inputs.py --data-root /path/to/inputs
 ```
 
-The recovery supplement and its manifests provide durable descriptions and exact hashes of the externally hosted input archives. GitHub availability does not establish that the new Zenodo version is published. The DOI remains reserved until its public landing page is accessible.
+The recovery supplement and its manifests identify externally hosted inputs by exact hash. The input-preservation archive has been published at [Zenodo DOI 10.5281/zenodo.23445294](https://doi.org/10.5281/zenodo.23445294); the later model supplement is separate.
 
 ### Earlier chunk-transport experiment
 
@@ -133,12 +133,12 @@ The formal expert/backbone checkpoint has expected SHA-256:
 0c2eadcd625a57686e02d604714e81de864efb19ca92c951a4d8e40e863532f9
 ```
 
-All 87 examined HPC checkpoint candidates were hashed; none matched. The matching expert normalization also remains missing. Its historical size is 4,712 bytes, but no independently recorded expected normalization hash was located. Fusion-head normalization is not a substitute.
+The initial HPC search hashed 87 checkpoint candidates without an exact match. A subsequent local search hashed 1,784 checkpoint files, also without finding the original full serialized file. It did locate the **exact paired expert normalization** under a baseline filename: 4,712 bytes, SHA-256 `3432ea2177762468cdae240a42edf9f1de8777345eabd327950d8570f7a02474`. A historical raw-extraction report and the frozen-pilot protocol directly pair this normalization hash with the formal expert hash. Fusion-head normalization remains a distinct artifact.
 
-Existing fusion/AOD weights and feature caches remain useful for the released metric and cached-head checks. Input recovery does not supply the missing original experts, establish complete executed-source identity, or make exact original-run raw-input inference available. Preserved source snapshots differ. A replacement training run must be reported as a new experiment, with its own preprocessing, implementation, configuration, weights, and checksums.
+The subsequent [model recovery supplement](MODEL_RECOVERY.md) extracts both original expert branches from a frozen pilot into a new serialization and includes preserved formal dynamic MLP heads and compatible historical code. All 119 test cases were checked against historical cached features and prediction tables, with the numerical differences reported explicitly. This later GitHub supplement is not included in Zenodo version `10.5281/zenodo.23445294`. It does not recover the full original checkpoint bytes or establish complete executed-source identity or bit-exact original-run inference. Preserved source snapshots differ. A replacement training run must be reported as a new experiment, with its own preprocessing, implementation, configuration, weights, and checksums.
 
 ## Rights and citation
 
 Source data retain their upstream attribution and access conditions; recovery does not assign a new blanket data license. BSRN notices and dataset DOI information must be preserved where applicable. See [Data availability](DATA_AVAILABILITY.md) and the repository rights statement.
 
-Cite the version-specific archive actually used and identify whether the experiment used the original cached-feature release or the recovered-input supplement. The v1 DOI refers to the preserved original archive; the concept DOI identifies the release family. Version DOI `10.5281/zenodo.23445294` becomes effective on publication and must not be cited as a published Zenodo supplement until that publication is confirmed.
+Cite the version-specific archive actually used and identify any additional GitHub model supplement by tag and checksum. The v1 DOI identifies the original cached-feature release; DOI [10.5281/zenodo.23445294](https://doi.org/10.5281/zenodo.23445294) identifies the published input-preservation archive. Neither DOI includes the later model supplement.
