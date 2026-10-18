@@ -1,6 +1,6 @@
 # Recovered input data: provenance and release status
 
-Updated **2026-10-18**. This document describes the packaged case-level input supplement for [GitHub release `inputs-20261018`](https://github.com/S1reN-hub/SCFusNet/releases/tag/inputs-20261018), whose page becomes public when the draft release is published. The [original v1 archive](https://doi.org/10.5281/zenodo.23418519) remains preserved. **Version DOI: `10.5281/zenodo.23445294` (registration becomes effective on publication).** Treat it as reserved until its public landing page is accessible; listing it here is not publication confirmation. The [Zenodo concept DOI](https://doi.org/10.5281/zenodo.23418518) identifies the release family.
+Updated **2026-10-18**. This document describes the packaged case-level input supplement for [GitHub release `inputs-20261018`](https://github.com/S1reN-hub/SCFusNet/releases/tag/inputs-20261018), which is public with all nine assets server-digest verified. The [original v1 archive](https://doi.org/10.5281/zenodo.23418519) remains preserved. **Version DOI: `10.5281/zenodo.23445294` (registration becomes effective on publication).** Treat it as reserved until its public landing page is accessible; listing it here is not publication confirmation. The [Zenodo concept DOI](https://doi.org/10.5281/zenodo.23418518) identifies the release family.
 
 ## Located inputs
 
@@ -12,7 +12,7 @@ Updated **2026-10-18**. This document describes the packaged case-level input su
 
 The files cover 17 stations and 86 cycles. Canonical case keys match the published case assignments with no missing or extra cases, preserving the **1,224/119/119** train/validation/test split and 1,462 unique physical payload files.
 
-The totals above describe the source snapshot before publication-path sanitization. All 1,462 source files have now been downloaded and their source checksums verified. The sanitized publication NPZ files total **5,305,765,926 bytes**. The four outer input ZIPs total **5,305,991,774 bytes**; the 82 transport chunks reconstruct exactly those archive bytes.
+The totals above describe the source snapshot before publication-path sanitization. All 1,462 source files have now been downloaded and their source checksums verified. The sanitized publication NPZ files total **5,305,765,926 bytes**. The four outer input ZIPs total **5,305,991,774 bytes** and are hosted on GitHub.
 
 Historical source-index SHA-256 values:
 
@@ -50,9 +50,9 @@ Public recovery evidence must use portable scientific identifiers and relative p
 
 ## Download layout and verification commands
 
-There are two input-download routes: **GitHub provides four independent ZIP archives directly; the Zenodo distribution uses binary transport chunks that must first be reassembled into those same ZIPs.** Both routes use the code archive `SCFusNet-code-and-data-20261018.zip`, which extracts to `SCFusNet/`. The GitHub download page is tied to tag `inputs-20261018`. Use the Zenodo network route only after its public landing page and files are accessible; GitHub publication does not imply Zenodo publication.
+The complete current code and bulk inputs are publicly available from **GitHub release `inputs-20261018`**. The code archive `SCFusNet-code-and-data-20261018.zip` extracts to `SCFusNet/`. Zenodo preserves the original code archive plus a small recovery overlay and exact-hash references to GitHub; it does not host bulk inputs or transport chunks.
 
-### Route A: four ZIPs from GitHub
+### Four independent ZIPs from GitHub
 
 Download the code archive and all four input archives from [GitHub release `inputs-20261018`](https://github.com/S1reN-hub/SCFusNet/releases/tag/inputs-20261018) into one working directory:
 
@@ -79,40 +79,9 @@ python -m pip install numpy
 python scripts/verify_recovered_inputs.py --data-root ../inputs
 ```
 
-### Route B: transport chunks from Zenodo
-
-Zenodo distributes **82 binary chunks of up to 64 MiB** instead of the four large input ZIPs. These chunks are transport pieces, not individually extractable ZIP archives. `data/recovered_inputs_20261018/archive_chunks.json` defines their download locations, order, sizes, checksums, and the four parent ZIPs.
-
-After downloading and extracting the code archive, run from its `SCFusNet/` root:
-
-```sh
-python scripts/restore_zenodo_inputs.py --output-dir ../downloaded-input-archives --workers 4
-```
-
-The script uses the bundled chunk manifest by default, downloads and verifies chunks, then reassembles and checks the four ZIPs in `../downloaded-input-archives/`. If all Zenodo files have already been downloaded into one directory, use them locally:
-
-```sh
-python scripts/restore_zenodo_inputs.py --local-chunk-dir /path/to/download-all --offline --output-dir ../downloaded-input-archives --workers 4
-```
-
-Only chunks assigned to the same parent ZIP are concatenated in manifest order. **The four restored ZIPs are independent archives and must never be concatenated together.** Extract all four into one `inputs/` directory, then verify its NPZ files:
-
-```sh
-python -m zipfile -e ../downloaded-input-archives/SCFusNet-inputs-20261018-part01.zip ../inputs
-python -m zipfile -e ../downloaded-input-archives/SCFusNet-inputs-20261018-part02.zip ../inputs
-python -m zipfile -e ../downloaded-input-archives/SCFusNet-inputs-20261018-part03.zip ../inputs
-python -m zipfile -e ../downloaded-input-archives/SCFusNet-inputs-20261018-part04.zip ../inputs
-python -m pip install numpy
-python scripts/verify_recovered_inputs.py --data-root ../inputs
-```
-
-Restoring ZIPs validates transport chunks and parent archives. The final `verify_recovered_inputs.py` command separately checks the published NPZ payloads and case contracts. Keep the two verification stages distinct. The Zenodo version identifier must be treated as reserved until its public landing page is accessible; these commands do not establish public availability.
-
-The bundled [offline restoration report](../reproduction/recovered_archive_restoration.json) records reconstruction of all four ZIPs from all 82 local chunks, with archive hashes matching the originals. This was a local transport test; no network download or public availability is implied by that report.
-
 ### Final layout and payload verification
 
-Both routes produce the following code/data layout:
+The GitHub download produces the following code/data layout:
 
 ```text
 working-directory/
@@ -131,6 +100,30 @@ python scripts/verify_recovered_inputs.py --data-root /path/to/inputs
 ```
 
 The metadata directory defaults to `data/recovered_inputs_20261018/` inside the code repository, so it need not be copied into the input root. Full verification checks all 1,462 published-file sizes and SHA-256 values, the case-file set, NPZ array headers and dtypes, scalar identities, and saved scientific contracts. Only NumPy is needed for this data verification; PyTorch is not required. The check does not train a model or establish historical raw-payload identity. To validate just the bundled metadata without downloading inputs, run `python scripts/verify_recovered_inputs.py --metadata-only`; this does not check any NPZ payload.
+
+## Zenodo preservation and recovery overlay
+
+The new Zenodo deposit retains the original v1 code ZIP unchanged and adds `SCFusNet-recovery-supplement-20261018.zip`, a small overlay of repository-relative files. It preserves current recovery metadata, verification scripts, documentation, three recovery-verification reports, rights information, and archive/hash manifests that identify the GitHub bulk files exactly. **It does not include the four bulk ZIPs or the previously planned 82 transport chunks.** The complete current code ZIP is available from GitHub.
+
+To use the preservation route after Zenodo publication, download the preserved original code ZIP and the recovery supplement. Extract the original code archive, locate its repository root containing `scripts/`, and extract the supplement into that same root, allowing the relative files to overwrite their older versions. From the extracted original code root, for example:
+
+```sh
+python -m zipfile -e /path/to/SCFusNet-recovery-supplement-20261018.zip .
+python scripts/verify_recovered_inputs.py --metadata-only
+```
+
+This overlay updates recovery metadata, scripts, documentation, and reports; it is not a second copy of all bulk data. Download the four input ZIPs from the fixed GitHub release, extract them into one input root using the commands above, then run:
+
+```sh
+python -m pip install numpy
+python scripts/verify_recovered_inputs.py --data-root /path/to/inputs
+```
+
+The recovery supplement and its manifests provide durable descriptions and exact hashes of the externally hosted input archives. GitHub availability does not establish that the new Zenodo version is published. The DOI remains reserved until its public landing page is accessible.
+
+### Earlier chunk-transport experiment
+
+The retained `archive_chunks.json`, chunk-restoration helper, and [offline restoration report](../reproduction/recovered_archive_restoration.json) document an earlier local transport plan. The report verifies reconstruction from 82 local chunks into the four original ZIP hashes. Those chunks were not deposited as a public Zenodo bulk-download route. Do not use the helper's default network mode to obtain this release. If independently retained local chunks are available, the helper may still check them offline with `--local-chunk-dir /path/to/local-chunks --offline`; otherwise use the four GitHub ZIPs directly.
 
 ## Missing artifacts and reproducibility
 

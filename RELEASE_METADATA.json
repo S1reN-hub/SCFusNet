@@ -23,13 +23,17 @@
     "published_payload_bytes": 5305765926,
     "input_archive_bytes": 5305991774,
     "github_zip_archives": 4,
-    "zenodo_transport_chunks": 82,
+    "zenodo_transport_chunks": 0,
     "historical_per_case_byte_identity_verified": false,
-    "numeric_arrays_preserved_during_path_redaction": true
+    "numeric_arrays_preserved_during_path_redaction": true,
+    "offline_transport_plan_chunks": 82
   },
   "zenodo": {
     "version_doi": "10.5281/zenodo.23445294",
     "concept_doi": "10.5281/zenodo.23418518",
-    "preserved_v1_doi": "10.5281/zenodo.23418519"
+    "preserved_v1_doi": "10.5281/zenodo.23418519",
+    "distribution": "Preserved v1 code archive plus recovery supplement; full inputs and current full code archive hosted on linked fixed GitHub release",
+    "bulk_data_hosted_on_zenodo": false,
+    "recovery_overlay": "SCFusNet-recovery-supplement-20261018.zip"
   }
 }

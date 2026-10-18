@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Download verified Zenodo transport chunks and reconstruct four input ZIPs.
+"""Download the four verified input ZIPs from the fixed public GitHub release.
 
 Python standard library only. Already correct chunks and archives are reused.
-To reuse files obtained with Zenodo's download-all feature, extract that download
-and pass its chunk directory with --local-chunk-dir. Use --offline to forbid
-network access. This restores archives; it does not extract or train on inputs.
+Default source: GitHub tag inputs-20261018. Interrupted downloads resume using
+HTTP Range. --local-chunk-dir retains offline reconstruction from previously
+obtained transport chunks. --source zenodo is an explicit legacy transport
+option: those 82 chunks are NOT included in the current Zenodo archive.
+Use --offline to forbid network access. No extraction or training is performed.
 """
 from __future__ import annotations
 
@@ -24,6 +26,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "data/recovered_inputs_20261018/archive_chunks.json"
+GITHUB = "https://github.com/S1reN-hub/SCFusNet/releases/download/inputs-20261018/"
 NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,199}\Z")
 DIGEST = re.compile(r"[0-9a-f]{64}\Z")
 BLOCK = 1024 * 1024
@@ -93,15 +96,22 @@ def reject_error_body(response, first):
 
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
+    def __init__(self, source="zenodo"):
+        super().__init__()
+        self.source = source
+
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         parsed = urllib.parse.urlsplit(newurl)
-        require(parsed.scheme == "https" and parsed.hostname in {"zenodo.org", "www.zenodo.org"}
+        hosts = ({"zenodo.org", "www.zenodo.org"} if self.source == "zenodo" else
+                 {"github.com", "release-assets.githubusercontent.com", "objects.githubusercontent.com",
+                  "github-releases.githubusercontent.com"})
+        require(parsed.scheme == "https" and parsed.hostname in hosts
                 and parsed.port in (None, 443) and parsed.username is None,
-                "Refusing redirect outside HTTPS Zenodo")
+                "Refusing redirect outside the selected HTTPS download source")
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def download_chunk(entry, cache, local, record, retries, timeout, offline):
+def download_chunk(entry, cache, local, record, retries, timeout, offline, source="zenodo"):
     name = entry["name"]
     target = confined(cache, name)
     if file_matches(target, entry):
@@ -113,8 +123,9 @@ def download_chunk(entry, cache, local, record, retries, timeout, offline):
             return name, supplied, "local"
     require(not offline, f"Verified chunk unavailable in offline mode: {name}")
     partial = confined(cache, name + ".partial")
-    url = f"https://zenodo.org/records/{record}/files/{urllib.parse.quote(name, safe='')}?download=1"
-    opener = urllib.request.build_opener(SafeRedirect())
+    url = (GITHUB + urllib.parse.quote(name, safe="") if source == "github" else
+           f"https://zenodo.org/records/{record}/files/{urllib.parse.quote(name, safe='')}?download=1")
+    opener = urllib.request.build_opener(SafeRedirect(source))
     last_error = None
     for attempt in range(retries):
         try:
@@ -130,6 +141,8 @@ def download_chunk(entry, cache, local, record, retries, timeout, offline):
             with opener.open(urllib.request.Request(url, headers=headers), timeout=timeout) as response:
                 status = response.getcode()
                 require(status in (200, 206), f"Unexpected HTTP status: {status}")
+                require(response.headers.get("Content-Encoding", "identity").lower() in ("identity", ""),
+                        "Encoded response cannot be verified or resumed safely")
                 if status == 206:
                     value = response.headers.get("Content-Range", "")
                     require(value == f"bytes {offset}-{entry['bytes'] - 1}/{entry['bytes']}",
@@ -175,18 +188,28 @@ def restore(args):
         require(local.is_dir(), "Local chunk directory does not exist")
     archives = data["archives"]
     pending = [a for a in archives if not file_matches(confined(output, a["name"]), a)]
-    chunks = [c for a in pending for c in a["chunks"]]
+    # An explicitly supplied local chunk directory always enables the existing
+    # reconstruction path, independent of the default remote source selection.
+    chunk_mode = local is not None or args.source == "zenodo"
+    if args.source == "zenodo":
+        print("WARNING: legacy transport chunks are not included in the current Zenodo archive; "
+              "use --source github for the published complete ZIP files.", flush=True)
+    chunks = [c for a in pending for c in a["chunks"]] if chunk_mode else []
     available = {}
     counts = {"cached": 0, "local": 0, "downloaded": 0}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = [pool.submit(download_chunk, c, cache, local, data["record"],
-                               args.retries, args.timeout, args.offline) for c in chunks]
+        entries = chunks if chunk_mode else pending
+        futures = [pool.submit(download_chunk, c, cache if chunk_mode else output, local,
+                               data["record"], args.retries, args.timeout,
+                               args.offline or (chunk_mode and args.source != "zenodo"),
+                               "zenodo" if chunk_mode else "github") for c in entries]
         for future in concurrent.futures.as_completed(futures):
             name, path, mode = future.result()
             available[name] = path
             counts[mode] += 1
-            print(f"Verified chunks: {sum(counts.values())}/{len(chunks)} ({name}, {mode})", flush=True)
-    for archive in pending:
+            unit = "chunks" if chunk_mode else "archives"
+            print(f"Verified {unit}: {sum(counts.values())}/{len(entries)} ({name}, {mode})", flush=True)
+    for archive in pending if chunk_mode else []:
         target = confined(output, archive["name"])
         temporary = confined(output, archive["name"] + ".assembling")
         with temporary.open("wb") as writer:
@@ -195,8 +218,12 @@ def restore(args):
                     shutil.copyfileobj(reader, writer, BLOCK)
         require(file_matches(temporary, archive), f"Restored archive checksum mismatch: {archive['name']}")
         os.replace(temporary, target)
-    result = {"zenodo_record": str(data["record"]), "archives_verified": len(archives),
-              "chunks": counts, "archives": [{k: a[k] for k in ("name", "bytes", "sha256")} for a in archives],
+    result = {"source": "local_chunks" if local is not None else args.source,
+              "github_release_tag": "inputs-20261018", "archives_verified": len(archives),
+              "archives_reused": len(archives) - len(pending),
+              "chunks": counts if chunk_mode else {"cached": 0, "local": 0, "downloaded": 0},
+              "archive_transfers": counts if not chunk_mode else {},
+              "archives": [{k: a[k] for k in ("name", "bytes", "sha256")} for a in archives],
               "note": "Verified transport reconstruction; historical raw training-payload identity is not established."}
     report = confined(output, "restore_verification.json")
     report.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
@@ -206,6 +233,8 @@ def restore(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
+    parser.add_argument("--source", choices=("github", "zenodo"), default="github",
+                        help="github: four complete ZIPs (default); zenodo: legacy chunks absent from current archive")
     parser.add_argument("--output-dir", type=Path, default=Path("restored_inputs"))
     parser.add_argument("--local-chunk-dir", type=Path)
     parser.add_argument("--offline", action="store_true")
