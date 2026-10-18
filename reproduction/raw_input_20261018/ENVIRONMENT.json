@@ -1,0 +1,14 @@
+{
+  "python": "3.14.3",
+  "implementation": "CPython",
+  "os": "Windows",
+  "release": "11",
+  "machine": "AMD64",
+  "numpy": "2.4.3",
+  "torch": "2.12.0+cu126",
+  "cuda_build": "12.6",
+  "cuda_available": true,
+  "inference_device": "cpu",
+  "threads": 4,
+  "batch_size": 4
+}

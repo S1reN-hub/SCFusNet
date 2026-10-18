@@ -1,18 +1,24 @@
 # Reproducibility
 
+## Complete inference verification update — 2026-10-18
+
+The **reproduction-20261018** version provides the full NPZ-to-experts-to-formal-fusion-to-AOD workflow and original-cohort metric checks. All 119 test cases and three formal fusion seeds were evaluated without retraining or selection. Main-table metrics match the manuscript at its reported precision, and the exploratory 38-hour AOD RMSE reduction remains 11.40%. Unrounded differences are preserved in the reports. See [raw-input reproduction](RAW_INPUT_REPRODUCTION.md) and [submission-ready availability/reproducibility wording](REPRODUCIBILITY_STATEMENT.md).
+
+Archive identifier: **[10.5281/zenodo.23446670](https://doi.org/10.5281/zenodo.23446670)**. This version preserves a complete code/results package and the recovered-expert ZIP together. The earlier input-preservation DOI `10.5281/zenodo.23445294` is unchanged; statements below about the model supplement being absent from that older version remain historical facts. Bulk inputs continue to use the four fixed GitHub ZIPs.
+
 ## Supported reproduction levels
 
 | Level | Supported by this snapshot | Limitation |
 | --- | --- | --- |
 | Recalculate reported metrics | Yes, from released prediction and reference tables | Must retain each metric's original evaluation cohort |
 | Re-evaluate fusion heads | Verified from released feature caches and head checkpoints | Starts after pretrained satellite/NWP feature extraction |
-| Inspect or rerun AOD correction | Feature caches, weights, and historical code are included | The quick verification command checks fusion heads; AOD metrics are checked from released tables |
+| Run the selected AOD correction | Verified from raw inputs with the unchanged selected heads and gate | A separate exploratory 38-hour result; not the main-table forecast |
 | Retrain heads on cached representations | Code and cached features are provided | Historical scripts may retain original-host defaults; reproducibility depends on the exact archived implementation and configuration |
 | Inspect/reconstruct case-level multimodal inputs | Packaged input supplement; see the fixed GitHub release assets | Current recovered snapshot has matching historical source indices and published split, but no historical per-NPZ digest |
 | Infer with recovered formal expert branches | Verified on all 119 test cases; see [model recovery](MODEL_RECOVERY.md) | Recovered from a frozen pilot into a new serialization; original full checkpoint bytes and exact original-run inference remain unverified |
 | Retrain a complete replacement model | Not established as a portable workflow | Recovered inputs can support new work once downloaded and configured; historical source versions differ, and a new run does not recover the original model |
 
-## Verification commands
+## Historical table and cached-head verification commands
 
 From the repository root:
 

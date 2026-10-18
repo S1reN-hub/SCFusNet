@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the versioned SCFusNet artifact archive used in your work."
+type: software
+title: "SCFusNet: Scenario-Conditioned Satellite-NWP Fusion for 1-6-h Solar Irradiance Forecasting — Code and Derived Data"
+authors:
+  - family-names: Liu
+    given-names: Shaocheng
+  - family-names: Xia
+    given-names: Jingming
+version: reproduction-20261018
+date-released: 2026-10-18
+doi: 10.5281/zenodo.23446670
+repository-code: "https://github.com/S1reN-hub/SCFusNet"
+url: "https://doi.org/10.5281/zenodo.23446670"
+abstract: "Research code, model recovery provenance and raw-input numerical inference verification for SCFusNet; original full checkpoint bytes and complete training reproducibility are not claimed."

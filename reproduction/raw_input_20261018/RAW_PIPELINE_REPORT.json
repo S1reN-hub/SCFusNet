@@ -1,0 +1,355 @@
+{
+  "schema": "scfusnet_raw_pipeline_verification_v1",
+  "date": "2026-10-18",
+  "assertions_passed": true,
+  "training_performed": false,
+  "checkpoint_or_gate_selection_performed": false,
+  "model_artifact_manifest_verified": true,
+  "selected_input_files_sha256_verified": 119,
+  "cases": 119,
+  "leads": 6,
+  "main_comparison_rows": 601,
+  "persistence_rows": 452,
+  "aod_admitted_hours": 38,
+  "aod_admitted_cases": 10,
+  "admission_keys_identical_to_historical": true,
+  "prediction_source": "Fresh inference from published NPZ files; historical caches/tables are validation references only",
+  "model_source_original_whole_checkpoint_recovered": false,
+  "by_seed": {
+    "42": {
+      "comparison": {
+        "before": {
+          "max_abs": 0.1483154296875,
+          "mean_abs": 0.0038728126868630406
+        },
+        "after": {
+          "max_abs": 0.1483154296875,
+          "mean_abs": 0.0038777889308834234
+        },
+        "aod550": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0
+        },
+        "aod_reference": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0
+        },
+        "common_clear": {
+          "max_abs": 0.00016602873802185059,
+          "mean_abs": 1.0919654912341653e-05
+        }
+      },
+      "common_601": {
+        "before": {
+          "mae_wm2": 62.11592132834944,
+          "rmse_wm2": 109.42927895994404,
+          "nrmse_pct": 20.695699250451597,
+          "r2": 0.8747557502993248,
+          "fs_pct": 34.45134589726811
+        },
+        "after": {
+          "mae_wm2": 61.79712104797363,
+          "rmse_wm2": 109.25604511691849,
+          "nrmse_pct": 20.66293657898623,
+          "r2": 0.8751519764165373,
+          "fs_pct": 34.572317196234636
+        }
+      },
+      "admitted_38": {
+        "before": {
+          "mae_wm2": 39.49539465653269,
+          "rmse_wm2": 51.977680292893716,
+          "nrmse_pct": 7.807020992913747,
+          "r2": 0.9307357144304871
+        },
+        "after": {
+          "mae_wm2": 34.45331653795744,
+          "rmse_wm2": 45.85322932063637,
+          "nrmse_pct": 6.88713158959574,
+          "r2": 0.946096690971063
+        }
+      },
+      "correction_sha256": "4b596120e713c79942d74ac690336dc96deff4bd5ebc3f85ac3436c9ed970783",
+      "correction_epoch": 2
+    },
+    "43": {
+      "comparison": {
+        "before": {
+          "max_abs": 0.144287109375,
+          "mean_abs": 0.0037697016101906978
+        },
+        "after": {
+          "max_abs": 0.144287109375,
+          "mean_abs": 0.0037677212681825863
+        },
+        "aod550": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0
+        },
+        "aod_reference": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0
+        },
+        "common_clear": {
+          "max_abs": 0.00016602873802185059,
+          "mean_abs": 1.0919654912341653e-05
+        }
+      },
+      "common_601": {
+        "before": {
+          "mae_wm2": 62.32832670608495,
+          "rmse_wm2": 110.12211595364766,
+          "nrmse_pct": 20.826731330600147,
+          "r2": 0.8731647949564949,
+          "fs_pct": 33.97949114512221
+        },
+        "after": {
+          "mae_wm2": 62.00452570669266,
+          "rmse_wm2": 109.95954334419315,
+          "nrmse_pct": 20.795984953911844,
+          "r2": 0.8735390106085904,
+          "fs_pct": 34.08980055910034
+        }
+      },
+      "admitted_38": {
+        "before": {
+          "mae_wm2": 39.59406922992907,
+          "rmse_wm2": 52.303337857369705,
+          "nrmse_pct": 7.855934592521092,
+          "r2": 0.9298650676361361
+        },
+        "after": {
+          "mae_wm2": 34.472900792172084,
+          "rmse_wm2": 46.58070492283691,
+          "nrmse_pct": 6.996398052935557,
+          "r2": 0.9443727378861335
+        }
+      },
+      "correction_sha256": "301c639ff6974bb0b665b0ac3fd263def1b28c5ba6772d2a06aa8cd1ad09d47a",
+      "correction_epoch": 2
+    },
+    "44": {
+      "comparison": {
+        "before": {
+          "max_abs": 0.164825439453125,
+          "mean_abs": 0.0039847242256964305
+        },
+        "after": {
+          "max_abs": 0.164825439453125,
+          "mean_abs": 0.003989954359717853
+        },
+        "aod550": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0
+        },
+        "aod_reference": {
+          "max_abs": 0.0,
+          "mean_abs": 0.0
+        },
+        "common_clear": {
+          "max_abs": 0.00016602873802185059,
+          "mean_abs": 1.0919654912341653e-05
+        }
+      },
+      "common_601": {
+        "before": {
+          "mae_wm2": 62.4589962380103,
+          "rmse_wm2": 108.92170778624602,
+          "nrmse_pct": 20.599705376975578,
+          "r2": 0.8759149088105221,
+          "fs_pct": 34.27129220813529
+        },
+        "after": {
+          "mae_wm2": 62.136193077100096,
+          "rmse_wm2": 108.75448593109093,
+          "nrmse_pct": 20.56807971650075,
+          "r2": 0.8762956191678498,
+          "fs_pct": 34.40319748895988
+        }
+      },
+      "admitted_38": {
+        "before": {
+          "mae_wm2": 39.045230664704974,
+          "rmse_wm2": 51.60357618428098,
+          "nrmse_pct": 7.750830747157932,
+          "r2": 0.9317291717748698
+        },
+        "after": {
+          "mae_wm2": 33.939843830309414,
+          "rmse_wm2": 45.68622229012386,
+          "nrmse_pct": 6.862047219038449,
+          "r2": 0.9464886301084279
+        }
+      },
+      "correction_sha256": "e141f5a3245054904d078306e87dd8b9baab6c9a9391177b191d8ea868550641",
+      "correction_epoch": 3
+    }
+  },
+  "main_table_summary": {
+    "mae_wm2": {
+      "mean": 62.30108142414823,
+      "seed_sd": 0.17315261317855132
+    },
+    "rmse_wm2": {
+      "mean": 109.49103423327925,
+      "seed_sd": 0.6025821333475415
+    },
+    "nrmse_pct": {
+      "mean": 20.707378652675775,
+      "seed_sd": 0.11396272299318674
+    },
+    "r2": {
+      "mean": 0.874611818022114,
+      "seed_sd": 0.0013806950886584143
+    },
+    "fs_pct": {
+      "mean": 34.23404308350854,
+      "seed_sd": 0.23812255194492216
+    }
+  },
+  "main_table_delta_vs_published": {
+    "mae_wm2": 6.068499961742191e-05,
+    "rmse_wm2": -0.00017977771832988765,
+    "nrmse_pct": -3.400027511801795e-05,
+    "r2": 4.119630176990796e-07,
+    "fs_pct": -6.808466246610578e-05
+  },
+  "main_table_paper_rounding_matches": {
+    "mae_wm2": true,
+    "rmse_wm2": true,
+    "nrmse_pct": true,
+    "r2": true,
+    "fs_pct": true
+  },
+  "table_ii_branch_rows": {
+    "Satellite expert": {
+      "raw_metrics": {
+        "mae_wm2": 79.45558631439971,
+        "rmse_wm2": 124.87710367412043,
+        "nrmse_pct": 23.617253128873053,
+        "r2": 0.8368991009689335,
+        "fs_pct": 20.96940519686473
+      },
+      "delta_vs_published": {
+        "mae_wm2": -0.0006925071932073479,
+        "rmse_wm2": -0.00010225958727971829,
+        "nrmse_pct": -1.9339738727808253e-05,
+        "r2": 2.671208245708101e-07,
+        "fs_pct": -0.0003239174694051883
+      },
+      "paper_rounding_matches": {
+        "mae_wm2": true,
+        "rmse_wm2": true,
+        "nrmse_pct": true,
+        "r2": true,
+        "fs_pct": true
+      }
+    },
+    "NWP expert": {
+      "raw_metrics": {
+        "mae_wm2": 69.50486723000118,
+        "rmse_wm2": 126.30537571190841,
+        "nrmse_pct": 23.88737360140865,
+        "r2": 0.8331468576160649,
+        "fs_pct": 21.344080297390576
+      },
+      "delta_vs_published": {
+        "mae_wm2": -0.00012591357238989076,
+        "rmse_wm2": -0.0005908621876784537,
+        "nrmse_pct": -0.00011174620038545413,
+        "r2": 1.5610965530266085e-06,
+        "fs_pct": 0.00037334923687026844
+      },
+      "paper_rounding_matches": {
+        "mae_wm2": true,
+        "rmse_wm2": true,
+        "nrmse_pct": true,
+        "r2": true,
+        "fs_pct": true
+      }
+    },
+    "Fixed fusion (0.2 satellite + 0.8 NWP)": {
+      "raw_metrics": {
+        "mae_wm2": 63.97174962467441,
+        "rmse_wm2": 115.35526843511995,
+        "nrmse_pct": 21.81644588339318,
+        "r2": 0.8608236032805436,
+        "fs_pct": 29.691194319052315
+      },
+      "delta_vs_published": {
+        "mae_wm2": 9.280758569474301e-05,
+        "rmse_wm2": -0.0003542708188888355,
+        "nrmse_pct": -6.700110236224077e-05,
+        "r2": 8.548584284895355e-07,
+        "fs_pct": 0.00015555067165351488
+      },
+      "paper_rounding_matches": {
+        "mae_wm2": true,
+        "rmse_wm2": true,
+        "nrmse_pct": true,
+        "r2": true,
+        "fs_pct": true
+      }
+    }
+  },
+  "aod_summary": {
+    "before": {
+      "mae_wm2": {
+        "mean": 39.378231517055575,
+        "seed_sd": 0.2925770729370479
+      },
+      "rmse_wm2": {
+        "mean": 51.961531444848134,
+        "seed_sd": 0.3501602329661118
+      },
+      "nrmse_pct": {
+        "mean": 7.804595444197591,
+        "seed_sd": 0.05259388788121323
+      },
+      "r2": {
+        "mean": 0.9307766512804977,
+        "seed_sd": 0.0009327260740847986
+      }
+    },
+    "after": {
+      "mae_wm2": {
+        "mean": 34.28868705347964,
+        "seed_sd": 0.30226574651642774
+      },
+      "rmse_wm2": {
+        "mean": 46.04005217786571,
+        "seed_sd": 0.47560685449625095
+      },
+      "nrmse_pct": {
+        "mean": 6.915192287189915,
+        "seed_sd": 0.07143590626789799
+      },
+      "r2": {
+        "mean": 0.9456526863218748,
+        "seed_sd": 0.0011256576168920014
+      }
+    }
+  },
+  "aod_admitted_rmse_reduction_pct": 11.39589057968291,
+  "environment": {
+    "python": "3.14.3",
+    "implementation": "CPython",
+    "os": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "numpy": "2.4.3",
+    "torch": "2.12.0+cu126",
+    "cuda_build": "12.6",
+    "cuda_available": true,
+    "inference_device": "cpu",
+    "threads": 4,
+    "batch_size": 4
+  },
+  "elapsed_seconds": 60.94,
+  "limits": [
+    "Numerical compatibility, not bit-exact original inference.",
+    "This verifies inference and metric calculation, not retraining or all ablation models from raw inputs.",
+    "The main comparison uses BEFORE-AOD predictions; the admitted-hour AOD sensitivity is a separate exploratory result.",
+    "The original full checkpoint bytes, complete executed-source/environment identity and historical per-NPZ hashes remain unavailable."
+  ]
+}

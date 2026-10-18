@@ -4,6 +4,18 @@ Research code and derived data for **SCFusNet: Scenario-Conditioned Satellite–
 
 SCFusNet combines independently supervised satellite and numerical weather prediction (NWP) branches, assigns scenario- and lead-dependent fusion weights, and applies conditional aerosol optical depth (AOD) attenuation. Older artifact and code names such as `SolFUS-Net`, `SolSC-Net`, and `solfus` are retained for traceability.
 
+## Verified raw-input reproduction
+
+The **reproduction-20261018** archive, identifier **[10.5281/zenodo.23446670](https://doi.org/10.5281/zenodo.23446670)**, preserves the complete current code/results package and recovered model supplement. It adds a single command for raw NPZ inputs -> recovered experts -> three original formal fusion heads -> fixed selected AOD correction -> original paper-cohort scoring. All 119 test cases were verified; main-table metrics match at manuscript precision and the separate exploratory AOD RMSE reduction remains **11.40%**. Exact differences, pins, per-seed outputs and provenance are included. This is numerical inference verification, not bit-exact original execution or full retraining reproduction.
+
+After obtaining the four input archives and the model bundle, run from this repository root:
+
+```sh
+python scripts/reproduce_raw_pipeline.py --data-root /path/to/inputs --model-bundle /path/to/SCFusNet-recovered-experts --output-dir reproduction/raw_pipeline --device cpu
+```
+
+See [download/setup instructions and measured results](docs/RAW_INPUT_REPRODUCTION.md) and [submission-ready availability/reproducibility wording](docs/REPRODUCIBILITY_STATEMENT.md). The earlier DOI versions and original missing full-checkpoint digest remain preserved and explicitly documented.
+
 ## Quick start
 
 Run from the repository root in a Python environment with the dependencies in `requirements.txt` installed:

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "check": "Full 119-case inference from independently extracted code and model archives, launched from an unrelated empty working directory",
+  "runtime_payload_sha256": {
+    "scripts/reproduce_raw_pipeline.py": "60b40abef934833db55ee50d966be96efd6765c77e1434c6c04f340f6afe448c",
+    "scripts/scfusnet_aod_runtime.py": "3a591feb8de3e6c9a3da2ceb50ac60fc0d48fa771448169758d0c965e3afb6dc",
+    "scripts/reproduce_paper_metrics.py": "e988ed2fdfc63fc37d4a90f9c5da0d70154b5439ede49021670b4ed47efa3228",
+    "scripts/fetch_recovered_models.py": "b3c215e3df6c408a9ccbf0dbf464f0558dbcc1e5c50bee1c5fd8760a1002b35b",
+    "requirements-reproduction.txt": "96ca1b69421e8339a8b42a7b3c43044f91d58fc14645be42659a5b541561bafa"
+  },
+  "model_archive_sha256": "1fa2f1978a6d7182022faab2a469e4f39de55d510e3fed2489c1adc4e53aa618",
+  "all_main_and_aod_metrics_exactly_match_first_cpu_run": true,
+  "original_project_python_modules_on_pythonpath": false,
+  "new_dependency_installation_tested": false,
+  "dependency_scope": "Existing installed packages recorded by ENVIRONMENT_LOCK.json; this is archive/path portability verification, not a fresh-machine installation test",
+  "elapsed_seconds": 76.38,
+  "cases": 119,
+  "seeds": [
+    42,
+    43,
+    44
+  ]
+}

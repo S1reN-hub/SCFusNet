@@ -1,5 +1,11 @@
 # Data availability
 
+## Complete inference verification update — 2026-10-18
+
+The **reproduction-20261018** version provides the full NPZ-to-experts-to-formal-fusion-to-AOD workflow and original-cohort metric checks. All 119 test cases and three formal fusion seeds were evaluated without retraining or selection. Main-table metrics match the manuscript at its reported precision, and the exploratory 38-hour AOD RMSE reduction remains 11.40%. Unrounded differences are preserved in the reports. See [raw-input reproduction](RAW_INPUT_REPRODUCTION.md) and [submission-ready availability/reproducibility wording](REPRODUCIBILITY_STATEMENT.md).
+
+Archive identifier: **[10.5281/zenodo.23446670](https://doi.org/10.5281/zenodo.23446670)**. This version preserves a complete code/results package and the recovered-expert ZIP together. The earlier input-preservation DOI `10.5281/zenodo.23445294` is unchanged; statements below about the model supplement being absent from that older version remain historical facts. Bulk inputs continue to use the four fixed GitHub ZIPs.
+
 The original release accompanies the 2026-10-16 manuscript version of SCFusNet. This statement was updated on 2026-10-18 to distinguish the preserved original archive, the recovered-input supplement, and artifacts that remain missing.
 
 ## Included material

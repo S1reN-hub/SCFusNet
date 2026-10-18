@@ -5,10 +5,10 @@
   "manuscript_sha256": "b9eff667094c31e0315f89bbebcdeada47c16b5bd5df5d267b1d6650318a36fd",
   "manuscript_status": "Research manuscript; publication DOI not assigned in this release",
   "includes_manuscript": false,
-  "scope": "Research code, derived results, frozen expert caches and heads, plus a source-index-matched recovered 1462-case input snapshot distributed through release assets",
+  "scope": "Code, inputs metadata, recovered expert branches, exact matched normalization, preserved formal fusion/AOD heads and raw-input numerical reproduction of main paper cohorts",
   "missing_for_end_to_end_training": [
-    "Formal independent-expert best_fusion.pt checkpoint and matching input normalization",
-    "Exact complete historical source snapshot executed during formal training"
+    "Original monolithic best_fusion.pt byte stream and its built-in router/conditional modules (not used in the released external-head inference route)",
+    "Exact complete historical executed source/environment and complete original training state; no claim of full retraining reproduction"
   ],
   "code_versions": {
     "src": "Current research implementation; differs from historical training code",
@@ -16,7 +16,7 @@
     "tmp/mlp17_7eval_training_bundle_20260909": "Historical launch bundle; differs from the partial recovered snapshot; neither establishes the exact complete formal training implementation"
   },
   "license": "No new blanket code or data license assigned; upstream data terms remain applicable",
-  "version": "inputs-20261018",
+  "version": "reproduction-20261018",
   "input_snapshot": {
     "cases": 1462,
     "source_payload_bytes": 5307594704,
@@ -29,11 +29,39 @@
     "offline_transport_plan_chunks": 82
   },
   "zenodo": {
-    "version_doi": "10.5281/zenodo.23445294",
+    "version_doi": "10.5281/zenodo.23446670",
     "concept_doi": "10.5281/zenodo.23418518",
     "preserved_v1_doi": "10.5281/zenodo.23418519",
-    "distribution": "Preserved v1 code archive plus recovery supplement; full inputs and current full code archive hosted on linked fixed GitHub release",
+    "distribution": "Complete current code/results ZIP plus unchanged recovered-expert ZIP and checksum/usage files; bulk NPZ inputs on fixed GitHub release",
     "bulk_data_hosted_on_zenodo": false,
-    "recovery_overlay": "SCFusNet-recovery-supplement-20261018.zip"
+    "previous_input_recovery_doi": "10.5281/zenodo.23445294",
+    "model_bundle_hosted_on_zenodo": true
+  },
+  "recovered_model": {
+    "artifact": "SCFusNet-recovered-experts-20261018.zip",
+    "bytes": 37467351,
+    "sha256": "1fa2f1978a6d7182022faab2a469e4f39de55d510e3fed2489c1adc4e53aa618",
+    "expert_parameters": 4156909,
+    "expert_state_entries": 383,
+    "exact_paired_normalization_recovered": true,
+    "original_monolithic_checkpoint_recovered": false
+  },
+  "inference_verification": {
+    "command": "scripts/reproduce_raw_pipeline.py",
+    "test_cases": 119,
+    "fusion_seeds": [
+      42,
+      43,
+      44
+    ],
+    "main_comparison_rows": 601,
+    "persistence_rows": 452,
+    "aod_admitted_hours": 38,
+    "aod_admitted_cases": 10,
+    "main_table_all_reported_rounding_matches": true,
+    "aod_rmse_reduction_pct": 11.39589057968291,
+    "training_performed": false,
+    "bit_exact_original_inference_claimed": false,
+    "report": "reproduction/raw_input_20261018/RAW_PIPELINE_REPORT.json"
   }
 }
