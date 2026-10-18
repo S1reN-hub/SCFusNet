@@ -1,0 +1,445 @@
+{
+  "record": "23445294",
+  "chunk_size": 67108864,
+  "archives": [
+    {
+      "name": "SCFusNet-inputs-20261018-part01.zip",
+      "bytes": 1498322200,
+      "sha256": "93501139e638686f4a98e1eeddd916c58c2129cc7ba442fe6fd5f60e4f732c87",
+      "chunks": [
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk001",
+          "bytes": 67108864,
+          "sha256": "62cbb721de9e700572a16eb07d3196d4ab2ccdb97e2dbf2fac38e8df616b58b7"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk002",
+          "bytes": 67108864,
+          "sha256": "8f18b67071a48a6c3943a60e6893f1c05adae6b5e806a538a55a2767543073fe"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk003",
+          "bytes": 67108864,
+          "sha256": "a42685ab1dcb79302ed683cbd494d5b37f925556f3a73975fa04fe3857e5739c"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk004",
+          "bytes": 67108864,
+          "sha256": "c3eeafa8832b00f1aa11fa6dae75f28a6910bd6e1370210430f958d1cd4f9007"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk005",
+          "bytes": 67108864,
+          "sha256": "8ee088bdef4174de77867be784acf45e65652751ed3c232bcc90c5a222a11ec9"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk006",
+          "bytes": 67108864,
+          "sha256": "73d7048fa51de8a4aa7a08f7c1547b69f549abc218abd62f796dae939b421d5c"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk007",
+          "bytes": 67108864,
+          "sha256": "2f216ff2813589e396740c30a2b6972e1fe90e1caf104cf4a4910895b186686b"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk008",
+          "bytes": 67108864,
+          "sha256": "4c0d9b15ac68492c9121b622e0bdb49474f24ce26e2fb752170f10750a435246"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk009",
+          "bytes": 67108864,
+          "sha256": "7f7265a8c38d280adb10798565730644dec6775e108acb75cab8a98674536696"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk010",
+          "bytes": 67108864,
+          "sha256": "7e81c81acd10ac3405166b9e76c09f3cba3040f9e4292c9e7046c1386159f21f"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk011",
+          "bytes": 67108864,
+          "sha256": "2aec5210ff4a29cd9920b85fdae4e184b55e52575d44fdf7188baf6c35d1eb10"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk012",
+          "bytes": 67108864,
+          "sha256": "e24f89fa019728adfcb77b4613c2104dd2b7e96fa970db7bf867505c298b5db3"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk013",
+          "bytes": 67108864,
+          "sha256": "0f0f75915cd4faae41202ca21a4792d956c7f4edc54f6bce9bb50d4fa5396f4e"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk014",
+          "bytes": 67108864,
+          "sha256": "e8ade7e6ef5e2c1a914a12a914eca5ed3492324af62f49b4004c561d42807c60"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk015",
+          "bytes": 67108864,
+          "sha256": "be4a20404770a4773af151c5886034514d9d1e71d94be96ca235abb6c7c3cec3"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk016",
+          "bytes": 67108864,
+          "sha256": "349357cce4dc7c4072b39baa7623e596b3356ca65cc5d0a1c5fb38a9211e5ed9"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk017",
+          "bytes": 67108864,
+          "sha256": "22786c7a36202061c81fe3c2f0794ca2a7041ccac01ebe06493354deea3b42d2"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk018",
+          "bytes": 67108864,
+          "sha256": "cc6061811383045f956d03200b944f0df3de3060e468aba002afac83bf8f73e0"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk019",
+          "bytes": 67108864,
+          "sha256": "47c1ef578983b2e8863842be9700a175cc29658bc4e36a336d28d55b222e056f"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk020",
+          "bytes": 67108864,
+          "sha256": "0bc844169ae58919143e97034d990984dcbcaef1147baaf1612d9bf413e989b4"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk021",
+          "bytes": 67108864,
+          "sha256": "e7b546c6c41b51bcee759ddf7a1d46d3281ad9c2f62690fcc0e5407af2c2561d"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk022",
+          "bytes": 67108864,
+          "sha256": "c659ecb1fa31858e8a1c74e32d87ca9ba119ea6dc0cd1a706e8005b03b4bad79"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part01.zip.chunk023",
+          "bytes": 21927192,
+          "sha256": "fffb274000f13c3e53022556c3f3c3ee4753c09c79d7a1ed9eb02968756ffc1a"
+        }
+      ]
+    },
+    {
+      "name": "SCFusNet-inputs-20261018-part02.zip",
+      "bytes": 1499249264,
+      "sha256": "933de5b2b2a6d2520d12905dd65bcbb0b12515cd7bd1ff90015f63d59150cd8d",
+      "chunks": [
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk001",
+          "bytes": 67108864,
+          "sha256": "153f7f399522e244c5ea4e55aa30b9c5d0750b39cbed3d04a91ba4746ba4c9b5"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk002",
+          "bytes": 67108864,
+          "sha256": "165e9888940d2b804a75d5f28e5e257a2155082ccf433c374041561a558c41d1"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk003",
+          "bytes": 67108864,
+          "sha256": "586ca59eee1dedb6bc61fde14bf748aab71b80f66729aaef0424b2343fe4392f"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk004",
+          "bytes": 67108864,
+          "sha256": "4e397de0afc678f33ededbaf270acc715790394b1d06a5c9141f739458e57e7e"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk005",
+          "bytes": 67108864,
+          "sha256": "19292af49752ef8d33df7272797f0f3cd79a87f506e22152845e9f548c73f3fb"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk006",
+          "bytes": 67108864,
+          "sha256": "b8990391a2995f66417309784105892f6defd0fe37129f818c4b83c414d10673"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk007",
+          "bytes": 67108864,
+          "sha256": "d3dc70148be30e5a7fdbbd03cf58946a8b84eb43902cf84231971fc16aec1920"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk008",
+          "bytes": 67108864,
+          "sha256": "be17e39f4aa960d5bc79b1016b7ce4e20d08bcf93761f54db4ab7a0d0d647344"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk009",
+          "bytes": 67108864,
+          "sha256": "725ee994b08682d4b1ec29a1c41735d2affd67a5256c2e05923dc2521f57bedc"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk010",
+          "bytes": 67108864,
+          "sha256": "32b5b8ed7a0072d28de236bca1e23f06023a636ee6fffdb6b39a39c1799698fe"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk011",
+          "bytes": 67108864,
+          "sha256": "1ffe25b392c3d5d525f9055255370a3c7d60c3a2bd418885c34d7e4ff14106b9"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk012",
+          "bytes": 67108864,
+          "sha256": "b83eeb8ec6a3bbf353eba0b382ee89ddd88c0eeb487d3a4c7f23bfde5ca08983"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk013",
+          "bytes": 67108864,
+          "sha256": "551abefd0e100b167c2f2a30c9976a2c976dab0409ac8cef1ae0bb6eea266bf2"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk014",
+          "bytes": 67108864,
+          "sha256": "d40cab83d2c017cd9222c998b0a51f85e14f765f203246b69efc240aebb7e7ad"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk015",
+          "bytes": 67108864,
+          "sha256": "eb05f3fa8c7ff38d77dadbe7d1f9e25396e5bd627206aff1bbf9726f86d8faba"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk016",
+          "bytes": 67108864,
+          "sha256": "8db5d21d1f0854245e61e55e863fd3f76e19e561fd3a940bf7b512264c3a50a7"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk017",
+          "bytes": 67108864,
+          "sha256": "5e0302bcbe50b7e75614f1879ec9e5aff29b4789c04d37129b2af32ebd756990"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk018",
+          "bytes": 67108864,
+          "sha256": "c7c8b4481b8283a698e2e694b56553e9d94aa7bdbbb82373e0197c890ed54c84"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk019",
+          "bytes": 67108864,
+          "sha256": "3b0bf689925df9a8fd35391eed26a20e1da5a3fa5da5a8d538a43859c18c5975"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk020",
+          "bytes": 67108864,
+          "sha256": "676138334e61a4296feb3f0e8de5fa94874d47455903300bbcc31118d5bb2947"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk021",
+          "bytes": 67108864,
+          "sha256": "8a3903fa6fd406ec03543b963a360cf6dbdb39f4d5c9ba68dd81e1e1f79863e3"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk022",
+          "bytes": 67108864,
+          "sha256": "f7c6208f498014e22ea9ef294faa72822259dcb4ebadb96a35228e2e5a56ba62"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part02.zip.chunk023",
+          "bytes": 22854256,
+          "sha256": "b34486575f5ac6348aba922a666bed3b7ed168c1f57bdc3c2c5575f2580358b3"
+        }
+      ]
+    },
+    {
+      "name": "SCFusNet-inputs-20261018-part03.zip",
+      "bytes": 1498364177,
+      "sha256": "cf3c375973ed57d3f5d0ef6c561087477aa541dda852eb41355abce22ed765f5",
+      "chunks": [
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk001",
+          "bytes": 67108864,
+          "sha256": "1fb1c37a1fb528787e27832e4e5f46207ce3032d9b4eecd7006bc77fb94d3150"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk002",
+          "bytes": 67108864,
+          "sha256": "2115fd5ddd9330eb684e798863e3b0f9299fd2cb4fd5f9a99346dcb6fa9e4aa8"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk003",
+          "bytes": 67108864,
+          "sha256": "14f7b3ab2e898414a52b4480ac5244a87956c894be6f4d747c9dd45c547f2121"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk004",
+          "bytes": 67108864,
+          "sha256": "f1c7afcae7952e9661639f3815a2a0294fbd825faf80fc3babadfdf04f74660f"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk005",
+          "bytes": 67108864,
+          "sha256": "a4f2e4bb7948a673959148c7b050e46747f63ec62106076903c5a875574eea7a"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk006",
+          "bytes": 67108864,
+          "sha256": "5cc04b2595710b3e1fbd0d5a24ea2f400f3e8fb77eba41cdcce38f3e285293db"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk007",
+          "bytes": 67108864,
+          "sha256": "03b175b8e15c9037f7f606f7e16f114e7e894cf2055c6514ffc8a32b6c511d00"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk008",
+          "bytes": 67108864,
+          "sha256": "9f16cd2fb099d244fb48b842a63de634e8562b641710c728ae0985c518085610"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk009",
+          "bytes": 67108864,
+          "sha256": "d9b4a108731c3f099b162890eb672bff852339d5a82686bb123fc4a0fcd87939"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk010",
+          "bytes": 67108864,
+          "sha256": "9224fb484171f5939b4e51cd085f3fb52e05ca85b78534f3496556b4c04fb03b"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk011",
+          "bytes": 67108864,
+          "sha256": "5e2c90a9adc3919df6be9250cc1a44534e843275c0bf93eed98dd3544afed017"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk012",
+          "bytes": 67108864,
+          "sha256": "04493ab97e76e45994c90e7d4ff762ef152e57795cf4dae8656c88f4075390d2"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk013",
+          "bytes": 67108864,
+          "sha256": "88b8dbd7c41301467d2f6a7d9337ef8819390f714deea8303dbadcb24b40da11"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk014",
+          "bytes": 67108864,
+          "sha256": "ea3c4844a3ac2aecb76ade28b9d3560df155550f0c0c55f71c378a3daa3fde31"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk015",
+          "bytes": 67108864,
+          "sha256": "705404c5f4e2fdda20d7491f10ba8efb32c590b19e1b7f506612defcfe13e4fd"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk016",
+          "bytes": 67108864,
+          "sha256": "4d2811f627f6c77ba9c6297a1bf11f6d471a862d11eaf9f2e976b9065a622ca5"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk017",
+          "bytes": 67108864,
+          "sha256": "031103921685f0c7e7ef7e18980e8148fef3ce3fef26e920a7e9f444150cded7"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk018",
+          "bytes": 67108864,
+          "sha256": "7e07201f2eb4aa77121502c9c0fbba8b05e2b0157bd8be3ec2583b6160cb49fb"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk019",
+          "bytes": 67108864,
+          "sha256": "d18cea44e402344f0c40009d3989befd58dd60bf3b067b34e982cc45ca36adda"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk020",
+          "bytes": 67108864,
+          "sha256": "7d1acae2127440d947639297895bbff5d3c509e86a8aed61bb9cccce229a18fb"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk021",
+          "bytes": 67108864,
+          "sha256": "88f3ed8d0dec7cd404600d1254a845ad2f07c9c64e51fbd940e3ba37a1d8ea3c"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk022",
+          "bytes": 67108864,
+          "sha256": "aff5bfc06d13d021198a96d2fe19ce9821a983251b67b95c226dc5762dc8fe35"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part03.zip.chunk023",
+          "bytes": 21969169,
+          "sha256": "a7a9388bc13c9c994f7d421333e1b3a21bedc25fe23a0d2261fb5101e936b564"
+        }
+      ]
+    },
+    {
+      "name": "SCFusNet-inputs-20261018-part04.zip",
+      "bytes": 810056133,
+      "sha256": "98e8c68506da0b05b5c27efb9265acabe78a8b125667bd654b84b28a0c98ed2f",
+      "chunks": [
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk001",
+          "bytes": 67108864,
+          "sha256": "cc7583e7a98f29fdfadd5e9ee6844a63e94a773268fb7437b4c5b85fee64790c"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk002",
+          "bytes": 67108864,
+          "sha256": "5cb464ecd1909dcd57978344b2c7f7794807c3989c91e26a7c39a50c73b848bf"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk003",
+          "bytes": 67108864,
+          "sha256": "0fb3211b945dbf3d5bcca27b6e921476283aea21538406ebef1e9c903b57985b"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk004",
+          "bytes": 67108864,
+          "sha256": "610ef88a815c7f631246f2f92a8a6af9ee80eae2a3500aca5c0c8356d92246f3"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk005",
+          "bytes": 67108864,
+          "sha256": "3b7d70715e61889ea36d8be0b4e1451d7ca3128a8045662cfe8e6efa2f180027"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk006",
+          "bytes": 67108864,
+          "sha256": "57bcb302fa2d038710634b7020efa3ad76734f296ffbf2d7a79ba94992f42bfc"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk007",
+          "bytes": 67108864,
+          "sha256": "fba86d2a6aced28401c59547117343081d1070330645d0d8b6130c9cdb4a9cae"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk008",
+          "bytes": 67108864,
+          "sha256": "8544656a7d45b3f25209b1c58f32c8617ab4e38391c04baa27efcf2a2a9ab5f1"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk009",
+          "bytes": 67108864,
+          "sha256": "96ec1b59b8ace136a2a00de8e279c66eb7a7274c409e2d62bd757ea26b77e5f3"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk010",
+          "bytes": 67108864,
+          "sha256": "fd584a297ca9a7ef0d5dab49d971aabcfa11cccad96c74a75cee26359939af58"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk011",
+          "bytes": 67108864,
+          "sha256": "c34b6532c344d97ea954efa5290a078c7ed672dabefef7f98da7217393006459"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk012",
+          "bytes": 67108864,
+          "sha256": "a7cafab6456e765085c0be53eadd7274450b2ae499643b5d0ec9e1ea81515042"
+        },
+        {
+          "name": "SCFusNet-inputs-20261018-part04.zip.chunk013",
+          "bytes": 4749765,
+          "sha256": "4d6554311ff6c456fc6dbbcb883057c205456df79ea9aa9303050af7dbabd4ba"
+        }
+      ]
+    }
+  ],
+  "transport_note": "GitHub provides four complete independent ZIP archives. Zenodo transport chunks must first be concatenated in each archive-specific order and verified; do not concatenate the four restored ZIP archives."
+}

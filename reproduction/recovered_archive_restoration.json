@@ -1,0 +1,40 @@
+{
+  "zenodo_record": "23445294",
+  "archives_verified": 4,
+  "chunks": {
+    "cached": 0,
+    "local": 82,
+    "downloaded": 0
+  },
+  "archives": [
+    {
+      "name": "SCFusNet-inputs-20261018-part01.zip",
+      "bytes": 1498322200,
+      "sha256": "93501139e638686f4a98e1eeddd916c58c2129cc7ba442fe6fd5f60e4f732c87"
+    },
+    {
+      "name": "SCFusNet-inputs-20261018-part02.zip",
+      "bytes": 1499249264,
+      "sha256": "933de5b2b2a6d2520d12905dd65bcbb0b12515cd7bd1ff90015f63d59150cd8d"
+    },
+    {
+      "name": "SCFusNet-inputs-20261018-part03.zip",
+      "bytes": 1498364177,
+      "sha256": "cf3c375973ed57d3f5d0ef6c561087477aa541dda852eb41355abce22ed765f5"
+    },
+    {
+      "name": "SCFusNet-inputs-20261018-part04.zip",
+      "bytes": 810056133,
+      "sha256": "98e8c68506da0b05b5c27efb9265acabe78a8b125667bd654b84b28a0c98ed2f"
+    }
+  ],
+  "note": "Verified transport reconstruction; historical raw training-payload identity is not established.",
+  "verification_scope": "Actual 82-chunk offline reconstruction of all four published input archives",
+  "original_archive_records_match": true,
+  "transport_chunks_verified": 82,
+  "total_archive_bytes": 5305991774,
+  "transport_manifest_sha256": "fdda9afa8252a6443ab1409ff94e0436e4b83531d40862597c0451c67950178d",
+  "network_used": false,
+  "training_performed": false,
+  "historical_raw_payload_identity_verified": false
+}

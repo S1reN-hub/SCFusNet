@@ -1,6 +1,6 @@
 # SCFusNet
 
-Research code and derived data for **SCFusNet: Scenario-Conditioned Satellite–NWP Fusion for 1–6-h Solar Irradiance Forecasting**, by Shaocheng Liu and Jingming Xia. This public snapshot is organized against the manuscript source dated **2026-10-16** and packaged on **2026-10-16**. Manuscript metadata and its source hash identify the version; the manuscript itself is not distributed here.
+Research code and derived data for **SCFusNet: Scenario-Conditioned Satellite–NWP Fusion for 1–6-h Solar Irradiance Forecasting**, by Shaocheng Liu and Jingming Xia. The original public snapshot accompanies the manuscript source dated **2026-10-16**. The **2026-10-18 input-recovery update** adds a separately packaged 1,462-case input snapshot. Manuscript metadata and its source hash identify the version; the manuscript itself is not distributed here.
 
 SCFusNet combines independently supervised satellite and numerical weather prediction (NWP) branches, assigns scenario- and lead-dependent fusion weights, and applies conditional aerosol optical depth (AOD) attenuation. Older artifact and code names such as `SolFUS-Net`, `SolSC-Net`, and `solfus` are retained for traceability.
 
@@ -30,7 +30,26 @@ The first command recomputes reported metrics from released prediction tables. T
 | `work/wrf_vertical_profile_ablation_20260925_remote/bundle/` | Retrieved vertical-profile ablation results |
 | `tmp/remote_mlp17_original/` | Partial recovered remote implementation snapshot; historical provenance rather than an exact complete training snapshot |
 
-The full 1,462-case multimodal input tensors and the trained satellite/NWP backbone checkpoint are retained on the original remote training server and will be uploaded in a subsequent update. They are not included in the current local snapshot. **This is a results-and-cached-head reproducibility release, not a complete end-to-end training release.** Fusion and AOD head weights are included. Historical training scripts may require the original GPU-host layout and external input files; their presence does not establish a portable raw-data training workflow.
+## Recovered input supplement
+
+A **1,462-case, 17-station, 86-cycle source input snapshot** has been located and fully enumerated: **5,307,594,704 source bytes** of NPZ payloads, with a new per-file SHA-256 manifest. Its two source-index hashes match the formal 2026-09-09 preparation log, and its canonical case assignments exactly match the published 1,224/119/119 split. Download the input assets and checksums from the fixed [GitHub release `inputs-20261018`](https://github.com/S1reN-hub/SCFusNet/releases/tag/inputs-20261018). Large input tensors are distributed as release assets rather than stored in Git. The release page becomes publicly accessible when the draft is published.
+
+All 1,462 files have now been downloaded with their source checksums verified. Publication copies remove personal absolute-path prefixes from textual extraction-metadata WRF-output references, retaining portable `runs/...` paths. Numeric array NPY bytes and their original compressed payload bytes are preserved. The sanitized publication payload totals **5,305,765,926 bytes**, compared with 5,307,594,704 source bytes; the four input ZIPs together total **5,305,991,774 bytes**. The supplement records **source SHA-256 and published-file SHA-256 separately**; verify downloaded files against the published-file hashes.
+
+The **GitHub** download contains four **independent ZIP archives**, `SCFusNet-inputs-20261018-part01.zip` through `part04.zip`. The **Zenodo** distribution uses 82 binary transport chunks of up to 64 MiB. Once the Zenodo version is public, run `python scripts/restore_zenodo_inputs.py --output-dir ../downloaded-input-archives --workers 4` from the code root to download and verify those chunks and reassemble the same four ZIPs. It reads `data/recovered_inputs_20261018/archive_chunks.json` by default; use `--local-chunk-dir /path/to/download-all --offline` for already downloaded chunks.
+
+Extract all four ZIPs into one input directory so it contains `cases/<sample_id>.npz`. Only chunks belonging to the same ZIP are reassembled by the restoration script; **never concatenate the four independent ZIPs together**. The code archive, `SCFusNet-code-and-data-20261018.zip`, extracts to `SCFusNet/`. From that code root, run:
+
+```sh
+python -m pip install numpy
+python scripts/verify_recovered_inputs.py --data-root /path/to/inputs
+```
+
+Metadata are read from the repository's `data/recovered_inputs_20261018/` by default. The repository includes [full payload verification](reproduction/recovered_inputs_verification.json), [independent numerical-preservation and sanitization checks](reproduction/recovered_inputs_sanitization.json), and [offline restoration of all 82 chunks](reproduction/recovered_archive_restoration.json). See [complete extraction instructions](docs/DATA_RECOVERY.md#download-layout-and-verification-commands). Local validation and a reserved DOI do not establish public Zenodo availability.
+
+The supplement represents the **current recovered snapshot**. No historical per-NPZ digest was located, so index identity and new checksums do not prove byte-for-byte identity with the original training inputs. The **formal satellite/NWP expert checkpoint and its matching normalization remain missing**. No claim is made that they will be included in the data supplement. Fusion and AOD head weights are already included; complete original-run end-to-end reproducibility remains unavailable. See [data recovery](docs/DATA_RECOVERY.md) for evidence, packaging requirements, and limitations.
+
+**Version DOI: `10.5281/zenodo.23445294` (registration becomes effective on publication).** Treat this as a reserved identifier until its public landing page is accessible; listing it here is not proof of publication or downloadable files. The [Zenodo concept DOI](https://doi.org/10.5281/zenodo.23418518) identifies the release family, and the original [v1 archive](https://doi.org/10.5281/zenodo.23418519) is preserved unchanged.
 
 ## Evaluation scope
 
@@ -40,11 +59,10 @@ The primary model comparison uses **601 common valid daytime records**. Forecast
 
 The selected AOD policy admits **38 unique target hours across 10 test cases** and reports an 11.40% admitted-hour RMSE reduction. The gate study is **exploratory**: the test split had already been inspected. Candidate and checkpoint selection used validation data, and all candidates are retained. This result is not a fresh confirmatory test or a reduction over the entire 601-record cohort.
 
-See [reproducibility](docs/REPRODUCIBILITY.md), [data availability](docs/DATA_AVAILABILITY.md), and the [data dictionary](docs/DATA_DICTIONARY.md) for definitions and limitations.
+See [reproducibility](docs/REPRODUCIBILITY.md), [data availability](docs/DATA_AVAILABILITY.md), [data recovery](docs/DATA_RECOVERY.md), and the [data dictionary](docs/DATA_DICTIONARY.md) for definitions and limitations.
 
 ## Data sources and reuse
 
 Ground observations originate from [BSRN](https://bsrn.awi.de/data/) and [SURFRAD](https://gml.noaa.gov/grad/stardata.html); satellite inputs include GOES, Himawari, and [GridSat-B1](https://www.ncei.noaa.gov/products/gridded-geostationary-brightness-temperature); aerosol forecasts originate from [CAMS](https://ads.atmosphere.copernicus.eu/). WRF-Chem simulations use GFS forcing. Released derived tables and feature caches do not replace the upstream datasets or their attribution and access conditions.
 
-No blanket open-source or dataset license is assigned by this snapshot. Public visibility alone does not grant unrestricted reuse; upstream data terms and the rights of the respective owners continue to apply. No publication DOI is asserted.
-
+No blanket open-source or dataset license is assigned by this snapshot. Public visibility alone does not grant unrestricted reuse; upstream data terms and the rights of the respective owners continue to apply. The repository/archive DOIs above identify research artifacts, not a journal publication.

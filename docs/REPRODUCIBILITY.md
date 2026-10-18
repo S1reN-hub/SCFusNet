@@ -8,7 +8,9 @@
 | Re-evaluate fusion heads | Verified from released feature caches and head checkpoints | Starts after pretrained satellite/NWP feature extraction |
 | Inspect or rerun AOD correction | Feature caches, weights, and historical code are included | The quick verification command checks fusion heads; AOD metrics are checked from released tables |
 | Retrain heads on cached representations | Code and cached features are provided | Historical scripts may retain original-host defaults; reproducibility depends on the exact archived implementation and configuration |
-| Infer from raw satellite/NWP inputs or retrain complete model | No | Complete inputs and the trained backbone checkpoint remain on the remote training server and will be added in a subsequent update |
+| Inspect/reconstruct case-level multimodal inputs | Packaged input supplement; see the fixed GitHub release assets | Current recovered snapshot has matching historical source indices and published split, but no historical per-NPZ digest |
+| Infer using the formal original satellite/NWP experts | No | Formal expert checkpoint and its matching expert normalization remain missing |
+| Retrain a complete replacement model | Not established as a portable workflow | Recovered inputs can support new work once downloaded and configured; historical source versions differ, and a new run does not recover the original model |
 
 ## Verification commands
 
@@ -29,6 +31,30 @@ PyTorch `.pt` artifacts contain research dictionaries and checkpoints. Load only
 This package targets the manuscript source dated 2026-10-16. Version metadata and its source hash identify the manuscript without distributing its full text. The final paper name is SCFusNet. Earlier `SolFUS-Net`, `SolSC-Net`, `solfus`, and `ghi_hierarchical_v*` names in artifact paths and columns are preserved so that tables remain traceable to their producers.
 
 Historical launch and partial recovered snapshots are retained in `tmp/mlp17_7eval_training_bundle_20260909/` and `tmp/remote_mlp17_original/`. Their model files differ, and neither is claimed to be the exact complete implementation of the formal training run. The current working-tree model also differs from the recovered snapshot. Source trees for versions 2, 3, and 4 document experiment lineage. Successful cached inference checks establish agreement for the tested released heads, not complete provenance of the backbone training implementation.
+
+## Recovered-input verification
+
+The 2026-10-18 audit enumerated and hashed all 1,462 source NPZ payloads, totaling 5,307,594,704 source-snapshot bytes. All files have been downloaded with source checksums verified; sanitized publication payloads total 5,305,765,926 bytes before outer ZIP packaging. Source indices match hashes recorded in the formal data-preparation log; canonical case assignments match the published split exactly. These checks establish the recovered case mapping and the current source snapshot's transfer-verification baseline. No historical per-case NPZ hashes were located, so original-training payload byte equality remains unverified.
+
+The download contains actual payload bytes rather than the source directories' symbolic links. Publication copies remove personal absolute-path prefixes from textual extraction-metadata WRF-output references while preserving numerical array NPY bytes and their original compressed payload bytes. Source and published-file hashes are therefore recorded separately. After obtaining the supplement from [GitHub release `inputs-20261018`](https://github.com/S1reN-hub/SCFusNet/releases/tag/inputs-20261018), compare every extracted case with its **published-file SHA-256** before running new experiments. That comparison establishes agreement with the distributed sanitized snapshot, not retroactive identity to the original training data. See [Data recovery](DATA_RECOVERY.md) for details.
+
+GitHub distributes four independent ZIPs directly. Zenodo distributes 82 transport chunks of up to 64 MiB: run `python scripts/restore_zenodo_inputs.py --output-dir ../downloaded-input-archives --workers 4` from the code root to download, verify, and restore the four ZIPs using the bundled `archive_chunks.json`. For local chunks, add `--local-chunk-dir /path/to/download-all --offline`. The script reassembles chunks belonging to each ZIP; the four ZIPs themselves must not be concatenated.
+
+Extract all four independent input ZIPs into a single input root containing `cases/`; the code archive extracts to `SCFusNet/`. From the code root, run `python scripts/verify_recovered_inputs.py --data-root /path/to/inputs`. Only NumPy is required for this payload check, and metadata are read from `data/recovered_inputs_20261018/` by default. See [both download routes and full extraction commands](DATA_RECOVERY.md#download-layout-and-verification-commands). Use the Zenodo network route only after its public landing page and files are accessible.
+
+The original [v1 archive](https://doi.org/10.5281/zenodo.23418519) is preserved. The [concept DOI](https://doi.org/10.5281/zenodo.23418518) identifies the version family. **Version DOI: `10.5281/zenodo.23445294` (registration becomes effective on publication).** Until its public landing page is accessible, treat the identifier as reserved; this documentation does not itself confirm Zenodo publication.
+
+## Published recovery verification reports
+
+The following reports are included in the repository as public verification evidence. Their inclusion does not establish Zenodo publication.
+
+| Report | Completed checks |
+| --- | --- |
+| [Recovered inputs](../reproduction/recovered_inputs_verification.json) | All 1,462 published payload sizes and SHA-256 values, metadata mapping, NPZ shape/dtype, identities, and saved scientific contracts |
+| [Independent sanitization audit](../reproduction/recovered_inputs_sanitization.json) | All source hashes; all 54 NPY members per case; bit-exact numerical payloads; identical compressed bytes for the 52 unchanged members per case; permitted edits restricted to the two WRF-output path fields; full published-member decompression/CRC checks; personal-path checks across all string members |
+| [Archive restoration](../reproduction/recovered_archive_restoration.json) | Offline reconstruction from all 82 chunks to the four original ZIP hashes, totaling 5,305,991,774 archive bytes |
+
+The corresponding source and sanitized NPZ totals are 5,307,594,704 and 5,305,765,926 bytes. These checks support recovery, publication transformation, and transport integrity. None establishes historical raw-training payload byte identity, supplies the missing formal experts, or represents a new training experiment.
 
 ## Split and temporal interpretation
 
@@ -60,5 +86,4 @@ The test split and its gate-feature coverage had already been inspected before t
 
 ## Historical training scripts
 
-Several scripts preserve absolute Windows or original GPU-host paths. To pursue new training, first obtain the input tensors and backbone checkpoint pending upload from the remote training server, or train a replacement backbone, then adapt dataset roots, split paths, output roots, and device options using each script's arguments. Such a new run is not the same as reproducing the frozen release. Existing audit files preserve historical provenance and are not current instructions to access a remote host.
-
+Several scripts preserve absolute Windows or original GPU-host paths. To pursue new training, obtain and verify the recovered-input supplement when available, then adapt dataset roots, split paths, output roots, and device options using each script's arguments. The formal backbone checkpoint and expert normalization remain missing; training a replacement backbone is a new experiment and must be reported as such. Existing audit files preserve historical provenance and are not current instructions to access a remote host.

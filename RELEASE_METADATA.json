@@ -1,14 +1,14 @@
 {
-  "release_date": "2026-10-16",
+  "release_date": "2026-10-18",
   "name": "SCFusNet",
   "title": "SCFusNet: Scenario-Conditioned Satellite-NWP Fusion for 1-6-h Solar Irradiance Forecasting",
   "manuscript_sha256": "b9eff667094c31e0315f89bbebcdeada47c16b5bd5df5d267b1d6650318a36fd",
   "manuscript_status": "Research manuscript; publication DOI not assigned in this release",
   "includes_manuscript": false,
-  "scope": "Locally available research code, official split indexes, frozen expert caches, MLP/AOD heads, per-seed predictions and result source tables",
+  "scope": "Research code, derived results, frozen expert caches and heads, plus a source-index-matched recovered 1462-case input snapshot distributed through release assets",
   "missing_for_end_to_end_training": [
-    "Complete 1462-case satellite/WRF input tensor dataset",
-    "Formal independent-expert best_fusion.pt checkpoint and corresponding input normalization"
+    "Formal independent-expert best_fusion.pt checkpoint and matching input normalization",
+    "Exact complete historical source snapshot executed during formal training"
   ],
   "code_versions": {
     "src": "Current research implementation; differs from historical training code",
@@ -16,12 +16,20 @@
     "tmp/mlp17_7eval_training_bundle_20260909": "Historical launch bundle; differs from the partial recovered snapshot; neither establishes the exact complete formal training implementation"
   },
   "license": "No new blanket code or data license assigned; upstream data terms remain applicable",
-  "remote_artifacts_pending_upload": {
-    "location": "Original remote training server",
-    "status": "Will be added in a subsequent public update",
-    "artifacts": [
-      "Complete 1462-case satellite/WRF input tensor dataset",
-      "Formal independent-expert best_fusion.pt checkpoint and corresponding input normalization"
-    ]
+  "version": "inputs-20261018",
+  "input_snapshot": {
+    "cases": 1462,
+    "source_payload_bytes": 5307594704,
+    "published_payload_bytes": 5305765926,
+    "input_archive_bytes": 5305991774,
+    "github_zip_archives": 4,
+    "zenodo_transport_chunks": 82,
+    "historical_per_case_byte_identity_verified": false,
+    "numeric_arrays_preserved_during_path_redaction": true
+  },
+  "zenodo": {
+    "version_doi": "10.5281/zenodo.23445294",
+    "concept_doi": "10.5281/zenodo.23418518",
+    "preserved_v1_doi": "10.5281/zenodo.23418519"
   }
 }

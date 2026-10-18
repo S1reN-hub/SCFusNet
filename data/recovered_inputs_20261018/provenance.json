@@ -1,0 +1,58 @@
+{
+  "version": "scfusnet_recovered_inputs_20261018_v1",
+  "snapshot_date": "2026-10-18",
+  "case_count": 1462,
+  "total_payload_bytes": 5305765926,
+  "metadata_files": {
+    "dataset_audit.json": {
+      "sha256": "2468fe450c122820e60783135a53880bcc2dbff34184170580a09c060d7575a9",
+      "bytes": 3552
+    },
+    "index.csv": {
+      "sha256": "9faacd31038453ee5b454b675cbdf5166e899ee3a6dc33d3b4cf9905b41597ab",
+      "bytes": 205105
+    },
+    "manifest.csv": {
+      "sha256": "5e3fe3571ae0860daccfaf5e9540cb7e44abff825bd8abf30407ab39bcd87931",
+      "bytes": 454182
+    },
+    "schema.json": {
+      "sha256": "7feb2ffbe2cb9c89948b6ed0a4cad2fba094639206e78a71dbb4ee63ed258e41",
+      "bytes": 3113
+    },
+    "split_config.json": {
+      "sha256": "16499542121165c047751fe9b48be2ae976f4b627af8691e1500d83cdcd54957",
+      "bytes": 4656
+    },
+    "training_aod_reference.json": {
+      "sha256": "436287255a3806aad51a9543225d72b11a39441daafc48671b6b1bc32a8153a0",
+      "bytes": 8131
+    }
+  },
+  "historical_source_index_sha256": {
+    "development": "749940fca701051c7602a77b53d28e56dcb099578f764e2e1e803a9ef92ae965",
+    "confirmation": "6a169c57eb6e9a69b0b563bc1ca2afe1fe2904a261d8fd5c6c14f13cf64b1133"
+  },
+  "historical_combined_index_sha256": "5a0d8428e42102dc10a946aedc57ff78148fb21dc8d1c8e6807046bc1d1df823",
+  "portable_index_note": "index.csv preserves historical scientific row fields but replaces machine-specific case_file values with portable relative paths; its byte hash therefore differs from the historical combined index.",
+  "payload_identity": "Published checksums identify the copy with machine-specific metadata path prefixes removed. Recovered-source checksums identify the input snapshot before that transformation. No independent historical training-time per-case NPZ hashes were found; equality to the original training payload remains unverified.",
+  "formal_expert_checkpoint_recovered": false,
+  "formal_expert_expected_sha256": "0c2eadcd625a57686e02d604714e81de864efb19ca92c951a4d8e40e863532f9",
+  "expert_normalization_recovered": false,
+  "training_performed": false,
+  "source_snapshot_payload_bytes": 5307594704,
+  "payload_transform": {
+    "scope": "Public copy only; recovered source files are unchanged",
+    "fields": [
+      "nwp_d01_extraction_metadata_json",
+      "nwp_d02_extraction_metadata_json"
+    ],
+    "change": "Remove machine-specific prefixes before the project-relative runs/ path in extraction metadata wrfout values",
+    "numerical_arrays": "Numerical NPY members and their compressed data streams are retained by the packaging procedure",
+    "manifest_columns": {
+      "bytes_sha256": "Published copy",
+      "recovered_source_bytes_sha256": "Recovered input snapshot before path redaction"
+    },
+    "cases_with_redacted_fields": 1462
+  }
+}

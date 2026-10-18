@@ -1,0 +1,11 @@
+{
+  "metadata_verified": true,
+  "mapped_cases": 1462,
+  "payload_cases_verified": 1462,
+  "payload_checks": "size, SHA256, NPZ shape/dtype, scalar identity and scientific contracts",
+  "snapshot_payload_bytes": 5305765926,
+  "recovered_source_payload_bytes": 5307594704,
+  "historical_raw_payload_identity_verified": false,
+  "identity_limit": "Published checksums identify the copy with machine-specific metadata path prefixes removed. Recovered-source checksums identify the input snapshot before that transformation. No independent historical training-time per-case NPZ hashes were found; equality to the original training payload remains unverified.",
+  "training_performed": false
+}

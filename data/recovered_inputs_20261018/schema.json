@@ -1,0 +1,170 @@
+{
+  "version": "scfusnet_recovered_inputs_20261018_v1",
+  "cases": 1462,
+  "stations": 17,
+  "cycles": 86,
+  "split_counts": {
+    "train": 1224,
+    "validation": 119,
+    "test": 119
+  },
+  "source_counts": {
+    "development": 1241,
+    "confirmation": 221
+  },
+  "payload_path": "cases/<sample_id>.npz",
+  "required_scalars": [
+    "sample_id",
+    "station_id",
+    "wrf_ghi_anchor_source",
+    "cape_cin_algorithm"
+  ],
+  "required_shapes": {
+    "satellite": [
+      6,
+      7,
+      32,
+      32
+    ],
+    "satellite_valid": [
+      6,
+      7,
+      32,
+      32
+    ],
+    "satellite_frame_mask": [
+      6
+    ],
+    "satellite_scan_time_offset_hours": [
+      6
+    ],
+    "satellite_unique_frame_mask": [
+      6
+    ],
+    "wrf_ghi_anchor_d02": [
+      6,
+      32,
+      32
+    ],
+    "aod550": [
+      6
+    ],
+    "aod_mask": [
+      6
+    ],
+    "target": [
+      6
+    ],
+    "target_mask": [
+      6
+    ],
+    "nwp_d01_3d_raw": [
+      7,
+      12,
+      10,
+      32,
+      32
+    ],
+    "nwp_d01_level_valid": [
+      7,
+      10,
+      32,
+      32
+    ],
+    "nwp_d01_channel_available": [
+      12
+    ],
+    "nwp_d01_surface_raw": [
+      7,
+      15,
+      32,
+      32
+    ],
+    "nwp_d01_surface_available": [
+      15
+    ],
+    "nwp_d01_static_raw": [
+      8,
+      32,
+      32
+    ],
+    "nwp_d02_3d_raw": [
+      7,
+      12,
+      10,
+      32,
+      32
+    ],
+    "nwp_d02_level_valid": [
+      7,
+      10,
+      32,
+      32
+    ],
+    "nwp_d02_channel_available": [
+      12
+    ],
+    "nwp_d02_surface_raw": [
+      7,
+      15,
+      32,
+      32
+    ],
+    "nwp_d02_surface_available": [
+      15
+    ],
+    "nwp_d02_static_raw": [
+      8,
+      32,
+      32
+    ]
+  },
+  "scientific_contracts": {
+    "nwp_3d_names": [
+      "air_temperature",
+      "specific_humidity",
+      "cloud_liquid_water",
+      "rain_water",
+      "cloud_ice",
+      "snow",
+      "graupel",
+      "cloud_fraction",
+      "geopotential_height",
+      "eastward_wind",
+      "northward_wind",
+      "vertical_velocity"
+    ],
+    "nwp_surface_names": [
+      "T2",
+      "Q2",
+      "PSFC",
+      "TSK",
+      "U10",
+      "V10",
+      "PBLH",
+      "HFX",
+      "LH",
+      "ALBEDO",
+      "SWDOWN",
+      "hourly_precipitation",
+      "OLR",
+      "CAPE",
+      "CIN"
+    ],
+    "pressure_hpa": [
+      1000,
+      925,
+      850,
+      700,
+      600,
+      500,
+      400,
+      300,
+      250,
+      200
+    ],
+    "wrf_ghi_anchor_source": "d02_ACSWDNB_endpoint_difference_3600s",
+    "cape_cin_algorithm": "wrf_python_cape_2d_rip_max_theta_e_0_3km_500m_parcel_ter_follow_v1"
+  },
+  "identity_limit": "Published checksums identify the copy with machine-specific metadata path prefixes removed. Recovered-source checksums identify the input snapshot before that transformation. No independent historical training-time per-case NPZ hashes were found; equality to the original training payload remains unverified."
+}

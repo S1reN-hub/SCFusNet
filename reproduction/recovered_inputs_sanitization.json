@@ -1,0 +1,50 @@
+{
+  "schema_version": "independent_full_payload_sanitization_check_v1",
+  "scope": "All 1462 recovered input cases; independent of the packaging implementation.",
+  "passed": true,
+  "counts": {
+    "cases": 1462,
+    "npy_members": 78948,
+    "unchanged_members": 76024,
+    "numeric_members": 51170,
+    "string_members": 27778,
+    "redacted_metadata_fields": 2924,
+    "source_bytes": 5307594704,
+    "published_bytes": 5305765926
+  },
+  "checks": {
+    "published_case_set_matches_recovery_manifest": true,
+    "all_source_npz_sha256_match_recovery_manifest": true,
+    "each_npz_contains_54_unique_npy_members_in_original_order": true,
+    "all_52_unchanged_members_per_case_have_identical_compressed_bytes_and_sha256": true,
+    "unchanged_member_compression_sizes_and_crc32_match": true,
+    "all_numeric_npy_payloads_are_bit_exact": true,
+    "all_published_npy_members_fully_decompressed_and_crc32_verified": true,
+    "all_original_members_crc32_verified_directly_or_by_identical_compressed_payload": true,
+    "object_dtypes_absent": true,
+    "all_string_members_checked_for_personal_absolute_path_patterns": true,
+    "personal_absolute_paths_absent_from_published_string_members": true,
+    "only_d01_d02_extraction_metadata_json_wrfout_fields_changed": true,
+    "redacted_wrfout_values_are_relative_runs_paths": true,
+    "all_other_extraction_metadata_json_values_unchanged": true
+  },
+  "methods": [
+    "Every source NPZ was bound to its recovery-manifest SHA256 and size.",
+    "For every unchanged member, original and published compressed payloads were compared directly and with SHA256; compression method, sizes and CRC32 were also compared. Identical losslessly compressed payloads prove identical NPY bytes, including numeric values and NPY headers.",
+    "Every published member was fully read with Python zipfile, which validates decompression and CRC32. Source metadata members were read and CRC-checked directly; unchanged source members share the verified compressed payload and CRC32.",
+    "Every NPY header was inspected for object dtypes. Every Unicode/byte-string array was loaded without pickle and checked for personal absolute-path patterns.",
+    "Both extraction metadata JSON objects were compared structurally against the source with only the wrfout path prefix redacted."
+  ],
+  "source_retransmission": {
+    "cases": 0,
+    "sample_ids": [],
+    "explanation": "A damaged transport-archive member, if encountered, was replaced only by the independently retransmitted source NPZ whose size and SHA256 match the same recovery-manifest entry."
+  },
+  "changed_fields": [
+    "nwp_d01_extraction_metadata_json.wrfout",
+    "nwp_d02_extraction_metadata_json.wrfout"
+  ],
+  "personal_path_check_scope": "All NPY Unicode and byte-string members; extraction-metadata wrfout values must begin with runs/.",
+  "elapsed_seconds": 110.3,
+  "case_source_published_sha256_attestation_in_tar_order": "e8c622dc07e82b55f7f3a516b5052d6b43a38fcb3085eda27a95e12c74a5b246"
+}
